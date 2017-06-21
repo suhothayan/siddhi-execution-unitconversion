@@ -17,13 +17,19 @@
  */
 package org.wso2.extension.siddhi.execution.unitconversion.length;
 
-import org.wso2.siddhi.core.config.ExecutionPlanContext;
-import org.wso2.siddhi.core.exception.ExecutionPlanRuntimeException;
+import org.wso2.siddhi.annotation.Example;
+import org.wso2.siddhi.annotation.Extension;
+import org.wso2.siddhi.annotation.ReturnAttribute;
+import org.wso2.siddhi.annotation.util.DataType;
+import org.wso2.siddhi.core.config.SiddhiAppContext;
+import org.wso2.siddhi.core.exception.SiddhiAppRuntimeException;
 import org.wso2.siddhi.core.executor.ExpressionExecutor;
 import org.wso2.siddhi.core.executor.function.FunctionExecutor;
+import org.wso2.siddhi.core.util.config.ConfigReader;
 import org.wso2.siddhi.query.api.definition.Attribute;
-import org.wso2.siddhi.query.api.exception.ExecutionPlanValidationException;
+import org.wso2.siddhi.query.api.exception.SiddhiAppValidationException;
 
+import java.util.Map;
 import javax.measure.Unit;
 import javax.measure.UnitConverter;
 import javax.measure.quantity.Length;
@@ -34,6 +40,15 @@ import static tec.units.ri.unit.Units.METRE;
 /**
  * Siddhi Function for UnitConversion Centimetre to Foot
  */
+@Extension(
+        name = "cmToft",
+        namespace = "unitconversion",
+        description = "Converts the the input centimeters into feets",
+        returnAttributes = @ReturnAttribute(
+                description = "TBD",
+                type = {DataType.DOUBLE}),
+        examples = @Example(description = "TBD", syntax = "TBD")
+)
 public class CentimetreToFoot extends FunctionExecutor {
 
     private UnitConverter converter;
@@ -42,22 +57,23 @@ public class CentimetreToFoot extends FunctionExecutor {
      * The initialization method for CentimetreToFoot, this method will be called before the other methods
      *
      * @param attributeExpressionExecutors the executors of each function parameter
-     * @param executionPlanContext         the context of the execution plan
+     * @param siddhiAppContext         the context of the execution plan
      */
     @Override
-    protected void init(ExpressionExecutor[] attributeExpressionExecutors, ExecutionPlanContext executionPlanContext) {
-        Unit<Length> FOOT = METRE.multiply(3.048E-01);
-        converter = CENTI(METRE).getConverterTo(FOOT);
+    protected void init(ExpressionExecutor[] attributeExpressionExecutors, ConfigReader reader, SiddhiAppContext
+            siddhiAppContext) {
+        Unit<Length> foot = METRE.multiply(3.048E-01);
+        converter = CENTI(METRE).getConverterTo(foot);
         if (attributeExpressionExecutors.length != 1) {
-            throw new ExecutionPlanValidationException("Invalid no of arguments passed to unitconversion:CentimetreToFoot() function, " +
-                    "required 1, but found " + attributeExpressionExecutors.length);
+            throw new SiddhiAppValidationException("Invalid no of arguments passed to unitconversion:cmToft" +
+                    "() function, required 1, but found " + attributeExpressionExecutors.length);
         }
         Attribute.Type attributeType = attributeExpressionExecutors[0].getReturnType();
         if (!((attributeType == Attribute.Type.DOUBLE)
                 || (attributeType == Attribute.Type.INT)
                 || (attributeType == Attribute.Type.FLOAT)
                 || (attributeType == Attribute.Type.LONG))) {
-            throw new ExecutionPlanValidationException("Invalid parameter type found " +
+            throw new SiddhiAppValidationException("Invalid parameter type found " +
                     "for the argument of UnitConversion function, " +
                     "required " + Attribute.Type.INT + " or " + Attribute.Type.LONG +
                     " or " + Attribute.Type.FLOAT + " or " + Attribute.Type.DOUBLE +
@@ -91,7 +107,7 @@ public class CentimetreToFoot extends FunctionExecutor {
             //type-conversion
             return converter.convert((Number) data);
         } else {
-            throw new ExecutionPlanRuntimeException("Input to the UnitConversion function cannot be null");
+            throw new SiddhiAppRuntimeException("Input to the UnitConversion function cannot be null");
         }
     }
 
@@ -129,7 +145,7 @@ public class CentimetreToFoot extends FunctionExecutor {
      * @return stateful objects of the processing element as an array
      */
     @Override
-    public Object[] currentState() {
+    public Map<String, Object> currentState() {
         return null;
     }
 
@@ -141,7 +157,7 @@ public class CentimetreToFoot extends FunctionExecutor {
      *              the same order provided by currentState().
      */
     @Override
-    public void restoreState(Object[] state) {
+    public void restoreState(Map<String, Object> state) {
         //Implement restore state logic.
     }
 }
