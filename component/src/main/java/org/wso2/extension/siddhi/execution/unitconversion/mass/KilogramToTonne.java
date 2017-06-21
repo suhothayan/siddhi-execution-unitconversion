@@ -17,13 +17,19 @@
  */
 package org.wso2.extension.siddhi.execution.unitconversion.mass;
 
-import org.wso2.siddhi.core.config.ExecutionPlanContext;
-import org.wso2.siddhi.core.exception.ExecutionPlanRuntimeException;
+import org.wso2.siddhi.annotation.Example;
+import org.wso2.siddhi.annotation.Extension;
+import org.wso2.siddhi.annotation.ReturnAttribute;
+import org.wso2.siddhi.annotation.util.DataType;
+import org.wso2.siddhi.core.config.SiddhiAppContext;
+import org.wso2.siddhi.core.exception.SiddhiAppRuntimeException;
 import org.wso2.siddhi.core.executor.ExpressionExecutor;
 import org.wso2.siddhi.core.executor.function.FunctionExecutor;
+import org.wso2.siddhi.core.util.config.ConfigReader;
 import org.wso2.siddhi.query.api.definition.Attribute;
-import org.wso2.siddhi.query.api.exception.ExecutionPlanValidationException;
+import org.wso2.siddhi.query.api.exception.SiddhiAppValidationException;
 
+import java.util.Map;
 import javax.measure.Unit;
 import javax.measure.UnitConverter;
 import javax.measure.quantity.Mass;
@@ -33,6 +39,15 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 /**
  * Siddhi Function for UnitConversion Kilogram to Tonne
  */
+@Extension(
+        name = "kgTot",
+        namespace = "unitconversion",
+        description = "Converts the the input kilograms into Tonnes",
+        returnAttributes = @ReturnAttribute(
+                description = "TBD",
+                type = {DataType.DOUBLE}),
+        examples = @Example(description = "TBD", syntax = "TBD")
+)
 public class KilogramToTonne extends FunctionExecutor {
 
     private UnitConverter converter;
@@ -41,14 +56,16 @@ public class KilogramToTonne extends FunctionExecutor {
      * The initialization method for KilogramToTonne, this method will be called before the other methods
      *
      * @param attributeExpressionExecutors the executors of each function parameter
-     * @param executionPlanContext         the context of the execution plan
+     * @param siddhiAppContext         the context of the execution plan
      */
     @Override
-    protected void init(ExpressionExecutor[] attributeExpressionExecutors, ExecutionPlanContext executionPlanContext) {
-        Unit<Mass> TONNE = KILOGRAM.multiply(1000.0);
-        converter = KILOGRAM.getConverterTo(TONNE);
+    protected void init(ExpressionExecutor[] attributeExpressionExecutors, ConfigReader reader, SiddhiAppContext
+            siddhiAppContext) {
+        Unit<Mass> tonne = KILOGRAM.multiply(1000.0);
+        converter = KILOGRAM.getConverterTo(tonne);
         if (attributeExpressionExecutors.length != 1) {
-            throw new ExecutionPlanValidationException("Invalid no of arguments passed to unitconversion:KilogramToTonne() function, " +
+            throw new SiddhiAppValidationException(
+                    "Invalid no of arguments passed to unitconversion:kgTot() function, " +
                     "required 1, but found " + attributeExpressionExecutors.length);
         }
         Attribute.Type attributeType = attributeExpressionExecutors[0].getReturnType();
@@ -56,7 +73,7 @@ public class KilogramToTonne extends FunctionExecutor {
                 || (attributeType == Attribute.Type.INT)
                 || (attributeType == Attribute.Type.FLOAT)
                 || (attributeType == Attribute.Type.LONG))) {
-            throw new ExecutionPlanValidationException("Invalid parameter type found " +
+            throw new SiddhiAppValidationException("Invalid parameter type found " +
                     "for the argument of UnitConversion function, " +
                     "required " + Attribute.Type.INT + " or " + Attribute.Type.LONG +
                     " or " + Attribute.Type.FLOAT + " or " + Attribute.Type.DOUBLE +
@@ -90,7 +107,7 @@ public class KilogramToTonne extends FunctionExecutor {
             //type-conversion
             return converter.convert((Number) data);
         } else {
-            throw new ExecutionPlanRuntimeException("Input to the UnitConversion function cannot be null");
+            throw new SiddhiAppRuntimeException("Input to the UnitConversion function cannot be null");
         }
     }
 
@@ -128,7 +145,7 @@ public class KilogramToTonne extends FunctionExecutor {
      * @return stateful objects of the processing element as an array
      */
     @Override
-    public Object[] currentState() {
+    public Map<String, Object> currentState() {
         return null;
     }
 
@@ -140,7 +157,7 @@ public class KilogramToTonne extends FunctionExecutor {
      *              the same order provided by currentState().
      */
     @Override
-    public void restoreState(Object[] state) {
+    public void restoreState(Map<String, Object> state) {
         //Implement restore state logic.
     }
 }
