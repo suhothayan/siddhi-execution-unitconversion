@@ -19,6 +19,7 @@ package org.wso2.extension.siddhi.execution.unitconversion.length;
 
 import org.wso2.siddhi.annotation.Example;
 import org.wso2.siddhi.annotation.Extension;
+import org.wso2.siddhi.annotation.Parameter;
 import org.wso2.siddhi.annotation.ReturnAttribute;
 import org.wso2.siddhi.annotation.util.DataType;
 import org.wso2.siddhi.core.config.SiddhiAppContext;
@@ -43,6 +44,10 @@ import static tec.units.ri.unit.Units.METRE;
         name = "cmTomm",
         namespace = "unitconversion",
         description = "Converts the input centimeters into millimeters",
+        parameters = @Parameter(
+                name = "p1",
+                description = "The value needed to be converted from centimeters into millimeters",
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
                 description = "The value converted from centimeters to millimeters",
                 type = {DataType.DOUBLE}),

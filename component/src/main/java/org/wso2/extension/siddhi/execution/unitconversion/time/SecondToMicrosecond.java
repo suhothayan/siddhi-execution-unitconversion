@@ -19,6 +19,7 @@ package org.wso2.extension.siddhi.execution.unitconversion.time;
 
 import org.wso2.siddhi.annotation.Example;
 import org.wso2.siddhi.annotation.Extension;
+import org.wso2.siddhi.annotation.Parameter;
 import org.wso2.siddhi.annotation.ReturnAttribute;
 import org.wso2.siddhi.annotation.util.DataType;
 import org.wso2.siddhi.core.config.SiddhiAppContext;
@@ -42,6 +43,10 @@ import static tec.units.ri.unit.Units.SECOND;
         name = "sTous",
         namespace = "unitconversion",
         description = "Converts the input seconds into microseconds",
+        parameters = @Parameter(
+                name = "p1",
+                description = "The value needed to be converted from seconds into microseconds",
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
                 description = "The value converted from seconds to microseconds",
                 type = {DataType.DOUBLE}),

@@ -19,6 +19,7 @@ package org.wso2.extension.siddhi.execution.unitconversion.volume;
 
 import org.wso2.siddhi.annotation.Example;
 import org.wso2.siddhi.annotation.Extension;
+import org.wso2.siddhi.annotation.Parameter;
 import org.wso2.siddhi.annotation.ReturnAttribute;
 import org.wso2.siddhi.annotation.util.DataType;
 import org.wso2.siddhi.core.config.SiddhiAppContext;
@@ -42,6 +43,10 @@ import static tec.units.ri.unit.Units.LITRE;
         name = "lTom3",
         namespace = "unitconversion",
         description = "Converts the input liters into cubic meters",
+        parameters = @Parameter(
+                name = "p1",
+                description = "The value needed to be converted from liters into cubic meters",
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
                 description = "The value converted from liters to cubic meters",
                 type = {DataType.DOUBLE}),
