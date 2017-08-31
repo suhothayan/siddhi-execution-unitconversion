@@ -43,9 +43,16 @@ import static tec.units.ri.unit.Units.SECOND;
         namespace = "unitconversion",
         description = "Converts the the input hours into seconds",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from hours to seconds",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The hour values from UnitConversionForHourToSecondStream will be " +
+                        "converted to seconds and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForHourToSecondStream (inValue int); \n" +
+                        "from UnitConversionForHourToSecondStream \n" +
+                        "select unitconversion:hTos(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class HourToSecond extends FunctionExecutor {
 

@@ -41,11 +41,18 @@ import static tec.units.ri.unit.Units.GRAM;
 @Extension(
         name = "gToug",
         namespace = "unitconversion",
-        description = "Converts the the input grams into micrograms",
+        description = "Converts the input grams into micrograms",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from grams to micrograms",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The gram values from UnitConversionForGramToMicrogramStream will be " +
+                        "converted to micrograms and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForGramToMicrogramStream (inValue int); \n" +
+                        "from UnitConversionForGramToMicrogramStream \n" +
+                        "select unitconversion:gToug(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class GramToMicrogram extends FunctionExecutor {
 

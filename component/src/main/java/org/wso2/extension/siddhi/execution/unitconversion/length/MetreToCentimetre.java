@@ -43,9 +43,16 @@ import static tec.units.ri.unit.Units.METRE;
         namespace = "unitconversion",
         description = "Converts the the input meters into centimeters",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from meters to centimeters",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The meter values from UnitConversionForMetreToCentimetreStream will be " +
+                        "converted to centimeters and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForMetreToCentimetreStream (inValue int); \n" +
+                        "from UnitConversionForMetreToCentimetreStream \n" +
+                        "select unitconversion:mTocm(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class MetreToCentimetre extends FunctionExecutor {
 

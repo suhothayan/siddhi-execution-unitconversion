@@ -43,11 +43,18 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmToyd",
         namespace = "unitconversion",
-        description = "Converts the the input kilometers into yards",
+        description = "Converts the input kilometers into yards",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from kilometers to yards",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The kilometer values from UnitConversionForKilometreToYardStream will be " +
+                        "converted to yards and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForKilometreToYardStream (inValue int); \n" +
+                        "from UnitConversionForKilometreToYardStream \n" +
+                        "select unitconversion:kmToyd(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class KilometreToYard extends FunctionExecutor {
 

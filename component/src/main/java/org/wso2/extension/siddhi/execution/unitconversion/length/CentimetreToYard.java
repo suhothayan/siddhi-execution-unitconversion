@@ -43,11 +43,18 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmToyd",
         namespace = "unitconversion",
-        description = "Converts the the input centimeters into yards",
+        description = "Converts the input centimeters into yards",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from centimeters to yards",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The centimeter values from UnitConversionForCentimetreToYardStream will be " +
+                        "converted to yards and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForCentimetreToYardStream (inValue int); \n" +
+                        "from UnitConversionForCentimetreToYardStream \n" +
+                        "select unitconversion:cmToyd(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class CentimetreToYard extends FunctionExecutor {
 

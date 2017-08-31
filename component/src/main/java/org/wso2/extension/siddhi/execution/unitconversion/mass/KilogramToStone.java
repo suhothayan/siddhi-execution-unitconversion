@@ -42,11 +42,18 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "kgTost",
         namespace = "unitconversion",
-        description = "Converts the the input kilograms into  imperial stones",
+        description = "Converts the input kilograms into imperial stones",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from kilograms to imperial stones",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The kilogram values from UnitConversionForKilogramToStonemStream will be " +
+                        "converted to imperial stones and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForKilogramToStonemStream (inValue int); \n" +
+                        "from UnitConversionForKilogramToStonemStream \n" +
+                        "select unitconversion:kgTost(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class KilogramToStone extends FunctionExecutor {
 

@@ -41,11 +41,18 @@ import static tec.units.ri.unit.Units.SECOND;
 @Extension(
         name = "sToms",
         namespace = "unitconversion",
-        description = "Converts the the input seconds into milliseconds",
+        description = "Converts the input seconds into milliseconds",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from seconds to milliseconds",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The second values from UnitConversionForSecondToMillisecondStream will be " +
+                        "converted to milliseconds and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForSecondToMillisecondStream (inValue int); \n" +
+                        "from UnitConversionForSecondToMillisecondStream \n" +
+                        "select unitconversion:sToms(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class SecondToMillisecond extends FunctionExecutor {
 

@@ -43,11 +43,18 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmToin",
         namespace = "unitconversion",
-        description = "Converts the the input kilometers into Inches",
+        description = "Converts the input kilometers into inches",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from kilometers to inches",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The kilometer values from UnitConversionForKilometreToInchStream will be " +
+                        "converted to inches and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForKilometreToInchStream (inValue int); \n" +
+                        "from UnitConversionForKilometreToInchStream \n" +
+                        "select unitconversion:kmToin(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class KilometreToInch extends FunctionExecutor {
 

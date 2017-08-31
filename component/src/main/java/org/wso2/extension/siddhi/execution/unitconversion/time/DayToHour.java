@@ -41,11 +41,18 @@ import static tec.units.ri.unit.Units.HOUR;
 @Extension(
         name = "dToh",
         namespace = "unitconversion",
-        description = "Converts the the input days into hours",
+        description = "Converts the input days into hours",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from days to hours",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The day values from UnitConversionForDayToHourStream will be " +
+                        "converted to hours and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForDayToHourStream (inValue int); \n" +
+                        "from UnitConversionForDayToHourStream \n" +
+                        "select unitconversion:dToh(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class DayToHour extends FunctionExecutor {
 

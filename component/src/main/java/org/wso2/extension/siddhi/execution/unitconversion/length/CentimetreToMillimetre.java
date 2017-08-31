@@ -42,11 +42,18 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmTomm",
         namespace = "unitconversion",
-        description = "Converts the the input centimeters into millimeters",
+        description = "Converts the input centimeters into millimeters",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from centimeters to millimeters",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The centimeter values from UnitConversionForCentimetreToMillimetreStream will be " +
+                        "converted to millimeters and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForCentimetreToMillimetreStream (inValue int); \n" +
+                        "from UnitConversionForCentimetreToMillimetreStream \n" +
+                        "select unitconversion:cmTomm(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class CentimetreToMillimetre extends FunctionExecutor {
 

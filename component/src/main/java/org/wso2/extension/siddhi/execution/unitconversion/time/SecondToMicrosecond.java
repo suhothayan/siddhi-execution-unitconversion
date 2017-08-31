@@ -43,9 +43,16 @@ import static tec.units.ri.unit.Units.SECOND;
         namespace = "unitconversion",
         description = "Converts the the input seconds into microseconds",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from seconds to microseconds",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The second values from UnitConversionForSecondToMicrosecondStream will be " +
+                        "converted to microseconds and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForSecondToMicrosecondStream (inValue int); \n" +
+                        "from UnitConversionForSecondToMicrosecondStream \n" +
+                        "select unitconversion:sTous(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class SecondToMicrosecond extends FunctionExecutor {
 

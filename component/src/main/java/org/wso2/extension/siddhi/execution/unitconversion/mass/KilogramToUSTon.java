@@ -42,11 +42,18 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "kgToST",
         namespace = "unitconversion",
-        description = "Converts the the input kilograms into US tons",
+        description = "Converts the input kilograms into US tons",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from kilograms to US tons",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The kilogram values from UnitConversionForKilogramToUSTonStream will be " +
+                        "converted to US tons and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForKilogramToUSTonStream (inValue int); \n" +
+                        "from UnitConversionForKilogramToUSTonStream \n" +
+                        "select unitconversion:kgToST(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class KilogramToUSTon extends FunctionExecutor {
 

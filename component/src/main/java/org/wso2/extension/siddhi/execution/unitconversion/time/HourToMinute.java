@@ -41,11 +41,18 @@ import static tec.units.ri.unit.Units.MINUTE;
 @Extension(
         name = "hTom",
         namespace = "unitconversion",
-        description = "Converts the the input hours into minutes",
+        description = "Converts the input hours into minutes",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from hours to minutes",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The hour values from UnitConversionForHourToMinuteStream will be " +
+                        "converted to minutes and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForHourToMinuteStream (inValue int); \n" +
+                        "from UnitConversionForHourToMinuteStream \n" +
+                        "select unitconversion:hTom(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class HourToMinute extends FunctionExecutor {
 
