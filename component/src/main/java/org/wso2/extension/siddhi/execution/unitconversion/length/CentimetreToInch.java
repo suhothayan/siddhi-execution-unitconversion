@@ -44,11 +44,18 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmToin",
         namespace = "unitconversion",
-        description = "Converts the the input centimeters into inches",
+        description = "Converts the input centimeters into inches",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from centimeters to inches",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The centimeter values from UnitConversionForCentimetreToInchStream will be " +
+                        "converted to inches and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForCentimetreToInchStream (inValue int); \n" +
+                        "from UnitConversionForCentimetreToInchStream \n" +
+                        "select unitconversion:cmToin(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class CentimetreToInch extends FunctionExecutor {
 

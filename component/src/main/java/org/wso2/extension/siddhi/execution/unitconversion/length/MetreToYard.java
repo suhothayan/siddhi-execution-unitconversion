@@ -42,11 +42,18 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "mToyd",
         namespace = "unitconversion",
-        description = "Converts the the input meters into yards",
+        description = "Converts the input meters into yards",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from meters to yards",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The meter values from UnitConversionForMetreToYardStream will be " +
+                        "converted to yards and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForMetreToYardStream (inValue int); \n" +
+                        "from UnitConversionForMetreToYardStream \n" +
+                        "select unitconversion:mToyd(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class MetreToYard extends FunctionExecutor {
 

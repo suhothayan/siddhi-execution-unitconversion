@@ -41,12 +41,20 @@ import static tec.units.ri.unit.Units.GRAM;
 @Extension(
         name = "gTomg",
         namespace = "unitconversion",
-        description = "Converts the the input grams into milligrams",
+        description = "Converts the input grams into milligrams",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from grams to milligrams",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The gram values from UnitConversionForGramToMilligramStream will be " +
+                        "converted to milligrams and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForGramToMilligramStream (inValue int); \n" +
+                        "from UnitConversionForGramToMilligramStream \n" +
+                        "select unitconversion:gTomg(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
+
 public class GramToMilligram extends FunctionExecutor {
 
     private UnitConverter converter;

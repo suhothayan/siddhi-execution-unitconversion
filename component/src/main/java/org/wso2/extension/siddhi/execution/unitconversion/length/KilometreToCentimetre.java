@@ -42,11 +42,18 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmTocm",
         namespace = "unitconversion",
-        description = "Converts the the input kilometers into centimeters",
+        description = "Converts the input kilometers into centimeters",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from kilometers to centimeters",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The kilometer values from UnitConversionForKilometreToCentimetreStream will be " +
+                        "converted to centimeters and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForKilometreToCentimetreStream (inValue int); \n" +
+                        "from UnitConversionForKilometreToCentimetreStream \n" +
+                        "select unitconversion:kmTocm(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class KilometreToCentimetre extends FunctionExecutor {
 

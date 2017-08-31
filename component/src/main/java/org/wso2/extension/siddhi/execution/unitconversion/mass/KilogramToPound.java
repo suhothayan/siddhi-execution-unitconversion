@@ -42,11 +42,18 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "kgTolb",
         namespace = "unitconversion",
-        description = "Converts the the input kilograms into pounds",
+        description = "Converts the input kilograms into pounds",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from kilograms to pounds",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The kilogram values from UnitConversionForKilogramToPoundStream will be " +
+                        "converted to pounds and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForKilogramToPoundStream (inValue int); \n" +
+                        "from UnitConversionForKilogramToPoundStream \n" +
+                        "select unitconversion:kgTolb(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class KilogramToPound extends FunctionExecutor {
 

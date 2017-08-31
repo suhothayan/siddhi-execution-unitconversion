@@ -45,11 +45,18 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmTomi",
         namespace = "unitconversion",
-        description = "Converts the the input centimeters into miles",
+        description = "Converts the input centimeters into miles",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from centimeters to miles",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The centimeter values from UnitConversionForCentimetreToMileStream will be " +
+                        "converted to miles and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForCentimetreToMileStream (inValue int); \n" +
+                        "from UnitConversionForCentimetreToMileStream \n" +
+                        "select unitconversion:cmTomi(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class CentimetreToMile extends FunctionExecutor {
 

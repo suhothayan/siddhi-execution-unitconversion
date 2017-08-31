@@ -41,11 +41,18 @@ import static tec.units.ri.unit.Units.LITRE;
 @Extension(
         name = "lTom3",
         namespace = "unitconversion",
-        description = "Converts the the input liters into cubic meters",
+        description = "Converts the input liters into cubic meters",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from liters to cubic meters",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The liter values from UnitConversionForLitreToCubicmetreStream will be " +
+                        "converted to cubic meters and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForLitreToCubicmetreStream (inValue int); \n" +
+                        "from UnitConversionForLitreToCubicmetreStream \n" +
+                        "select unitconversion:lTom3(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class LitreToCubicmetre extends FunctionExecutor {
 

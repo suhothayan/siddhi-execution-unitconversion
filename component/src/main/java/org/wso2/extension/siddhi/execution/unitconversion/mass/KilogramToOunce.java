@@ -42,11 +42,18 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "kgTooz",
         namespace = "unitconversion",
-        description = "Converts the the input kilograms into ounces",
+        description = "Converts the input kilograms into ounces",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from kilograms to ounces",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The kilogram values from UnitConversionForKilogramToOunceStream will be " +
+                        "converted to ounces and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForKilogramToOunceStream (inValue int); \n" +
+                        "from UnitConversionForKilogramToOunceStream \n" +
+                        "select unitconversion:kgTooz(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class KilogramToOunce extends FunctionExecutor {
 

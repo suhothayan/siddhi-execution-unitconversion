@@ -41,11 +41,18 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "kgTog",
         namespace = "unitconversion",
-        description = "Converts the the input kilograms into grams",
+        description = "Converts the input kilograms into grams",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from kilograms to grams",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The kilogram values from UnitConversionForKilogramToGramStream will be " +
+                        "converted to grams and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForKilogramToGramStream (inValue int); \n" +
+                        "from UnitConversionForKilogramToGramStream \n" +
+                        "select unitconversion:kgTog(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class KilogramToGram extends FunctionExecutor {
 

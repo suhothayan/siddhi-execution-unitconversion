@@ -41,11 +41,18 @@ import static tec.units.ri.unit.Units.YEAR;
 @Extension(
         name = "yTod",
         namespace = "unitconversion",
-        description = "Converts the the input years into days",
+        description = "Converts the input years into days",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from years to days",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The year values from UnitConversionForYearToDayStream will be " +
+                        "converted to days and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForYearToDayStream (inValue int); \n" +
+                        "from UnitConversionForYearToDayStream \n" +
+                        "select unitconversion:yTod(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class YearToDay extends FunctionExecutor {
 

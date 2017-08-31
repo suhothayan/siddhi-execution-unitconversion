@@ -42,11 +42,18 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmToum",
         namespace = "unitconversion",
-        description = "Converts the the input kilometers into micrometers",
+        description = "Converts the input kilometers into micrometers",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from kilometers to micrometers",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The kilometer values from UnitConversionForKilometreToMicrometreStream will be " +
+                        "converted to micrometers and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForKilometreToMicrometreStream (inValue int); \n" +
+                        "from UnitConversionForKilometreToMicrometreStream \n" +
+                        "select unitconversion:kmToum(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class KilometreToMicrometre extends FunctionExecutor {
 

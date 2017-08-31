@@ -41,11 +41,18 @@ import static tec.units.ri.unit.Units.LITRE;
 @Extension(
         name = "lToml",
         namespace = "unitconversion",
-        description = "Converts the the input liters into milliliters",
+        description = "Converts the input liters into milliliters",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from liters to milliliters",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The liter values from UnitConversionForLitreToMillilitreStream will be " +
+                        "converted to milliliters and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForLitreToMillilitreStream (inValue int); \n" +
+                        "from UnitConversionForLitreToMillilitreStream \n" +
+                        "select unitconversion:lToml(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class LitreToMillilitre extends FunctionExecutor {
 

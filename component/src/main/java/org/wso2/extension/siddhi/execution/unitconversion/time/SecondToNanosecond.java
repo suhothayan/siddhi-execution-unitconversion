@@ -41,11 +41,18 @@ import static tec.units.ri.unit.Units.SECOND;
 @Extension(
         name = "sTons",
         namespace = "unitconversion",
-        description = "Converts the the input seconds into nanoseconds",
+        description = "Converts the input seconds into nanoseconds",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from seconds to nanoseconds",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The second values from UnitConversionForSecondToNanosecondStream will be " +
+                        "converted to nanoseconds and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForSecondToNanosecondStream (inValue int); \n" +
+                        "from UnitConversionForSecondToNanosecondStream \n" +
+                        "select unitconversion:sTons(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class SecondToNanosecond extends FunctionExecutor {
 

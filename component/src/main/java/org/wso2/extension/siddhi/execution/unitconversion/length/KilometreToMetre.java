@@ -41,11 +41,18 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmTom",
         namespace = "unitconversion",
-        description = "Converts the the input kilometers into meters",
+        description = "Converts the input kilometers into meters",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from kilometers to meters",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The kilometer values from UnitConversionForKilometreToMetreStream will be " +
+                        "converted to meters and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForKilometreToMetreStream (inValue int); \n" +
+                        "from UnitConversionForKilometreToMetreStream \n" +
+                        "select unitconversion:kmTom(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class KilometreToMetre extends FunctionExecutor {
 

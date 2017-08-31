@@ -42,11 +42,18 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmTonm",
         namespace = "unitconversion",
-        description = "Converts the the input centimeters into nanometers",
+        description = "Converts the input centimeters into nanometers",
         returnAttributes = @ReturnAttribute(
-                description = "TBD",
+                description = "The value converted from centimeters to nanometers",
                 type = {DataType.DOUBLE}),
-        examples = @Example(description = "TBD", syntax = "TBD")
+        examples = @Example(
+                description = "The centimeter values from UnitConversionForCentimetreToNanometreStream will be " +
+                        "converted to nanometers and inserted in to the OutMediationStream",
+                syntax = "define stream UnitConversionForCentimetreToNanometreStream (inValue int); \n" +
+                        "from UnitConversionForCentimetreToNanometreStream \n" +
+                        "select unitconversion:cmTonm(inValue) as UnitConversionValue \n" +
+                        "insert into OutMediationStream;"
+        )
 )
 public class CentimetreToNanometre extends FunctionExecutor {
 
