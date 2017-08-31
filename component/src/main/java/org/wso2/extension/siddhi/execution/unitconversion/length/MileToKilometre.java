@@ -19,6 +19,7 @@ package org.wso2.extension.siddhi.execution.unitconversion.length;
 
 import org.wso2.siddhi.annotation.Example;
 import org.wso2.siddhi.annotation.Extension;
+import org.wso2.siddhi.annotation.Parameter;
 import org.wso2.siddhi.annotation.ReturnAttribute;
 import org.wso2.siddhi.annotation.util.DataType;
 import org.wso2.siddhi.core.config.SiddhiAppContext;
@@ -44,6 +45,10 @@ import static tec.units.ri.unit.Units.METRE;
         name = "miTokm",
         namespace = "unitconversion",
         description = "Converts the input miles into kilometers",
+        parameters = @Parameter(
+                name = "p1",
+                description = "The value needed to be converted from miles into kilometers",
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
                 description = "The value converted from miles to kilometers",
                 type = {DataType.DOUBLE}),

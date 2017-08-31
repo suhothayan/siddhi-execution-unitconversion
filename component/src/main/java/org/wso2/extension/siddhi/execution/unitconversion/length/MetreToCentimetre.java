@@ -19,6 +19,7 @@ package org.wso2.extension.siddhi.execution.unitconversion.length;
 
 import org.wso2.siddhi.annotation.Example;
 import org.wso2.siddhi.annotation.Extension;
+import org.wso2.siddhi.annotation.Parameter;
 import org.wso2.siddhi.annotation.ReturnAttribute;
 import org.wso2.siddhi.annotation.util.DataType;
 import org.wso2.siddhi.core.config.SiddhiAppContext;
@@ -42,6 +43,10 @@ import static tec.units.ri.unit.Units.METRE;
         name = "mTocm",
         namespace = "unitconversion",
         description = "Converts the input meters into centimeters",
+        parameters = @Parameter(
+                name = "p1",
+                description = "The value needed to be converted from meters into centimeters",
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
                 description = "The value converted from meters to centimeters",
                 type = {DataType.DOUBLE}),
