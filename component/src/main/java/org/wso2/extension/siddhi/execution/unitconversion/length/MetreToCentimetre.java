@@ -41,7 +41,7 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "mTocm",
         namespace = "unitconversion",
-        description = "Converts the the input meters into centimeters",
+        description = "Converts the input meters into centimeters",
         returnAttributes = @ReturnAttribute(
                 description = "The value converted from meters to centimeters",
                 type = {DataType.DOUBLE}),

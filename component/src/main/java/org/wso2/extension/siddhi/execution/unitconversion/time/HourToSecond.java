@@ -41,7 +41,7 @@ import static tec.units.ri.unit.Units.SECOND;
 @Extension(
         name = "hTos",
         namespace = "unitconversion",
-        description = "Converts the the input hours into seconds",
+        description = "Converts the input hours into seconds",
         returnAttributes = @ReturnAttribute(
                 description = "The value converted from hours to seconds",
                 type = {DataType.DOUBLE}),

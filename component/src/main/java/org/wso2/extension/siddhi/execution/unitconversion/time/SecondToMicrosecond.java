@@ -41,7 +41,7 @@ import static tec.units.ri.unit.Units.SECOND;
 @Extension(
         name = "sTous",
         namespace = "unitconversion",
-        description = "Converts the the input seconds into microseconds",
+        description = "Converts the input seconds into microseconds",
         returnAttributes = @ReturnAttribute(
                 description = "The value converted from seconds to microseconds",
                 type = {DataType.DOUBLE}),
