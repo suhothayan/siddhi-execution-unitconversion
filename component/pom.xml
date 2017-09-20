@@ -76,6 +76,7 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Private-Package>
+                            tec.units.ri.*,
                         </Private-Package>
                         <Export-Package>
                             !tec.units.ri.*,
@@ -83,7 +84,6 @@
                             org.wso2.extension.siddhi.execution.unitconversion.*
                         </Export-Package>
                         <Import-Package>
-                            tec.units.ri.*,
                             *;resolution:=optional
                         </Import-Package>
                         <Include-Resource>
