@@ -121,32 +121,10 @@ public class DayToHour extends FunctionExecutor {
         }
     }
 
-    /**
-     * This will be called only once and this can be used to acquire
-     * required resources for the processing element.
-     * This will be called after initializing the system and before
-     * starting to process the events.
-     */
-    @Override
-    public void start() {
-        //Implement start logic to acquire relevant resources
-    }
-
-    /**
-     * This will be called only once and this can be used to release
-     * the acquired resources for processing.
-     * This will be called before shutting down the system.
-     */
-    @Override
-    public void stop() {
-        //Implement stop logic to release the acquired resources
-    }
-
     @Override
     public Attribute.Type getReturnType() {
         return Attribute.Type.DOUBLE;
     }
-
 
     /**
      * Used to collect the serializable state of the processing element, that need to be
