@@ -44,7 +44,7 @@
         <siddhi.version>4.0.0-M89</siddhi.version>
         <log4j.version>1.2.17.wso2v1</log4j.version>
         <testng.version>6.11</testng.version>
-        <jacoco.maven.version>0.7.8</jacoco.maven.version>
+        <jacoco.maven.version>0.7.9</jacoco.maven.version>
         <unit.api.version>0.8</unit.api.version>
         <tec.unit.version>0.8</tec.unit.version>
     </properties>
