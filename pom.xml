@@ -47,6 +47,8 @@
         <jacoco.maven.version>0.7.9</jacoco.maven.version>
         <unit.api.version>0.8</unit.api.version>
         <tec.unit.version>0.8</tec.unit.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     <scm>
         <connection>scm:git:https://github.com/wso2-extensions/siddhi-execution-unitconversion.git

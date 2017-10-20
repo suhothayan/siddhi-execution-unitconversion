@@ -20,9 +20,12 @@ package org.wso2.extension.siddhi.execution.test.length;
 import org.apache.log4j.Logger;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
+import org.wso2.extension.siddhi.execution.test.util.UnitTestAppender;
 import org.wso2.siddhi.core.SiddhiAppRuntime;
 import org.wso2.siddhi.core.SiddhiManager;
 import org.wso2.siddhi.core.event.Event;
+import org.wso2.siddhi.core.exception.SiddhiAppCreationException;
+import org.wso2.siddhi.core.executor.function.FunctionExecutor;
 import org.wso2.siddhi.core.query.output.callback.QueryCallback;
 import org.wso2.siddhi.core.stream.input.InputHandler;
 import org.wso2.siddhi.core.util.EventPrinter;
@@ -61,7 +64,8 @@ public class MegametreToKilometreTestCase {
                 }
             }
         });
-        InputHandler inputHandler = siddhiAppRuntime.getInputHandler("UnitConversionForMegametreToKilometreStream");
+        InputHandler inputHandler = siddhiAppRuntime.getInputHandler
+                ("UnitConversionForMegametreToKilometreStream");
         siddhiAppRuntime.start();
         inputHandler.send(new Object[]{1.0});
         Thread.sleep(100);
@@ -94,7 +98,8 @@ public class MegametreToKilometreTestCase {
                 }
             }
         });
-        InputHandler inputHandler = siddhiAppRuntime.getInputHandler("UnitConversionForMegametreToKilometreStream");
+        InputHandler inputHandler = siddhiAppRuntime.getInputHandler
+                ("UnitConversionForMegametreToKilometreStream");
         siddhiAppRuntime.start();
         inputHandler.send(new Object[]{0});
         Thread.sleep(100);
@@ -127,10 +132,63 @@ public class MegametreToKilometreTestCase {
                 }
             }
         });
-        InputHandler inputHandler = siddhiAppRuntime.getInputHandler("UnitConversionForMegametreToKilometreStream");
+        InputHandler inputHandler = siddhiAppRuntime.getInputHandler
+                ("UnitConversionForMegametreToKilometreStream");
         siddhiAppRuntime.start();
         inputHandler.send(new Object[]{2147483647});
         Thread.sleep(100);
         siddhiAppRuntime.shutdown();
     }
+
+    @Test (expectedExceptions = SiddhiAppCreationException.class)
+    public void testProcessForMegametreToKilometre4() throws Exception {
+        logger.info("UnitConversionForMegametreToKilometreFunctionExtension4 TestCase");
+        siddhiManager = new SiddhiManager();
+        String siddhiApp = "define stream UnitConversionForMegametreToKilometreStream (inValue int); ";
+
+        String eventFuseSiddhiApp = ("@info(name = 'query1') from UnitConversionForMegametreToKilometreStream "
+                + " select unitconversion:MmTokm() "
+                + "as UnitConversionValue "
+                + " insert into OutMediationStream;");
+        siddhiManager.createSiddhiAppRuntime(siddhiApp + eventFuseSiddhiApp);
+    }
+
+    @Test (expectedExceptions = SiddhiAppCreationException.class)
+    public void testProcessForMegametreToKilometre5() throws Exception {
+        logger.info("UnitConversionForMegametreToKilometreFunctionExtension5 TestCase");
+        siddhiManager = new SiddhiManager();
+        String siddhiApp = "define stream UnitConversionForMegametreToKilometreStream (inValue string); ";
+
+        String eventFuseSiddhiApp = ("@info(name = 'query1') from UnitConversionForMegametreToKilometreStream "
+                + " select unitconversion:MmTokm(inValue) "
+                + "as UnitConversionValue "
+                + " insert into OutMediationStream;");
+        siddhiManager.createSiddhiAppRuntime(siddhiApp + eventFuseSiddhiApp);
+    }
+
+    @Test
+    public void testProcessForMegametreToKilometre6() throws Exception {
+        logger.info("UnitConversionForMegametreToKilometreFunctionExtension6 TestCase");
+        logger = Logger.getLogger(FunctionExecutor.class);
+        UnitTestAppender appender = new UnitTestAppender();
+        logger.addAppender(appender);
+        siddhiManager = new SiddhiManager();
+        String siddhiApp = "define stream UnitConversionForMegametreToKilometreStream (inValue int); ";
+
+        String eventFuseSiddhiApp = ("@info(name = 'query1') from UnitConversionForMegametreToKilometreStream "
+                + " select unitconversion:MmTokm(inValue) "
+                + "as UnitConversionValue "
+                + " insert into OutMediationStream;");
+        SiddhiAppRuntime siddhiAppRuntime = siddhiManager
+                .createSiddhiAppRuntime(siddhiApp + eventFuseSiddhiApp);
+
+        InputHandler inputHandler = siddhiAppRuntime.getInputHandler
+                ("UnitConversionForMegametreToKilometreStream");
+        siddhiAppRuntime.start();
+        inputHandler.send(new Object[]{null});
+        AssertJUnit.assertTrue(appender.getMessages().contains("Input to the UnitConversion function "
+                                                                       + "cannot be null"));
+        siddhiAppRuntime.shutdown();
+    }
+
 }

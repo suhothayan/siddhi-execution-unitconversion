@@ -20,9 +20,12 @@ package org.wso2.extension.siddhi.execution.test.mass;
 import org.apache.log4j.Logger;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
+import org.wso2.extension.siddhi.execution.test.util.UnitTestAppender;
 import org.wso2.siddhi.core.SiddhiAppRuntime;
 import org.wso2.siddhi.core.SiddhiManager;
 import org.wso2.siddhi.core.event.Event;
+import org.wso2.siddhi.core.exception.SiddhiAppCreationException;
+import org.wso2.siddhi.core.executor.function.FunctionExecutor;
 import org.wso2.siddhi.core.query.output.callback.QueryCallback;
 import org.wso2.siddhi.core.stream.input.InputHandler;
 import org.wso2.siddhi.core.util.EventPrinter;
@@ -133,4 +136,55 @@ public class KilogramToPoundTestCase {
         Thread.sleep(100);
         siddhiAppRuntime.shutdown();
     }
+
+    @Test(expectedExceptions = SiddhiAppCreationException.class)
+    public void testProcessForKilogramToPound4() throws Exception {
+        logger.info("UnitConversionForKilogramToPoundFunctionExtension4 TestCase");
+        siddhiManager = new SiddhiManager();
+        String siddhiApp = "define stream UnitConversionForKilogramToPoundStream (inValue int); ";
+
+        String eventFuseSiddhiApp = ("@info(name = 'query1') from UnitConversionForKilogramToPoundStream "
+                + " select unitconversion:kgTolb() "
+                + "as UnitConversionValue "
+                + " insert into OutMediationStream;");
+        siddhiManager.createSiddhiAppRuntime(siddhiApp + eventFuseSiddhiApp);
+    }
+
+    @Test(expectedExceptions = SiddhiAppCreationException.class)
+    public void testProcessForKilogramToPound5() throws Exception {
+        logger.info("UnitConversionForKilogramToPoundFunctionExtension5 TestCase");
+        siddhiManager = new SiddhiManager();
+        String siddhiApp = "define stream UnitConversionForKilogramToPoundStream (inValue string); ";
+
+        String eventFuseSiddhiApp = ("@info(name = 'query1') from UnitConversionForKilogramToPoundStream "
+                + " select unitconversion:kgTolb(inValue) "
+                + "as UnitConversionValue "
+                + " insert into OutMediationStream;");
+        siddhiManager.createSiddhiAppRuntime(siddhiApp + eventFuseSiddhiApp);
+    }
+
+    @Test
+    public void testProcessForKilogramToPound6() throws Exception {
+        logger.info("UnitConversionForKilogramToPoundFunctionExtension6 TestCase");
+        logger = Logger.getLogger(FunctionExecutor.class);
+        UnitTestAppender appender = new UnitTestAppender();
+        logger.addAppender(appender);
+        siddhiManager = new SiddhiManager();
+        String siddhiApp = "define stream UnitConversionForKilogramToPoundStream (inValue int); ";
+
+        String eventFuseSiddhiApp = ("@info(name = 'query1') from UnitConversionForKilogramToPoundStream "
+                + " select unitconversion:kgTolb(inValue) "
+                + "as UnitConversionValue "
+                + " insert into OutMediationStream;");
+        SiddhiAppRuntime siddhiAppRuntime = siddhiManager
+                .createSiddhiAppRuntime(siddhiApp + eventFuseSiddhiApp);
+
+        InputHandler inputHandler = siddhiAppRuntime.getInputHandler("UnitConversionForKilogramToPoundStream");
+        siddhiAppRuntime.start();
+        inputHandler.send(new Object[]{null});
+        AssertJUnit.assertTrue(appender.getMessages().contains("Input to the UnitConversion function "
+                                                                       + "cannot be null"));
+        siddhiAppRuntime.shutdown();
+    }
+
 }
