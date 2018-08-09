@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
@@ -10,9 +13,26 @@
       
       
       
-        <link rel="shortcut icon" href="./images/favicon.ico">
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.3">
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="./assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.2">
     
     
       
@@ -20,34 +40,28 @@
       
     
     
-      <script src="./assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="./assets/stylesheets/application-9011e2d3f8.css">
+      <link rel="stylesheet" href="./assets/stylesheets/application.ba0fd1a6.css">
       
-        <link rel="stylesheet" href="./assets/stylesheets/application-23f75ab9c7.palette.css">
       
     
     
+      <script src="./assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <link rel="stylesheet" href="./assets/fonts/material-icons.css">
     
       <link rel="stylesheet" href="./stylesheets/extra.css">
     
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="teal" data-md-color-accent="teal">
+    <body dir="ltr">
   
     <svg class="md-svg">
       <defs>
@@ -55,9 +69,14 @@
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#siddhi-execution-unitconversion" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -65,41 +84,46 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="." title="Siddhi-Execution-Unitconversion" class="md-header-nav__button md-logo">
           
-            
-              <img src="./images/siddhi-logo-w.svg" width="24" height="24">
-            
+            <i class="md-icon"></i>
           
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
+              <span class="md-header-nav__topic">
+                Siddhi-Execution-Unitconversion
+              </span>
+              <span class="md-header-nav__topic">
+                Welcome to WSO2 Siddhi Execution Unitconversion
+              </span>
             
-            Welcome to WSO2 Siddhi Execution Unitconversion
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -108,6 +132,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -117,6 +142,7 @@
     
     <div class="md-container">
       
+        
       
       
       <main class="md-main">
@@ -127,14 +153,12 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
       
-        
-          <img src="./images/siddhi-logo-w.svg">
-        
+        <i class="md-icon"></i>
       
-    </div>
+    </span>
     Siddhi-Execution-Unitconversion
   </label>
   
@@ -149,12 +173,12 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         Welcome to WSO2 Siddhi Execution Unitconversion
       </label>
     
@@ -169,7 +193,7 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -223,6 +247,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -248,6 +274,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="api/1.0.13/" title="1.0.13" class="md-nav__link">
+      1.0.13
+    </a>
+  </li>
+
         
           
           
@@ -391,7 +429,7 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -445,6 +483,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -467,7 +507,7 @@
 <li><a target="_blank" href="https://github.com/wso2-extensions/siddhi-execution-unitconversion/issues">Issue tracker</a></li>
 </ul>
 <h2 id="latest-api-docs">Latest API Docs</h2>
-<p>Latest API Docs is <a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12">1.0.12</a>.</p>
+<p>Latest API Docs is <a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13">1.0.13</a>.</p>
 <h2 id="how-to-use">How to use</h2>
 <p><strong>Using the extension in <a target="_blank" href="https://github.com/wso2/product-sp">WSO2 Stream Processor</a></strong></p>
 <ul>
@@ -508,54 +548,54 @@
 <hr />
 <h2 id="features">Features</h2>
 <ul>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#mmtokm-function">MmTokm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input megameters into kilometers</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#cmtoft-function">cmToft</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into feet</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#cmtoin-function">cmToin</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into inches</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#cmtokm-function">cmTokm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into kilometers</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#cmtom-function">cmTom</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into meters</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#cmtomi-function">cmTomi</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into miles</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#cmtomm-function">cmTomm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into millimeters</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#cmtonm-function">cmTonm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into nanometers</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#cmtoum-function">cmToum</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into micrometers</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#cmtoyd-function">cmToyd</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into yards</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#dtoh-function">dToh</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input days into hours</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#gtokg-function">gTokg</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input grams into kilograms</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#gtomg-function">gTomg</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input grams into milligrams</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#gtoug-function">gToug</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input grams into micrograms</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#htom-function">hTom</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input hours into minutes</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#htos-function">hTos</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input hours into seconds</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kgtolt-function">kgToLT</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into imperial tons</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kgtost-function">kgToST</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into US tons</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kgtog-function">kgTog</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into grams</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kgtolb-function">kgTolb</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into pounds</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kgtooz-function">kgTooz</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into ounces</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kgtost-function">kgTost</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into imperial stones</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kgtot-function">kgTot</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into Tonnes</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kmtocm-function">kmTocm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into centimeters</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kmtoft-function">kmToft</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into feet</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kmtoin-function">kmToin</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into inches</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kmtom-function">kmTom</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into meters</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kmtomi-function">kmTomi</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into miles</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kmtomm-function">kmTomm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into millimeters</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kmtonm-function">kmTonm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into nanometers</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kmtoum-function">kmToum</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into micrometers</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#kmtoyd-function">kmToyd</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into yards</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#ltom3-function">lTom3</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input liters into cubic meters</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#ltoml-function">lToml</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input liters into milliliters</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#m3tol-function">m3Tol</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input cubic meters into liters</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#mtocm-function">mTocm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input meters into centimeters</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#mtoft-function">mToft</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input meters into feet</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#mtomm-function">mTomm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input meters into millimeters</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#mtos-function">mTos</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input minutes into seconds</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#mtoyd-function">mToyd</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input meters into yards</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#mitokm-function">miTokm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input miles into kilometers</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#mltol-function">mlTol</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input milliliters into liters</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#stoms-function">sToms</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input seconds into milliseconds</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#stons-function">sTons</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input seconds into nanoseconds</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#stous-function">sTous</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input seconds into microseconds</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#ttog-function">tTog</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input Tonnes into grams</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#ttokg-function">tTokg</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input Tonnes into kilograms</p></div></li>
-<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.12/#ytod-function">yTod</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input years into days</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#mmtokm-function">MmTokm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input megameters into kilometers</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#cmtoft-function">cmToft</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into feet</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#cmtoin-function">cmToin</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into inches</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#cmtokm-function">cmTokm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into kilometers</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#cmtom-function">cmTom</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into meters</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#cmtomi-function">cmTomi</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into miles</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#cmtomm-function">cmTomm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into millimeters</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#cmtonm-function">cmTonm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into nanometers</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#cmtoum-function">cmToum</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into micrometers</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#cmtoyd-function">cmToyd</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input centimeters into yards</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#dtoh-function">dToh</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input days into hours</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#gtokg-function">gTokg</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input grams into kilograms</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#gtomg-function">gTomg</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input grams into milligrams</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#gtoug-function">gToug</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input grams into micrograms</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#htom-function">hTom</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input hours into minutes</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#htos-function">hTos</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input hours into seconds</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kgtolt-function">kgToLT</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into imperial tons</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kgtost-function">kgToST</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into US tons</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kgtog-function">kgTog</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into grams</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kgtolb-function">kgTolb</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into pounds</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kgtooz-function">kgTooz</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into ounces</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kgtost-function">kgTost</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into imperial stones</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kgtot-function">kgTot</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilograms into Tonnes</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kmtocm-function">kmTocm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into centimeters</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kmtoft-function">kmToft</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into feet</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kmtoin-function">kmToin</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into inches</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kmtom-function">kmTom</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into meters</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kmtomi-function">kmTomi</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into miles</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kmtomm-function">kmTomm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into millimeters</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kmtonm-function">kmTonm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into nanometers</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kmtoum-function">kmToum</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into micrometers</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#kmtoyd-function">kmToyd</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input kilometers into yards</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#ltom3-function">lTom3</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input liters into cubic meters</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#ltoml-function">lToml</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input liters into milliliters</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#m3tol-function">m3Tol</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input cubic meters into liters</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#mtocm-function">mTocm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input meters into centimeters</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#mtoft-function">mToft</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input meters into feet</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#mtomm-function">mTomm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input meters into millimeters</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#mtos-function">mTos</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input minutes into seconds</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#mtoyd-function">mToyd</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input meters into yards</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#mitokm-function">miTokm</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input miles into kilometers</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#mltol-function">mlTol</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input milliliters into liters</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#stoms-function">sToms</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input seconds into milliseconds</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#stons-function">sTons</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input seconds into nanoseconds</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#stous-function">sTous</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input seconds into microseconds</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#ttog-function">tTog</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input Tonnes into grams</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#ttokg-function">tTokg</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input Tonnes into kilograms</p></div></li>
+<li><a target="_blank" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/1.0.13/#ytod-function">yTod</a> <em><a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#function">(Function)</a></em><br><div style="padding-left: 1em;"><p>Converts the input years into days</p></div></li>
 </ul>
 <h2 id="how-to-contribute">How to Contribute</h2>
 <ul>
@@ -592,6 +632,8 @@
               
               
                 
+
+
               
             </article>
           </div>
@@ -605,13 +647,13 @@
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="api/1.0.12/" title="1.0.12" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="api/1.0.13/" title="1.0.13" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                1.0.12
+                1.0.13
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -627,9 +669,9 @@
       <div class="md-footer-copyright">
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -641,17 +683,16 @@
       
     </div>
     
-      <script src="./assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="./assets/javascripts/application.a59e2a89.js"></script>
       
-      
-      <script>app.initialize({url:{base:"."}})</script>
+      <script>app.initialize({version:"0.17.4",url:{base:"."}})</script>
       
         <script src="./javascripts/extra.js"></script>
       
     
     
       
-      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-103065-28","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-103065-28","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
       
     
   </body>
