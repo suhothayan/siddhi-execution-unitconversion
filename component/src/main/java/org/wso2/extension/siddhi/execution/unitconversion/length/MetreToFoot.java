@@ -43,21 +43,22 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "mToft",
         namespace = "unitconversion",
-        description = "Converts the input meters into feet",
+        description = "This converts the input given in meters into feet.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from meters into feet",
+                description = "The value that needs to be converted from meters into feet.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from meters to feet",
+                description = "The value returned in feet.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The meter values from UnitConversionForMetreToFootStream will be " +
-                        "converted to feet and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForMetreToFootStream (inValue int); \n" +
                         "from UnitConversionForMetreToFootStream \n" +
                         "select unitconversion:mToft(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in meters from 'UnitConversionForMetreToFootStream' input stream is " +
+                        "converted into feet and returned to the 'OutMediationStream' output stream."
+
         )
 )
 public class MetreToFoot extends FunctionExecutor {

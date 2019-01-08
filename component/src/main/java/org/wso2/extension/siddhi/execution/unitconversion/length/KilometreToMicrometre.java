@@ -43,21 +43,23 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmToum",
         namespace = "unitconversion",
-        description = "Converts the input kilometers into micrometers",
+        description = "This converts the input given in kilometers into micrometers.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from kilometers into micrometers",
+                description = "The value that needs to be converted from kilometers into micrometers.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from kilometers to micrometers",
+                description = "The value returned in micrometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The kilometer values from UnitConversionForKilometreToMicrometreStream will be " +
-                        "converted to micrometers and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForKilometreToMicrometreStream (inValue int); \n" +
                         "from UnitConversionForKilometreToMicrometreStream \n" +
                         "select unitconversion:kmToum(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in kilometers obtained from 'UnitConversionForKilometreToMicrometreStream'" +
+                        "input stream is converted into micrometers and returned to the 'OutMediationStream'" +
+                        "output stream."
+
         )
 )
 public class KilometreToMicrometre extends FunctionExecutor {

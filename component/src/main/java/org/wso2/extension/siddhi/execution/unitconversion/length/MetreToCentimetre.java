@@ -42,21 +42,23 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "mTocm",
         namespace = "unitconversion",
-        description = "Converts the input meters into centimeters",
+        description = "This converts the input given in meters into centimeters.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from meters into centimeters",
+                description = "The value that needs to be converted from meters into centimeters.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from meters to centimeters",
+                description = "The value returned in centimeters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The meter values from UnitConversionForMetreToCentimetreStream will be " +
-                        "converted to centimeters and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForMetreToCentimetreStream (inValue int); \n" +
                         "from UnitConversionForMetreToCentimetreStream \n" +
                         "select unitconversion:mTocm(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in meters from 'UnitConversionForMetreToCentimetreStream' " +
+                        "input stream is converted to centimeters and returned to the 'OutMediationStream' " +
+                        "output stream."
+
         )
 )
 public class MetreToCentimetre extends FunctionExecutor {

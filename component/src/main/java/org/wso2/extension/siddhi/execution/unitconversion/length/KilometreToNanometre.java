@@ -43,21 +43,23 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmTonm",
         namespace = "unitconversion",
-        description = "Converts the input kilometers into nanometers",
+        description = "This converts the input given in kilometers into nanometers.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from kilometers into nanometers",
+                description = "The value that needs to be converted from kilometers into nanometers.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from kilometers to nanometers",
+                description = "The value returned in nanometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The kilometer values from UnitConversionForKilometreToNanometreStream will be " +
-                        "converted to nanometers and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForKilometreToNanometreStream (inValue int); \n" +
                         "from UnitConversionForKilometreToNanometreStream \n" +
                         "select unitconversion:kmTonm(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in kilometers obtained from 'UnitConversionForKilometreToNanometreStream'" +
+                        "input stream is converted into nanometers and returned to the 'OutMediationStream' " +
+                        "output stream."
+
         )
 )
 public class KilometreToNanometre extends FunctionExecutor {

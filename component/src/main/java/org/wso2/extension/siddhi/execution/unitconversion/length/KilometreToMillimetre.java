@@ -43,21 +43,23 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmTomm",
         namespace = "unitconversion",
-        description = "Converts the input kilometers into millimeters",
+        description = "This converts the input given in kilometers into millimeters.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from kilometers into millimeters",
+                description = "The value that needs to be converted from kilometers into millimeters.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from kilometers to millimeters",
+                description = "The value returned in millimeters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The kilometer values from UnitConversionForKilometreToMillimetreStream will be " +
-                        "converted to millimeters and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForKilometreToMillimetreStream (inValue int); \n" +
                         "from UnitConversionForKilometreToMillimetreStream \n" +
                         "select unitconversion:kmTomm(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in kilometers obtained from 'UnitConversionForKilometreToMillimetreStream'" +
+                        "input stream is converted into millimeters and returned to the 'OutMediationStream'" +
+                        " output stream."
+
         )
 )
 public class KilometreToMillimetre extends FunctionExecutor {

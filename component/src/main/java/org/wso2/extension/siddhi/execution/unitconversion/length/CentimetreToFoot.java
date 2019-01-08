@@ -44,21 +44,22 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmToft",
         namespace = "unitconversion",
-        description = "Converts the input centimeters into feet",
+        description = "This converts the input given in centimeters into feet.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from centimeters to feet",
+                description = "The value that needs to be converted from centimeters into feet.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from centimeters to feet",
+                description = "The value returned in feet.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The centimeter values from UnitConversionForCentimetreToFootStream will be " +
-                        "converted to feet and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForCentimetreToFootStream (inValue int); \n" +
                         "from UnitConversionForCentimetreToFootStream \n" +
                         "select unitconversion:cmToft(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The centimeter values received from 'UnitConversionForCentimetreToFootStream' input " +
+                        "stream is converted into feet and returned to the 'OutMediationStream' output stream."
+
         )
 )
 public class CentimetreToFoot extends FunctionExecutor {
