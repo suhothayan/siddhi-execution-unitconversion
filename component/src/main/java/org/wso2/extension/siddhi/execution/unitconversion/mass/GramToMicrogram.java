@@ -42,21 +42,22 @@ import static tec.units.ri.unit.Units.GRAM;
 @Extension(
         name = "gToug",
         namespace = "unitconversion",
-        description = "Converts the input grams into micrograms",
+        description = "This converts the input given in grams into micrograms.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from grams into micrograms",
+                description = "The value that needs to be converted from grams into micrograms.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from grams to micrograms",
+                description = "The value returned in micrograms.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The gram values from UnitConversionForGramToMicrogramStream will be " +
-                        "converted to micrograms and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForGramToMicrogramStream (inValue int); \n" +
                         "from UnitConversionForGramToMicrogramStream \n" +
                         "select unitconversion:gToug(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in grams from 'UnitConversionForGramToMicrogramStream' input stream is " +
+                        "converted into micrograms and returned to the 'OutMediationStream' output stream."
+
         )
 )
 public class GramToMicrogram extends FunctionExecutor {

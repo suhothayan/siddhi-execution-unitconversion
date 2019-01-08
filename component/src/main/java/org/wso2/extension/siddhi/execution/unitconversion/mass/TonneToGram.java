@@ -44,21 +44,22 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "tTog",
         namespace = "unitconversion",
-        description = "Converts the input Tonnes into grams",
+        description = "This converts the input given in tonnes into grams.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from Tonnes into grams",
+                description = "The value that needs to be converted from Tonnes into grams.",
                 type = {DataType.INT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from Tonnes to grams",
+                description = "The value that is returned in grams.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The Tonne values from UnitConversionForTonneToGramStream will be " +
-                        "converted to grams and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForTonneToGramStream (inValue int); \n" +
                         "from UnitConversionForTonneToGramStream \n" +
                         "select unitconversion:tTog(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in tonnes from 'UnitConversionForTonneToGramStream' input stream is " +
+                        "converted into grams and returned to the 'OutMediationStream' output stream."
+
         )
 )
 public class TonneToGram extends FunctionExecutor {

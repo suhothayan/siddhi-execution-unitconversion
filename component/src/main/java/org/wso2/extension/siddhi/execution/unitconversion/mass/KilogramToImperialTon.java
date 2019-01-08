@@ -43,21 +43,22 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "kgToLT",
         namespace = "unitconversion",
-        description = "Converts the input kilograms into imperial tons",
+        description = "This converts the input given in kilograms into imperial tons.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from kilograms into imperial tons",
+                description = "The value that needs to be converted from kilograms into imperial tons.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from kilograms to imperial tons",
+                description = "The value that is returned in imperial tons.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The kilogram values from UnitConversionForKilogramToImperialTonStream will be " +
-                        "converted to imperial tons and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForKilogramToImperialTonStream (inValue int); \n" +
                         "from UnitConversionForKilogramToImperialTonStream \n" +
                         "select unitconversion:kgToLT(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in kilograms from 'UnitConversionForKilogramToImperialTonStream' input " +
+                        "stream is converted into imperial tons and returned to the 'OutMediationStream' output stream."
+
         )
 )
 public class KilogramToImperialTon extends FunctionExecutor {

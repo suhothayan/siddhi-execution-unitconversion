@@ -42,21 +42,22 @@ import static tec.units.ri.unit.Units.GRAM;
 @Extension(
         name = "gTokg",
         namespace = "unitconversion",
-        description = "Converts the input grams into kilograms",
+        description = "This converts the input given in grams into kilograms.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from grams into kilograms",
+                description = "The value that needs to be converted from grams into kilograms.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from grams to kilograms",
+                description = "The value returned in kilograms.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The gram values from UnitConversionForGramToKilogramStream will be " +
-                        "converted to kilograms and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForGramToKilogramStream (inValue int); \n" +
                         "from UnitConversionForGramToKilogramStream \n" +
                         "select unitconversion:gTokg(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in grams from 'UnitConversionForGramToKilogramStream' input stream is " +
+                        "converted into kilograms and returned to the 'OutMediationStream' output stream."
+
         )
 )
 public class GramToKilogram extends FunctionExecutor {
