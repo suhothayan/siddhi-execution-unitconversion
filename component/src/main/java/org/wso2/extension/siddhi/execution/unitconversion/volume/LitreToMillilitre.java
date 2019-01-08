@@ -42,21 +42,21 @@ import static tec.units.ri.unit.Units.LITRE;
 @Extension(
         name = "lToml",
         namespace = "unitconversion",
-        description = "Converts the input liters into milliliters",
+        description = "This converts the input given in liters into milliliters.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from liters into milliliters",
+                description = "The value that needs to be converted from liters into milliliters.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from liters to milliliters",
+                description = "The value that is returned in milliliters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The liter values from UnitConversionForLitreToMillilitreStream will be " +
-                        "converted to milliliters and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForLitreToMillilitreStream (inValue int); \n" +
                         "from UnitConversionForLitreToMillilitreStream \n" +
                         "select unitconversion:lToml(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in liters from 'UnitConversionForLitreToMillilitreStream' input stream is " +
+                        "converted into milliliters and returned to the 'OutMediationStream' output stream."
         )
 )
 public class LitreToMillilitre extends FunctionExecutor {

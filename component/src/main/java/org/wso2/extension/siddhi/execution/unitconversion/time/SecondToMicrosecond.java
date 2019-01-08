@@ -42,21 +42,21 @@ import static tec.units.ri.unit.Units.SECOND;
 @Extension(
         name = "sTous",
         namespace = "unitconversion",
-        description = "Converts the input seconds into microseconds",
+        description = "This converts the input given in seconds into microseconds.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from seconds into microseconds",
+                description = "The value that needs to be converted from seconds into microseconds.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from seconds to microseconds",
+                description = "The value that is returned in microseconds.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The second values from UnitConversionForSecondToMicrosecondStream will be " +
-                        "converted to microseconds and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForSecondToMicrosecondStream (inValue int); \n" +
                         "from UnitConversionForSecondToMicrosecondStream \n" +
                         "select unitconversion:sTous(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in seconds from 'UnitConversionForSecondToMicrosecondStream' input stream is" +
+                        " converted into microseconds and returned to the 'OutMediationStream' output stream."
         )
 )
 public class SecondToMicrosecond extends FunctionExecutor {

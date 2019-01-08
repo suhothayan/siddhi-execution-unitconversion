@@ -50,7 +50,7 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that needs to be converted from centimeters into kilometers.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value returned in kilometers.",
+                description = "The value that is returned in kilometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
                 syntax = "define stream UnitConversionForCentimetreToKilometreStream (inValue int); \n" +
@@ -60,7 +60,6 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value obtained from 'UnitConversionForCentimetreToKilometreStream' input stream" +
                         " in centimeters, is converted into kilometers and returned to the 'OutMediationStream' " +
                         "output stream."
-
         )
 )
 public class CentimetreToKilometre extends FunctionExecutor {

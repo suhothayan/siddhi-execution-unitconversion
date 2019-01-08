@@ -42,21 +42,21 @@ import static tec.units.ri.unit.Units.SECOND;
 @Extension(
         name = "mTos",
         namespace = "unitconversion",
-        description = "Converts the input minutes into seconds",
+        description = "This converts the input given in minutes into seconds.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from minutes into seconds",
+                description = "The value that needs to be converted from minutes into seconds.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from minutes to seconds",
+                description = "The value that is returned in seconds.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The minute values from UnitConversionForMinuteToSecondStream will be " +
-                        "converted to seconds and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForMinuteToSecondStream (inValue int); \n" +
                         "from UnitConversionForMinuteToSecondStream \n" +
                         "select unitconversion:mTos(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in minutes from 'UnitConversionForMinuteToSecondStream' input stream is " +
+                        "converted into seconds and returned to the 'OutMediationStream' output stream."
         )
 )
 public class MinuteToSecond extends FunctionExecutor {

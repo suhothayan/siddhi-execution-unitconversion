@@ -57,7 +57,6 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                         "insert into OutMediationStream;",
                 description = "The value in kilograms from 'UnitConversionForKilogramToGramStream' input stream " +
                         "is converted into grams and returned to the 'OutMediationStream' output stream."
-
         )
 )
 public class KilogramToGram extends FunctionExecutor {

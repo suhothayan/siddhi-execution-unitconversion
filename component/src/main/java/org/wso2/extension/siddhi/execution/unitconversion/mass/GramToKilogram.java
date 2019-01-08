@@ -48,7 +48,7 @@ import static tec.units.ri.unit.Units.GRAM;
                 description = "The value that needs to be converted from grams into kilograms.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value returned in kilograms.",
+                description = "The value that is returned in kilograms.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
                 syntax = "define stream UnitConversionForGramToKilogramStream (inValue int); \n" +
@@ -57,7 +57,6 @@ import static tec.units.ri.unit.Units.GRAM;
                         "insert into OutMediationStream;",
                 description = "The value in grams from 'UnitConversionForGramToKilogramStream' input stream is " +
                         "converted into kilograms and returned to the 'OutMediationStream' output stream."
-
         )
 )
 public class GramToKilogram extends FunctionExecutor {

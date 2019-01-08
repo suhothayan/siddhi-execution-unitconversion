@@ -58,7 +58,6 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                         "insert into OutMediationStream;",
                 description = "The value in kilograms from 'UnitConversionForKilogramToStonemStream' input stream is " +
                         "converted into imperial stones and returned to the 'OutMediationStream' output stream."
-
         )
 )
 public class KilogramToStone extends FunctionExecutor {

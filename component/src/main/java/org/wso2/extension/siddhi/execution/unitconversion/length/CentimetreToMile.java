@@ -52,7 +52,7 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that needs to be converted from centimeters into miles.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value returned in miles.",
+                description = "The value that is returned in miles.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
                 syntax = "define stream UnitConversionForCentimetreToMileStream (inValue int); \n" +
@@ -61,7 +61,6 @@ import static tec.units.ri.unit.Units.METRE;
                         "insert into OutMediationStream;",
                 description = "The value in centimeters obtained from 'UnitConversionForCentimetreToMileStream' " +
                         "input stream is converted into miles and returned to the 'OutMediationStream' output stream."
-
         )
 )
 public class CentimetreToMile extends FunctionExecutor {

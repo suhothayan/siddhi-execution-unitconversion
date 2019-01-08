@@ -57,7 +57,6 @@ import static tec.units.ri.unit.Units.GRAM;
                         "insert into OutMediationStream;",
                 description = "The value in grams from 'UnitConversionForGramToMilligramStream' input stream is " +
                         "converted into milligrams and returned to the 'OutMediationStream' output stream."
-
         )
 )
 

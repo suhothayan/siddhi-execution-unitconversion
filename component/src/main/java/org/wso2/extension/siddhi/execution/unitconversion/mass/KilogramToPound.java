@@ -58,7 +58,6 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                         "insert into OutMediationStream;",
                 description = "The value in kilograms from 'UnitConversionForKilogramToPoundStream' input stream is" +
                         " converted into pounds and returned to the 'OutMediationStream' output stream."
-
         )
 )
 public class KilogramToPound extends FunctionExecutor {

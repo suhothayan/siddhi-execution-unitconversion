@@ -58,7 +58,6 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                         "insert into OutMediationStream;",
                 description = "The value in kilograms from 'UnitConversionForKilogramToUSTonStream' input stream is " +
                         "converted into US tons and returned to the 'OutMediationStream' output stream."
-
         )
 )
 public class KilogramToUSTon extends FunctionExecutor {

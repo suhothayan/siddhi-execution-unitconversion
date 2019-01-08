@@ -57,7 +57,6 @@ import static tec.units.ri.unit.Units.METRE;
                         "insert into OutMediationStream;",
                 description = "The value in meters from 'UnitConversionForMetreToMillimetreStream' input stream" +
                         "is converted into millimeters and returned to the 'OutMediationStream' output stream."
-
         )
 )
 public class MetreToMillimetre extends FunctionExecutor {

@@ -58,7 +58,6 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                         "insert into OutMediationStream;",
                 description = "The value in kilograms from 'UnitConversionForKilogramToOunceStream' input stream is" +
                         " converted into ounces and returned to the 'OutMediationStream' output stream."
-
         )
 )
 public class KilogramToOunce extends FunctionExecutor {

@@ -49,7 +49,7 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that needs to be converted from centimeters into meters.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value returned in meters.",
+                description = "The value that is returned in meters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
                 syntax = "define stream UnitConversionForCentimetreToMeterStream (inValue int); \n" +
