@@ -43,7 +43,7 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmTom",
         namespace = "unitconversion",
-        description = "This Converts the input given in centimeters into meters.",
+        description = "This converts the input given in centimeters into meters.",
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from centimeters into meters.",
@@ -56,7 +56,7 @@ import static tec.units.ri.unit.Units.METRE;
                         "from UnitConversionForCentimetreToMeterStream \n" +
                         "select unitconversion:cmTom(inValue) as UnitConversionValue \n" +
                         "insert into OutMediationStream;",
-                description = "The value in centimeter obtained from 'UnitConversionForCentimetreToMeterStream'" +
+                description = "The value in centimeters obtained from 'UnitConversionForCentimetreToMeterStream'" +
                         "input stream is converted into meters and returned to the 'OutMediationStream' output stream."
         )
 )
