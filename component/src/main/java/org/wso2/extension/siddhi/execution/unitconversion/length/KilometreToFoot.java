@@ -44,21 +44,21 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmToft",
         namespace = "unitconversion",
-        description = "Converts the input kilometers into feet",
+        description = "This converts the input given in kilometers into feet.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from kilometers into feet",
+                description = "The value that needs to be converted from kilometers into feet.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from kilometers to feet",
+                description = "The value that is returned in feet.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The kilometer values from UnitConversionForKilometreToFootStream will be " +
-                        "converted to feet and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForKilometreToFootStream (inValue int); \n" +
                         "from UnitConversionForKilometreToFootStream \n" +
                         "select unitconversion:kmToft(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in kilometers obtained from 'UnitConversionForKilometreToFootStream' " +
+                        "input stream is converted into feet and returned to the 'OutMediationStream' output stream."
         )
 )
 public class KilometreToFoot extends FunctionExecutor {

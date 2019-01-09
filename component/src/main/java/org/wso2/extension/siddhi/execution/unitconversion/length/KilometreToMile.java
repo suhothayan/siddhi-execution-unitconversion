@@ -44,21 +44,21 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmTomi",
         namespace = "unitconversion",
-        description = "Converts the input kilometers into miles",
+        description = "This converts the input given in kilometers into miles.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from kilometers into miles",
+                description = "The value that needs to be converted from kilometers into miles.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from kilometers to miles",
+                description = "The value that is returned in miles.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The kilometer values from UnitConversionForKilometreToMileStream will be " +
-                        "converted to miles and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForKilometreToMileStream (inValue int); \n" +
                         "from UnitConversionForKilometreToMileStream \n" +
                         "select unitconversion:kmTomi(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in kilometers obtained from 'UnitConversionForKilometreToMileStream' " +
+                        "input stream is converted into miles and returned to the 'OutMediationStream' output stream."
         )
 )
 public class KilometreToMile extends FunctionExecutor {

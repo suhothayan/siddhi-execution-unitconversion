@@ -43,21 +43,22 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmToum",
         namespace = "unitconversion",
-        description = "Converts the input centimeters into micrometers",
+        description = "This converts the input in centimeters into micrometers.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from centimeters into micrometers",
+                description = "The value that needs to be converted from centimeters into micrometers.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from centimeters to micrometers",
+                description = "The value that is returned in micrometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The centimeter values from UnitConversionForCentimetreToMicrometreStream will be " +
-                        "converted to micrometers and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForCentimetreToMicrometreStream (inValue int); \n" +
                         "from UnitConversionForCentimetreToMicrometreStream \n" +
                         "select unitconversion:cmToum(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in centimeter obtained from 'UnitConversionForCentimetreToMicrometreStream' " +
+                        "input stream is converted into micrometers and returned to the 'OutMediationStream' " +
+                        "output stream."
         )
 )
 public class CentimetreToMicrometre extends FunctionExecutor {

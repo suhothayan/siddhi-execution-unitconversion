@@ -43,21 +43,22 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmTocm",
         namespace = "unitconversion",
-        description = "Converts the input kilometers into centimeters",
+        description = "This converts the input given in kilometers into centimeters.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from kilometers into centimeters",
+                description = "The value that needs to be converted from kilometers into centimeters.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from kilometers to centimeters",
+                description = "The value that is returned in centimeters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The kilometer values from UnitConversionForKilometreToCentimetreStream will be " +
-                        "converted to centimeters and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForKilometreToCentimetreStream (inValue int); \n" +
                         "from UnitConversionForKilometreToCentimetreStream \n" +
                         "select unitconversion:kmTocm(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The values in kilometers obtained from 'UnitConversionForKilometreToCentimetreStream'" +
+                        "input stream is converted into centimeters and returned to the 'OutMediationStream' output" +
+                        "stream."
         )
 )
 public class KilometreToCentimetre extends FunctionExecutor {

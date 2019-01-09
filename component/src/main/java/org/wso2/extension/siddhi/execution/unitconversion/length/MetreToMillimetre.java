@@ -42,21 +42,21 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "mTomm",
         namespace = "unitconversion",
-        description = "Converts the input meters into millimeters",
+        description = "This converts the input given in meters into millimeters.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from meters into millimeters",
+                description = "The value that needs to be converted from meters into millimeters.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from meters to millimeters",
+                description = "The value returned in millimeters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The meter values from UnitConversionForMetreToMillimetreStream will be " +
-                        "converted to millimeters and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForMetreToMillimetreStream (inValue int); \n" +
                         "from UnitConversionForMetreToMillimetreStream \n" +
                         "select unitconversion:mTomm(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in meters from 'UnitConversionForMetreToMillimetreStream' input stream" +
+                        "is converted into millimeters and returned to the 'OutMediationStream' output stream."
         )
 )
 public class MetreToMillimetre extends FunctionExecutor {

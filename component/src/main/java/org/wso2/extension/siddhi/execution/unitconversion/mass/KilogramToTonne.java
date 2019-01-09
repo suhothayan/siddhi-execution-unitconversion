@@ -43,21 +43,21 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "kgTot",
         namespace = "unitconversion",
-        description = "Converts the input kilograms into Tonnes",
+        description = "This converts the input given in kilograms into tonnes.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from kilograms into Tonnes",
+                description = "The value that needs to be converted from kilograms into tonnes.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from kilograms to Tonnes",
+                description = "The value that is returned in tonnes.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The kilogram values from UnitConversionForKilogramToTonneStream will be " +
-                        "converted to Tonnes and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForKilogramToTonneStream (inValue int); \n" +
                         "from UnitConversionForKilogramToTonneStream \n" +
                         "select unitconversion:kgTot(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in kilograms from 'UnitConversionForKilogramToTonneStream' input stream is" +
+                        " converted into tonnes and returned to the 'OutMediationStream' output stream."
         )
 )
 public class KilogramToTonne extends FunctionExecutor {

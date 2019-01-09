@@ -43,21 +43,21 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "mToyd",
         namespace = "unitconversion",
-        description = "Converts the input meters into yards",
+        description = "This converts the input given in meters into yards.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value needed to be converted from meters into yards",
+                description = "The value that needs to be converted from meters into yards.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
         returnAttributes = @ReturnAttribute(
-                description = "The value converted from meters to yards",
+                description = "The value that is returned in yards.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                description = "The meter values from UnitConversionForMetreToYardStream will be " +
-                        "converted to yards and inserted in to the OutMediationStream",
                 syntax = "define stream UnitConversionForMetreToYardStream (inValue int); \n" +
                         "from UnitConversionForMetreToYardStream \n" +
                         "select unitconversion:mToyd(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;"
+                        "insert into OutMediationStream;",
+                description = "The value in meters from 'UnitConversionForMetreToYardStream' input stream is " +
+                        "converted into yards and returned to the 'OutMediationStream' output stream."
         )
 )
 public class MetreToYard extends FunctionExecutor {
