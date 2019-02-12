@@ -25,8 +25,8 @@ import org.wso2.siddhi.core.SiddhiAppRuntime;
 import org.wso2.siddhi.core.SiddhiManager;
 import org.wso2.siddhi.core.event.Event;
 import org.wso2.siddhi.core.exception.SiddhiAppCreationException;
-import org.wso2.siddhi.core.executor.function.FunctionExecutor;
 import org.wso2.siddhi.core.query.output.callback.QueryCallback;
+import org.wso2.siddhi.core.stream.StreamJunction;
 import org.wso2.siddhi.core.stream.input.InputHandler;
 import org.wso2.siddhi.core.util.EventPrinter;
 
@@ -169,7 +169,7 @@ public class MetreToCentimetreTestCase {
     @Test
     public void testProcessForMetreToCentimetre6() throws Exception {
         logger.info("UnitConversionForMetreToCentimetreFunctionExtension6 TestCase");
-        logger = Logger.getLogger(FunctionExecutor.class);
+        logger = Logger.getLogger(StreamJunction.class);
         UnitTestAppender appender = new UnitTestAppender();
         logger.addAppender(appender);
         siddhiManager = new SiddhiManager();
