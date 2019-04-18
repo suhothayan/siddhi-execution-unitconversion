@@ -17,20 +17,21 @@
  */
 package org.wso2.extension.siddhi.execution.unitconversion.length;
 
-import org.wso2.siddhi.annotation.Example;
-import org.wso2.siddhi.annotation.Extension;
-import org.wso2.siddhi.annotation.Parameter;
-import org.wso2.siddhi.annotation.ReturnAttribute;
-import org.wso2.siddhi.annotation.util.DataType;
-import org.wso2.siddhi.core.config.SiddhiAppContext;
-import org.wso2.siddhi.core.exception.SiddhiAppRuntimeException;
-import org.wso2.siddhi.core.executor.ExpressionExecutor;
-import org.wso2.siddhi.core.executor.function.FunctionExecutor;
-import org.wso2.siddhi.core.util.config.ConfigReader;
-import org.wso2.siddhi.query.api.definition.Attribute;
-import org.wso2.siddhi.query.api.exception.SiddhiAppValidationException;
+import io.siddhi.annotation.Example;
+import io.siddhi.annotation.Extension;
+import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ReturnAttribute;
+import io.siddhi.annotation.util.DataType;
+import io.siddhi.core.config.SiddhiQueryContext;
+import io.siddhi.core.exception.SiddhiAppRuntimeException;
+import io.siddhi.core.executor.ExpressionExecutor;
+import io.siddhi.core.executor.function.FunctionExecutor;
+import io.siddhi.core.util.config.ConfigReader;
+import io.siddhi.core.util.snapshot.state.State;
+import io.siddhi.core.util.snapshot.state.StateFactory;
+import io.siddhi.query.api.definition.Attribute;
+import io.siddhi.query.api.exception.SiddhiAppValidationException;
 
-import java.util.Map;
 import javax.measure.Unit;
 import javax.measure.UnitConverter;
 import javax.measure.quantity.Length;
@@ -68,18 +69,19 @@ public class KilometreToMile extends FunctionExecutor {
     /**
      * The initialization method for KilometreToMile, this method will be called before the other methods
      *
-     * @param attributeExpressionExecutors the executors of each function parameter
-     * @param siddhiAppContext         the context of the execution plan
+     * @param attributeExpressionExecutors are the executors of each function parameters
+     * @param configReader                 This hold the {@link FunctionExecutor} extensions configuration reader.
+     * @param siddhiQueryContext           the context of the siddhi query
      */
     @Override
-    protected void init(ExpressionExecutor[] attributeExpressionExecutors, ConfigReader reader, SiddhiAppContext
-                        siddhiAppContext) {
+    protected StateFactory init(ExpressionExecutor[] attributeExpressionExecutors, ConfigReader configReader,
+                                SiddhiQueryContext siddhiQueryContext) {
         Unit<Length> mile = KILO(METRE).multiply(1.609344E+00);
         converter = KILO(METRE).getConverterTo(mile);
         if (attributeExpressionExecutors.length != 1) {
             throw new SiddhiAppValidationException(
                     "Invalid no of arguments passed to unitconversion:kmTomi() function, " +
-                    "required 1, but found " + attributeExpressionExecutors.length);
+                            "required 1, but found " + attributeExpressionExecutors.length);
         }
         Attribute.Type attributeType = attributeExpressionExecutors[0].getReturnType();
         if (!((attributeType == Attribute.Type.DOUBLE)
@@ -92,6 +94,7 @@ public class KilometreToMile extends FunctionExecutor {
                     " or " + Attribute.Type.FLOAT + " or " + Attribute.Type.DOUBLE +
                     ", but found " + attributeType.toString());
         }
+        return null;
     }
 
     /**
@@ -99,10 +102,12 @@ public class KilometreToMile extends FunctionExecutor {
      * when there are more than one function parameter
      *
      * @param data the runtime values of function parameters
+     * @param state current query state
      * @return the function result
      */
     @Override
-    protected Object execute(Object[] data) {
+    protected Object execute(Object[] data, State state) {
+
         return null;
     }
 
@@ -112,10 +117,11 @@ public class KilometreToMile extends FunctionExecutor {
      *
      * @param data null if the function parameter count is zero or
      *             runtime data value of the function parameter
+     * @param state current query state
      * @return the function result
      */
     @Override
-    protected Object execute(Object data) {
+    protected Object execute(Object data, State state) {
         if (data != null) {
             //type-conversion
             return converter.convert((Number) data);
@@ -127,28 +133,5 @@ public class KilometreToMile extends FunctionExecutor {
     @Override
     public Attribute.Type getReturnType() {
         return Attribute.Type.DOUBLE;
-    }
-
-    /**
-     * Used to collect the serializable state of the processing element, that need to be
-     * persisted for the reconstructing the element to the same state on a different point of time
-     *
-     * @return stateful objects of the processing element as an array
-     */
-    @Override
-    public Map<String, Object> currentState() {
-        return null;
-    }
-
-    /**
-     * Used to restore serialized state of the processing element, for reconstructing
-     * the element to the same state as if was on a previous point of time.
-     *
-     * @param state the stateful objects of the element as an array on
-     *              the same order provided by currentState().
-     */
-    @Override
-    public void restoreState(Map<String, Object> state) {
-        //Implement restore state logic.
     }
 }
