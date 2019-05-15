@@ -27,7 +27,7 @@ Latest API Docs is <a target="_blank" href="https://wso2-extensions.github.io/si
 
 ```
      <dependency>
-        <groupId>org.wso2.extension.siddhi.execution.unitconversion</groupId>
+        <groupId>io.siddhi.extension.execution.unitconversion</groupId>
         <artifactId>siddhi-execution-unitconversion</artifactId>
         <version>x.x.x</version>
      </dependency>

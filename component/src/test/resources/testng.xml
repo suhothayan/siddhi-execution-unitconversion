@@ -22,10 +22,10 @@
 <suite name="Unit Conversion-Test-Suite">
     <test name="unit-conversion-tests" preserve-order="true" parallel="false">
         <packages>
-            <package name="org.wso2.extension.siddhi.execution.test.length"/>
-            <package name="org.wso2.extension.siddhi.execution.test.mass"/>
-            <package name="org.wso2.extension.siddhi.execution.test.time"/>
-            <package name="org.wso2.extension.siddhi.execution.test.volume"/>
+            <package name="io.siddhi.extension.execution.unitconversion.test.length"/>
+            <package name="io.siddhi.extension.execution.unitconversion.test.mass"/>
+            <package name="io.siddhi.extension.execution.unitconversion.test.time"/>
+            <package name="io.siddhi.extension.execution.unitconversion.test.volume"/>
         </packages>
     </test>
 </suite>
