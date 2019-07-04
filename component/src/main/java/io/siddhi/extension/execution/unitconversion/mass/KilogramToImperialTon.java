@@ -20,6 +20,7 @@ package io.siddhi.extension.execution.unitconversion.mass;
 import io.siddhi.annotation.Example;
 import io.siddhi.annotation.Extension;
 import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ParameterOverload;
 import io.siddhi.annotation.ReturnAttribute;
 import io.siddhi.annotation.util.DataType;
 import io.siddhi.core.config.SiddhiQueryContext;
@@ -48,17 +49,18 @@ import static tec.units.ri.unit.Units.KILOGRAM;
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from kilograms into imperial tons.",
-                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
+                dynamic = true
+        ),
+        parameterOverloads = {
+                @ParameterOverload(parameterNames = {"p1"})
+        },
         returnAttributes = @ReturnAttribute(
                 description = "The value that is returned in imperial tons.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "define stream UnitConversionForKilogramToImperialTonStream (inValue int); \n" +
-                        "from UnitConversionForKilogramToImperialTonStream \n" +
-                        "select unitconversion:kgToLT(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;",
-                description = "The value in kilograms from 'UnitConversionForKilogramToImperialTonStream' input " +
-                        "stream is converted into imperial tons and returned to the 'OutMediationStream' output stream."
+                syntax = "unitconversion:kgToLT(1000) \n",
+                description = "The kilograms value '1000' is converted into imperial tons as '0.9842' ."
         )
 )
 public class KilogramToImperialTon extends FunctionExecutor {

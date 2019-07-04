@@ -20,6 +20,7 @@ package io.siddhi.extension.execution.unitconversion.mass;
 import io.siddhi.annotation.Example;
 import io.siddhi.annotation.Extension;
 import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ParameterOverload;
 import io.siddhi.annotation.ReturnAttribute;
 import io.siddhi.annotation.util.DataType;
 import io.siddhi.core.config.SiddhiQueryContext;
@@ -48,17 +49,18 @@ import static tec.units.ri.unit.Units.KILOGRAM;
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from kilograms into pounds.",
-                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
+                dynamic = true
+        ),
+        parameterOverloads = {
+                @ParameterOverload(parameterNames = {"p1"})
+        },
         returnAttributes = @ReturnAttribute(
                 description = "The value that is returned in pounds.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "define stream UnitConversionForKilogramToPoundStream (inValue int); \n" +
-                        "from UnitConversionForKilogramToPoundStream \n" +
-                        "select unitconversion:kgTolb(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;",
-                description = "The value in kilograms from 'UnitConversionForKilogramToPoundStream' input stream is" +
-                        " converted into pounds and returned to the 'OutMediationStream' output stream."
+                syntax = "unitconversion:kgTolb(1) \n",
+                description = "The kilogram value '1' is converted into pounds as '2.2' ."
         )
 )
 public class KilogramToPound extends FunctionExecutor {

@@ -20,6 +20,7 @@ package io.siddhi.extension.execution.unitconversion.length;
 import io.siddhi.annotation.Example;
 import io.siddhi.annotation.Extension;
 import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ParameterOverload;
 import io.siddhi.annotation.ReturnAttribute;
 import io.siddhi.annotation.util.DataType;
 import io.siddhi.core.config.SiddhiQueryContext;
@@ -47,17 +48,18 @@ import static tec.units.ri.unit.Units.METRE;
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from meters into millimeters.",
-                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
+                dynamic = true
+        ),
+        parameterOverloads = {
+                @ParameterOverload(parameterNames = {"p1"})
+        },
         returnAttributes = @ReturnAttribute(
                 description = "The value returned in millimeters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "define stream UnitConversionForMetreToMillimetreStream (inValue int); \n" +
-                        "from UnitConversionForMetreToMillimetreStream \n" +
-                        "select unitconversion:mTomm(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;",
-                description = "The value in meters from 'UnitConversionForMetreToMillimetreStream' input stream" +
-                        "is converted into millimeters and returned to the 'OutMediationStream' output stream."
+                syntax = "unitconversion:mTomm(1) \n",
+                description = "The meter value '1' is converted into millimeters as '1000.0' ."
         )
 )
 public class MetreToMillimetre extends FunctionExecutor {

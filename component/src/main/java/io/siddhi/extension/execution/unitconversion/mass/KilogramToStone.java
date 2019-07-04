@@ -20,6 +20,7 @@ package io.siddhi.extension.execution.unitconversion.mass;
 import io.siddhi.annotation.Example;
 import io.siddhi.annotation.Extension;
 import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ParameterOverload;
 import io.siddhi.annotation.ReturnAttribute;
 import io.siddhi.annotation.util.DataType;
 import io.siddhi.core.config.SiddhiQueryContext;
@@ -48,17 +49,18 @@ import static tec.units.ri.unit.Units.KILOGRAM;
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from kilograms into imperial stones.",
-                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
+                dynamic = true
+        ),
+        parameterOverloads = {
+                @ParameterOverload(parameterNames = {"p1"})
+        },
         returnAttributes = @ReturnAttribute(
                 description = "The value that is returned in imperial stones.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "define stream UnitConversionForKilogramToStonemStream (inValue int); \n" +
-                        "from UnitConversionForKilogramToStonemStream \n" +
-                        "select unitconversion:kgTost(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;",
-                description = "The value in kilograms from 'UnitConversionForKilogramToStonemStream' input stream is " +
-                        "converted into imperial stones and returned to the 'OutMediationStream' output stream."
+                syntax = "unitconversion:kgTost(1) \n",
+                description = "The kilogram value '1' is converted into imperial stones as '0.157' ."
         )
 )
 public class KilogramToStone extends FunctionExecutor {

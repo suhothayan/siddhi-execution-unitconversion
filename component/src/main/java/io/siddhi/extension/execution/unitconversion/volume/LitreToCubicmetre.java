@@ -20,6 +20,7 @@ package io.siddhi.extension.execution.unitconversion.volume;
 import io.siddhi.annotation.Example;
 import io.siddhi.annotation.Extension;
 import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ParameterOverload;
 import io.siddhi.annotation.ReturnAttribute;
 import io.siddhi.annotation.util.DataType;
 import io.siddhi.core.config.SiddhiQueryContext;
@@ -47,17 +48,18 @@ import static tec.units.ri.unit.Units.LITRE;
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from liters into cubic meters.",
-                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
+                dynamic = true
+        ),
+        parameterOverloads = {
+                @ParameterOverload(parameterNames = {"p1"})
+        },
         returnAttributes = @ReturnAttribute(
                 description = "The value that is returned in cubic meters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "define stream UnitConversionForLitreToCubicmetreStream (inValue int); \n" +
-                        "from UnitConversionForLitreToCubicmetreStream \n" +
-                        "select unitconversion:lTom3(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;",
-                description = "The value in liters from 'UnitConversionForLitreToCubicmetreStream' input stream is " +
-                        "converted into cubic meters and returned to the 'OutMediationStream' output stream.")
+                syntax = "unitconversion:lTom3(1000) \n",
+                description = "The liters value '1000' is converted into cubic meters as '1' .")
 )
 public class LitreToCubicmetre extends FunctionExecutor {
 

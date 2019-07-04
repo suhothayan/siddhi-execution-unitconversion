@@ -20,6 +20,7 @@ package io.siddhi.extension.execution.unitconversion.length;
 import io.siddhi.annotation.Example;
 import io.siddhi.annotation.Extension;
 import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ParameterOverload;
 import io.siddhi.annotation.ReturnAttribute;
 import io.siddhi.annotation.util.DataType;
 import io.siddhi.core.config.SiddhiQueryContext;
@@ -48,18 +49,18 @@ import static tec.units.ri.unit.Units.METRE;
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from centimeters into nanometers.",
-                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
+                dynamic = true
+        ),
+        parameterOverloads = {
+                @ParameterOverload(parameterNames = {"p1"})
+        },
         returnAttributes = @ReturnAttribute(
                 description = "The value that is returned in nanometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "define stream UnitConversionForCentimetreToNanometreStream (inValue int); \n" +
-                        "from UnitConversionForCentimetreToNanometreStream \n" +
-                        "select unitconversion:cmTonm(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;",
-                description = "The values in centimeters obtained from " +
-                        "'UnitConversionForCentimetreToNanometreStream' input stream is converted into nanometers" +
-                        " and returned to the 'OutMediationStream' output stream."
+                syntax = "unitconversion:cmTonm(1) \n",
+                description = "The centimeter value '1' is converted into nanometers as '10000000' ."
         )
 )
 public class CentimetreToNanometre extends FunctionExecutor {

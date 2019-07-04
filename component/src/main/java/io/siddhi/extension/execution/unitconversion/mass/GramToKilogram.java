@@ -20,6 +20,7 @@ package io.siddhi.extension.execution.unitconversion.mass;
 import io.siddhi.annotation.Example;
 import io.siddhi.annotation.Extension;
 import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ParameterOverload;
 import io.siddhi.annotation.ReturnAttribute;
 import io.siddhi.annotation.util.DataType;
 import io.siddhi.core.config.SiddhiQueryContext;
@@ -47,17 +48,18 @@ import static tec.units.ri.unit.Units.GRAM;
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from grams into kilograms.",
-                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
+                dynamic = true
+        ),
+        parameterOverloads = {
+                @ParameterOverload(parameterNames = {"p1"})
+        },
         returnAttributes = @ReturnAttribute(
                 description = "The value that is returned in kilograms.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "define stream UnitConversionForGramToKilogramStream (inValue int); \n" +
-                        "from UnitConversionForGramToKilogramStream \n" +
-                        "select unitconversion:gTokg(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;",
-                description = "The value in grams from 'UnitConversionForGramToKilogramStream' input stream is " +
-                        "converted into kilograms and returned to the 'OutMediationStream' output stream."
+                syntax = "unitconversion:gTokg(1000) \n",
+                description = "The grams value '1000' is converted into kilogram as '1.0' ."
         )
 )
 public class GramToKilogram extends FunctionExecutor {
