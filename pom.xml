@@ -52,11 +52,11 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     <scm>
-        <connection>scm:git:https://github.com/wso2-extensions/siddhi-execution-unitconversion.git
+        <connection>scm:git:https://github.com/siddhi-io/siddhi-execution-unitconversion.git
         </connection>
-        <url>https://github.com/wso2-extensions/siddhi-execution-unitconversion.git</url>
+        <url>https://github.com/siddhi-io/siddhi-execution-unitconversion.git</url>
         <developerConnection>
-            scm:git:https://github.com/wso2-extensions/siddhi-execution-unitconversion.git
+            scm:git:https://github.com/siddhi-io/siddhi-execution-unitconversion.git
         </developerConnection>
         <tag>HEAD</tag>
     </scm>
