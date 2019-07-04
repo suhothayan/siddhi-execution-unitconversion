@@ -20,6 +20,7 @@ package io.siddhi.extension.execution.unitconversion.time;
 import io.siddhi.annotation.Example;
 import io.siddhi.annotation.Extension;
 import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ParameterOverload;
 import io.siddhi.annotation.ReturnAttribute;
 import io.siddhi.annotation.util.DataType;
 import io.siddhi.core.config.SiddhiQueryContext;
@@ -47,17 +48,18 @@ import static tec.units.ri.unit.Units.SECOND;
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from minutes into seconds.",
-                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
+                dynamic = true
+        ),
+        parameterOverloads = {
+                @ParameterOverload(parameterNames = {"p1"})
+        },
         returnAttributes = @ReturnAttribute(
                 description = "The value that is returned in seconds.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "define stream UnitConversionForMinuteToSecondStream (inValue int); \n" +
-                        "from UnitConversionForMinuteToSecondStream \n" +
-                        "select unitconversion:mTos(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;",
-                description = "The value in minutes from 'UnitConversionForMinuteToSecondStream' input stream is " +
-                        "converted into seconds and returned to the 'OutMediationStream' output stream."
+                syntax = "unitconversion:mTos(inValue) as UnitConversionValue \n",
+                description = "The value in minutes is converted into seconds."
         )
 )
 public class MinuteToSecond extends FunctionExecutor {

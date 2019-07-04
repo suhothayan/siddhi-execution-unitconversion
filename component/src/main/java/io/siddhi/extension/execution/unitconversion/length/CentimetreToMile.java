@@ -20,6 +20,7 @@ package io.siddhi.extension.execution.unitconversion.length;
 import io.siddhi.annotation.Example;
 import io.siddhi.annotation.Extension;
 import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ParameterOverload;
 import io.siddhi.annotation.ReturnAttribute;
 import io.siddhi.annotation.util.DataType;
 import io.siddhi.core.config.SiddhiQueryContext;
@@ -51,17 +52,18 @@ import static tec.units.ri.unit.Units.METRE;
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from centimeters into miles.",
-                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
+                dynamic = true
+        ),
+        parameterOverloads = {
+                @ParameterOverload(parameterNames = {"p1"})
+        },
         returnAttributes = @ReturnAttribute(
                 description = "The value that is returned in miles.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "define stream UnitConversionForCentimetreToMileStream (inValue int); \n" +
-                        "from UnitConversionForCentimetreToMileStream \n" +
-                        "select unitconversion:cmTomi(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;",
-                description = "The value in centimeters obtained from 'UnitConversionForCentimetreToMileStream' " +
-                        "input stream is converted into miles and returned to the 'OutMediationStream' output stream."
+                syntax = "unitconversion:cmTomi(inValue) as UnitConversionValue \n",
+                description = "The value in centimeters is converted into miles."
         )
 )
 public class CentimetreToMile extends FunctionExecutor {

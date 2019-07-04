@@ -20,6 +20,7 @@ package io.siddhi.extension.execution.unitconversion.length;
 import io.siddhi.annotation.Example;
 import io.siddhi.annotation.Extension;
 import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ParameterOverload;
 import io.siddhi.annotation.ReturnAttribute;
 import io.siddhi.annotation.util.DataType;
 import io.siddhi.core.config.SiddhiQueryContext;
@@ -48,17 +49,18 @@ import static tec.units.ri.unit.Units.METRE;
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from meters into yards.",
-                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
+                dynamic = true
+        ),
+        parameterOverloads = {
+                @ParameterOverload(parameterNames = {"p1"})
+        },
         returnAttributes = @ReturnAttribute(
                 description = "The value that is returned in yards.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "define stream UnitConversionForMetreToYardStream (inValue int); \n" +
-                        "from UnitConversionForMetreToYardStream \n" +
-                        "select unitconversion:mToyd(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;",
-                description = "The value in meters from 'UnitConversionForMetreToYardStream' input stream is " +
-                        "converted into yards and returned to the 'OutMediationStream' output stream."
+                syntax = "unitconversion:mToyd(inValue) as UnitConversionValue \n",
+                description = "The value in meters is converted into yards."
         )
 )
 public class MetreToYard extends FunctionExecutor {

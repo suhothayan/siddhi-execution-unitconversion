@@ -20,6 +20,7 @@ package io.siddhi.extension.execution.unitconversion.length;
 import io.siddhi.annotation.Example;
 import io.siddhi.annotation.Extension;
 import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ParameterOverload;
 import io.siddhi.annotation.ReturnAttribute;
 import io.siddhi.annotation.util.DataType;
 import io.siddhi.core.config.SiddhiQueryContext;
@@ -49,17 +50,18 @@ import static tec.units.ri.unit.Units.METRE;
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from kilometers into feet.",
-                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE}),
+                type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
+                dynamic = true
+        ),
+        parameterOverloads = {
+                @ParameterOverload(parameterNames = {"p1"})
+        },
         returnAttributes = @ReturnAttribute(
                 description = "The value that is returned in feet.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "define stream UnitConversionForKilometreToFootStream (inValue int); \n" +
-                        "from UnitConversionForKilometreToFootStream \n" +
-                        "select unitconversion:kmToft(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;",
-                description = "The value in kilometers obtained from 'UnitConversionForKilometreToFootStream' " +
-                        "input stream is converted into feet and returned to the 'OutMediationStream' output stream."
+                syntax = "unitconversion:kmToft(inValue) as UnitConversionValue \n",
+                description = "The value in kilometers is converted into feet."
         )
 )
 public class KilometreToFoot extends FunctionExecutor {

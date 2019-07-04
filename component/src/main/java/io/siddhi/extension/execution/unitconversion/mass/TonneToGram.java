@@ -20,6 +20,7 @@ package io.siddhi.extension.execution.unitconversion.mass;
 import io.siddhi.annotation.Example;
 import io.siddhi.annotation.Extension;
 import io.siddhi.annotation.Parameter;
+import io.siddhi.annotation.ParameterOverload;
 import io.siddhi.annotation.ReturnAttribute;
 import io.siddhi.annotation.util.DataType;
 import io.siddhi.core.config.SiddhiQueryContext;
@@ -49,17 +50,18 @@ import static tec.units.ri.unit.Units.KILOGRAM;
         parameters = @Parameter(
                 name = "p1",
                 description = "The value that needs to be converted from Tonnes into grams.",
-                type = {DataType.INT, DataType.DOUBLE}),
+                type = {DataType.INT, DataType.DOUBLE},
+                dynamic = true
+        ),
+        parameterOverloads = {
+                @ParameterOverload(parameterNames = {"p1"})
+        },
         returnAttributes = @ReturnAttribute(
                 description = "The value that is returned in grams.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "define stream UnitConversionForTonneToGramStream (inValue int); \n" +
-                        "from UnitConversionForTonneToGramStream \n" +
-                        "select unitconversion:tTog(inValue) as UnitConversionValue \n" +
-                        "insert into OutMediationStream;",
-                description = "The value in tonnes from 'UnitConversionForTonneToGramStream' input stream is " +
-                        "converted into grams and returned to the 'OutMediationStream' output stream."
+                syntax = "unitconversion:tTog(inValue) as UnitConversionValue \n",
+                description = "The value in tonnes is converted into grams."
         )
 )
 public class TonneToGram extends FunctionExecutor {
