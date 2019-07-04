@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.LITRE;
                 description = "The value that is returned in milliliters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:lToml(inValue) as UnitConversionValue \n",
-                description = "The value in liters is converted into milliliters."
+                syntax = "unitconversion:lToml(1) \n",
+                description = "The liter value '1' is converted into milliliters as '1000.0' ."
         )
 )
 public class LitreToMillilitre extends FunctionExecutor {

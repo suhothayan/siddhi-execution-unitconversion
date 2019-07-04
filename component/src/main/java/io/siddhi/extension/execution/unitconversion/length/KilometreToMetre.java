@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in meters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kmTom(inValue) as UnitConversionValue \n",
-                description = "The value in kilometers is converted into meters."
+                syntax = "unitconversion:kmTom(1) \n",
+                description = "The kilometer value '1' is converted into meters as '1000.0' ."
         )
 )
 public class KilometreToMetre extends FunctionExecutor {

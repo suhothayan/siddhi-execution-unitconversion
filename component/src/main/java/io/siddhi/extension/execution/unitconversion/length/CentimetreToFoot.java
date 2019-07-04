@@ -60,8 +60,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in feet.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmToft(inValue) as UnitConversionValue \n",
-                description = "The centimeter values is converted into feet."
+                syntax = "unitconversion:cmToft(100) \n",
+                description = "The centimeters value '100' is converted into feet as '3.280' ."
         )
 )
 public class CentimetreToFoot extends FunctionExecutor {

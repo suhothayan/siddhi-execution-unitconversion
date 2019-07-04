@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 description = "The value that is returned in US tons.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kgToST(inValue) as UnitConversionValue \n",
-                description = "The value in kilograms is converted into US tons."
+                syntax = "unitconversion:kgToST(1000) \n",
+                description = "The kilograms value '1000 is converted into US tons as '1.10' ."
         )
 )
 public class KilogramToUSTon extends FunctionExecutor {

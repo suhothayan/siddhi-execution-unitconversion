@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in nanometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kmTonm(inValue) as UnitConversionValue \n",
-                description = "The value in kilometers is converted into nanometers."
+                syntax = "unitconversion:kmTonm(1) \n",
+                description = "The kilometer value '1' is converted into nanometers as '1000000000000.0' ."
         )
 )
 public class KilometreToNanometre extends FunctionExecutor {

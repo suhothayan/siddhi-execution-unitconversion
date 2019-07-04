@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in millimeters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kmTomm(inValue) as UnitConversionValue \n",
-                description = "The value in kilometers is converted into millimeters."
+                syntax = "unitconversion:kmTomm(1) \n",
+                description = "The kilometer value '1' is converted into millimeters as '1000000.0' ."
         )
 )
 public class KilometreToMillimetre extends FunctionExecutor {

@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 description = "The value that is returned in tonnes.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kgTot(inValue) as UnitConversionValue \n",
-                description = "The value in kilograms is converted into tonnes."
+                syntax = "unitconversion:kgTot(1) \n",
+                description = "The kilogram value '1' is converted into tonnes as '0.001' ."
         )
 )
 public class KilogramToTonne extends FunctionExecutor {

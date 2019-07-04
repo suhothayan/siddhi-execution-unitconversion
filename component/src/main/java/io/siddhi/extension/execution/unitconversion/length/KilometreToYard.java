@@ -60,8 +60,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in yards.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kmToyd(inValue) as UnitConversionValue \n",
-                description = "The value in kilometers is converted into yards."
+                syntax = "unitconversion:kmToyd(1) \n",
+                description = "The kilometer value '1' is converted into yards as '1093.6' ."
         )
 )
 public class KilometreToYard extends FunctionExecutor {

@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in nanometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmTonm(inValue) as UnitConversionValue \n",
-                description = "The values in centimeters is converted into nanometers."
+                syntax = "unitconversion:cmTonm(1) \n",
+                description = "The centimeter value '1' is converted into nanometers as '10000000' ."
         )
 )
 public class CentimetreToNanometre extends FunctionExecutor {

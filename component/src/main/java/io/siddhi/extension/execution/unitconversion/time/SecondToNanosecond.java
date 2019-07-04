@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.SECOND;
                 description = "The value that is returned in nanoseconds.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:sTons(inValue) as UnitConversionValue \n",
-                description = "The value in seconds is converted into nanoseconds."
+                syntax = "unitconversion:sTons(1) \n",
+                description = "The second value '1' is converted into nanoseconds as '1000000000.0' ."
         )
 )
 public class SecondToNanosecond extends FunctionExecutor {

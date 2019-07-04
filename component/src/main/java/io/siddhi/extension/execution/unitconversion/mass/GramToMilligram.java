@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.GRAM;
                 description = "The value that is returned milligrams.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:gTomg(inValue) as UnitConversionValue \n",
-                description = "The value in grams is converted into milligrams."
+                syntax = "unitconversion:gTomg(1) \n",
+                description = "The gram value '1' is converted into milligrams as '1000.0' ."
         )
 )
 

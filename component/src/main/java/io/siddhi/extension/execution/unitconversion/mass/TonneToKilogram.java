@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 description = "The value that is returned in kilograms.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:tTokg(inValue) as UnitConversionValue \n",
-                description = "The value in tonnes is converted into kilograms."
+                syntax = "unitconversion:tTokg(inValue) \n",
+                description = "The tonne value is converted into kilograms as '1000.0' ."
         )
 )
 public class TonneToKilogram extends FunctionExecutor {

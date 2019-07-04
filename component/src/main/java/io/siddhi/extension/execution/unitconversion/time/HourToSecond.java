@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.SECOND;
                 description = "The value that is returned in seconds.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:hTos(inValue) as UnitConversionValue \n",
-                description = "The value in hours is converted into seconds."
+                syntax = "unitconversion:hTos(1) \n",
+                description = "The hour value '1' is converted into seconds as '3600.0'."
 
         )
 )

@@ -60,8 +60,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in kilometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmTokm(inValue) as UnitConversionValue \n",
-                description = "The value in centimeters is converted into kilometers."
+                syntax = "unitconversion:cmTokm(100) \n",
+                description = "The centimeters value '100' is converted into kilometers as '0.001'."
         )
 )
 public class CentimetreToKilometre extends FunctionExecutor {

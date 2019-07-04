@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 description = "The value that is returned in ounces.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kgTooz(inValue) as UnitConversionValue \n",
-                description = "The value in kilograms is converted into ounces."
+                syntax = "unitconversion:kgTooz(1) \n",
+                description = "The kilogram value '1' is converted into ounces as ' 35.274' ."
         )
 )
 public class KilogramToOunce extends FunctionExecutor {

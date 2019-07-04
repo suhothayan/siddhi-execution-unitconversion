@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in feet.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:mToft(inValue) as UnitConversionValue \n",
-                description = "The value in meters is converted into feet."
+                syntax = "unitconversion:mToft(1) \n",
+                description = "The meter value '1' is converted into feet as '3.280' ."
         )
 )
 public class MetreToFoot extends FunctionExecutor {

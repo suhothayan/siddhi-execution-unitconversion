@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in millimeters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmTomm(inValue) as UnitConversionValue \n",
-                description = "The value in centimeters is converted into millimeters."
+                syntax = "unitconversion:cmTomm(1) \n",
+                description = "The centimeter value '1' is converted into millimeters as '10.0' ."
         )
 )
 public class CentimetreToMillimetre extends FunctionExecutor {

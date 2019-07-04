@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.SECOND;
                 description = "The value that is returned in microseconds.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:sTous(inValue) as UnitConversionValue \n",
-                description = "The value in seconds is converted into microseconds."
+                syntax = "unitconversion:sTous(1) \n",
+                description = "The second value '1' is converted into microseconds as '1000000.0' ."
         )
 )
 public class SecondToMicrosecond extends FunctionExecutor {

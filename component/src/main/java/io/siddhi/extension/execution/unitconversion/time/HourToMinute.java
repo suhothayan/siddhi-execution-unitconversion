@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.MINUTE;
                 description = "The value that is returned in minutes.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:hTom(inValue) as UnitConversionValue \n",
-                description = "The value in hours is converted into minutes."
+                syntax = "unitconversion:hTom(1) \n",
+                description = "The hour value '1' is converted into minutes as '60.0' ."
         )
 )
 public class HourToMinute extends FunctionExecutor {

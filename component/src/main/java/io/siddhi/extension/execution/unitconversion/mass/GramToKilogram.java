@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.GRAM;
                 description = "The value that is returned in kilograms.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:gTokg(inValue) as UnitConversionValue \n",
-                description = "The value in grams is converted into kilograms."
+                syntax = "unitconversion:gTokg(1000) \n",
+                description = "The grams value '1000' is converted into kilogram as '1.0' ."
         )
 )
 public class GramToKilogram extends FunctionExecutor {

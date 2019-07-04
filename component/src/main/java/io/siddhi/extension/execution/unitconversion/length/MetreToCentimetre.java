@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in centimeters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:mTocm(inValue) as UnitConversionValue \n",
-                description = "The value in meters is converted to centimeters."
+                syntax = "unitconversion:mTocm(1) \n",
+                description = "The meter value '1' is converted to centimeters as '100.0' ."
         )
 )
 public class MetreToCentimetre extends FunctionExecutor {

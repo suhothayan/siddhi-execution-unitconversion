@@ -62,8 +62,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in miles.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmTomi(inValue) as UnitConversionValue \n",
-                description = "The value in centimeters is converted into miles."
+                syntax = "unitconversion:cmTomi(10000) \n",
+                description = "The centimeters value '10000' is converted into miles as '0.062' ."
         )
 )
 public class CentimetreToMile extends FunctionExecutor {

@@ -60,8 +60,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in yards.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmToyd(inValue) as UnitConversionValue \n",
-                description = "The values in centimeters is converted into yards."
+                syntax = "unitconversion:cmToyd(1) \n",
+                description = "The centimeter value '1' is converted into yards as '0.01' ."
         )
 )
 public class CentimetreToYard extends FunctionExecutor {

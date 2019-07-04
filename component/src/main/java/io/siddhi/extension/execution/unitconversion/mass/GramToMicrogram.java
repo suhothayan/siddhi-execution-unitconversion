@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.GRAM;
                 description = "The value that is returned in micrograms.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:gToug(inValue) as UnitConversionValue \n",
-                description = "The value in grams is converted into micrograms."
+                syntax = "unitconversion:gToug(1) \n",
+                description = "The gram value '1' is converted into micrograms as '1000000.0' ."
         )
 )
 public class GramToMicrogram extends FunctionExecutor {

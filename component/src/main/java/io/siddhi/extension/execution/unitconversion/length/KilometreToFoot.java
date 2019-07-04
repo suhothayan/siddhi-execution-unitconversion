@@ -60,8 +60,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in feet.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kmToft(inValue) as UnitConversionValue \n",
-                description = "The value in kilometers is converted into feet."
+                syntax = "unitconversion:kmToft(1) \n",
+                description = "The kilometer value '1' is converted into feet as '3280.8' ."
         )
 )
 public class KilometreToFoot extends FunctionExecutor {

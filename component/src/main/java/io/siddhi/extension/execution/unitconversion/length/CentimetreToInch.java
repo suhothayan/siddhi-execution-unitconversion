@@ -61,8 +61,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in inches.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmToin(inValue) as UnitConversionValue \n",
-                description = "The value in centimeters is converted into inches."
+                syntax = "unitconversion:cmToin(100) \n",
+                description = "Input centimeters value '100' is converted into inches as '39.37'."
         )
 )
 public class CentimetreToInch extends FunctionExecutor {

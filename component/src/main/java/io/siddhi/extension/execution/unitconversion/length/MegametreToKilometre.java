@@ -60,8 +60,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in kilometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:MmTokm(inValue) as UnitConversionValue \n",
-                description = "The value in megameters is converted into kilometers."
+                syntax = "unitconversion:MmTokm(1) \n",
+                description = "The megameter value '1' is converted into kilometers as '1000.0' ."
         )
 )
 public class MegametreToKilometre extends FunctionExecutor {

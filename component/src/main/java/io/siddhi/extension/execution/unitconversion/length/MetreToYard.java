@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in yards.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:mToyd(inValue) as UnitConversionValue \n",
-                description = "The value in meters is converted into yards."
+                syntax = "unitconversion:mToyd(1) \n",
+                description = "The meter value '1' is converted into yards as '1.093' ."
         )
 )
 public class MetreToYard extends FunctionExecutor {

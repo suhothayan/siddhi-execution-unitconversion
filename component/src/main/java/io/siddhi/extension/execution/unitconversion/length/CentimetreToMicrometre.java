@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in micrometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmToum(inValue) as UnitConversionValue \n",
-                description = "The value in centimeter is converted into micrometers."
+                syntax = "unitconversion:cmToum(100) \n",
+                description = "The centimeters value '100' is converted into micrometers as '1000000.0' ."
         )
 )
 public class CentimetreToMicrometre extends FunctionExecutor {

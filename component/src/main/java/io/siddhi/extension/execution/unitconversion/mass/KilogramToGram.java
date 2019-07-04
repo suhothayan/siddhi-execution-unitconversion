@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 description = "The value that is returned in grams.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kgTog(inValue) as UnitConversionValue \n",
-                description = "The value in kilograms is converted into grams."
+                syntax = "unitconversion:kgTog(1) \n",
+                description = "The kilogram value '1' is converted into grams as '1000'."
         )
 )
 public class KilogramToGram extends FunctionExecutor {

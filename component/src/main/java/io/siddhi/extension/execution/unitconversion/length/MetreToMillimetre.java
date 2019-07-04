@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value returned in millimeters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:mTomm(inValue) as UnitConversionValue \n",
-                description = "The value in meters is converted into millimeters."
+                syntax = "unitconversion:mTomm(1) \n",
+                description = "The meter value '1' is converted into millimeters as '1000.0' ."
         )
 )
 public class MetreToMillimetre extends FunctionExecutor {

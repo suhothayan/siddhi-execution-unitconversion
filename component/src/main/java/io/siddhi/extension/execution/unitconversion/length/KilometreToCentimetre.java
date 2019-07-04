@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in centimeters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kmTocm(inValue) as UnitConversionValue \n",
-                description = "The values in kilometers is converted into centimeters."
+                syntax = "unitconversion:kmTocm(1) \n",
+                description = "The kilometer value '1' is converted into centimeters as '100000.0' ."
         )
 )
 public class KilometreToCentimetre extends FunctionExecutor {

@@ -60,8 +60,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in miles.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kmTomi(inValue) as UnitConversionValue \n",
-                description = "The value in kilometers is converted into miles."
+                syntax = "unitconversion:kmTomi(1) \n",
+                description = "The kilometer value '1' is converted into miles as '0.621' ."
         )
 )
 public class KilometreToMile extends FunctionExecutor {

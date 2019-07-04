@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 description = "The value that is returned in pounds.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kgTolb(inValue) as UnitConversionValue \n",
-                description = "The value in kilograms is converted into pounds."
+                syntax = "unitconversion:kgTolb(1) \n",
+                description = "The kilogram value '1' is converted into pounds as '2.2' ."
         )
 )
 public class KilogramToPound extends FunctionExecutor {

@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.SECOND;
                 description = "The value that is returned in seconds.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:mTos(inValue) as UnitConversionValue \n",
-                description = "The value in minutes is converted into seconds."
+                syntax = "unitconversion:mTos(1) \n",
+                description = "The minute value '1' is converted into seconds as '60.0' ."
         )
 )
 public class MinuteToSecond extends FunctionExecutor {

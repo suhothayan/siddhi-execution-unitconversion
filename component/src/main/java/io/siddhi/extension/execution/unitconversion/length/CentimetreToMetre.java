@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in meters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmTom(inValue) as UnitConversionValue \n",
-                description = "The value in centimeters is converted into meters."
+                syntax = "unitconversion:cmTom(100) \n",
+                description = "The centimeters value '100' is converted into meters as '1.0' ."
         )
 )
 public class CentimetreToMetre extends FunctionExecutor {

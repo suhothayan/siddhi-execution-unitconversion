@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.YEAR;
                 description = "The value that is returned in days.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:yTod(inValue) as UnitConversionValue \n",
-                description = "The value in years is converted into days."
+                syntax = "unitconversion:yTod(1) \n",
+                description = "The year value '1' is converted into days as '365.2525' ."
         )
 )
 public class YearToDay extends FunctionExecutor {

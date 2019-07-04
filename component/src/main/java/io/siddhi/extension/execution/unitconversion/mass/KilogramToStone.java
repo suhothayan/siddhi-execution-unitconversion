@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 description = "The value that is returned in imperial stones.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kgTost(inValue) as UnitConversionValue \n",
-                description = "The value in kilograms is converted into imperial stones."
+                syntax = "unitconversion:kgTost(1) \n",
+                description = "The kilogram value '1' is converted into imperial stones as '0.157' ."
         )
 )
 public class KilogramToStone extends FunctionExecutor {

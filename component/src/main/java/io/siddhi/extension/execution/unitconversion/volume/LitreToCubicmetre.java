@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.LITRE;
                 description = "The value that is returned in cubic meters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:lTom3(inValue) as UnitConversionValue \n",
-                description = "The value in liters is converted into cubic meters.")
+                syntax = "unitconversion:lTom3(1000) \n",
+                description = "The liters value '1000' is converted into cubic meters as '1' .")
 )
 public class LitreToCubicmetre extends FunctionExecutor {
 

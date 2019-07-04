@@ -60,8 +60,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in inches.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kmToin(inValue) as UnitConversionValue \n",
-                description = "The value in kilometers is converted into inches."
+                syntax = "unitconversion:kmToin(1) \n",
+                description = "The kilometer value '1' is converted into inches as '39370.08' ."
         )
 )
 public class KilometreToInch extends FunctionExecutor {

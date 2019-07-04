@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.HOUR;
                 description = "The value that is returned in hours.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:dToh(inValue) as UnitConversionValue \n",
-                description = "The value in days is converted into hours."
+                syntax = "unitconversion:dToh(1) \n",
+                description = "The day value '1' is converted into hours as '24.0'."
         )
 )
 public class DayToHour extends FunctionExecutor {

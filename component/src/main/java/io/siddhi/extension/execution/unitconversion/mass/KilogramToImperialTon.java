@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 description = "The value that is returned in imperial tons.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kgToLT(inValue) as UnitConversionValue \n",
-                description = "The value in kilograms is converted into imperial tons."
+                syntax = "unitconversion:kgToLT(1000) \n",
+                description = "The kilograms value '1000' is converted into imperial tons as '0.9842' ."
         )
 )
 public class KilogramToImperialTon extends FunctionExecutor {

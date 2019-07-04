@@ -59,8 +59,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value that is returned in micrometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kmToum(inValue) as UnitConversionValue \n",
-                description = "The value in kilometers is converted into micrometers."
+                syntax = "unitconversion:kmToum(1) \n",
+                description = "The kilometer value '1' is converted into micrometers as '1000000000.0' ."
         )
 )
 public class KilometreToMicrometre extends FunctionExecutor {
