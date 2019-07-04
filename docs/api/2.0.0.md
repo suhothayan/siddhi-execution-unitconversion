@@ -2,7 +2,7 @@
 
 ## Unitconversion
 
-### MmTokm *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### MmTokm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in megameters into kilometers.</p>
 
@@ -41,7 +41,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in megameters from 'UnitConversionForMegametreToKilometreStream' input stream is converted into kilometers and returned to the 'OutMediationStream' output stream.</p>
 
-### cmToft *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### cmToft *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in centimeters into feet.</p>
 
@@ -80,7 +80,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The centimeter values received from 'UnitConversionForCentimetreToFootStream' input stream is converted into feet and returned to the 'OutMediationStream' output stream.</p>
 
-### cmToin *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### cmToin *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in centimeters into inches.</p>
 
@@ -119,7 +119,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in centimeters obtained from 'UnitConversionForCentimetreToInchStream' input stream, is converted into inches and returned to the 'OutMediationStream' output stream.</p>
 
-### cmTokm *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### cmTokm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input value given in centimeters into kilometers.</p>
 
@@ -158,7 +158,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value obtained from 'UnitConversionForCentimetreToKilometreStream' input stream in centimeters, is converted into kilometers and returned to the 'OutMediationStream' output stream.</p>
 
-### cmTom *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### cmTom *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in centimeters into meters.</p>
 
@@ -197,7 +197,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in centimeters obtained from 'UnitConversionForCentimetreToMeterStream'input stream is converted into meters and returned to the 'OutMediationStream' output stream.</p>
 
-### cmTomi *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### cmTomi *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in centimeters into miles.</p>
 
@@ -236,7 +236,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in centimeters obtained from 'UnitConversionForCentimetreToMileStream' input stream is converted into miles and returned to the 'OutMediationStream' output stream.</p>
 
-### cmTomm *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### cmTomm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in centimeters into millimeters.</p>
 
@@ -275,7 +275,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in centimeters obtained from 'UnitConversionForCentimetreToMillimetreStream' input stream is converted into millimeters and returned to the 'OutMediationStream' output stream.</p>
 
-### cmTonm *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### cmTonm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in centimeters into nanometers.</p>
 
@@ -314,7 +314,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The values in centimeters obtained from 'UnitConversionForCentimetreToNanometreStream' input stream is converted into nanometers and returned to the 'OutMediationStream' output stream.</p>
 
-### cmToum *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### cmToum *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input in centimeters into micrometers.</p>
 
@@ -353,7 +353,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in centimeter obtained from 'UnitConversionForCentimetreToMicrometreStream' input stream is converted into micrometers and returned to the 'OutMediationStream' output stream.</p>
 
-### cmToyd *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### cmToyd *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in centimeters into yards.</p>
 
@@ -392,7 +392,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The values in centimeters obtained from 'UnitConversionForCentimetreToYardStream' is converted into yards and returned to the 'OutMediationStream' output stream.</p>
 
-### dToh *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### dToh *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in days into hours.</p>
 
@@ -431,7 +431,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in days from 'UnitConversionForDayToHourStream' is converted into hours and returned to the 'OutMediationStream'.</p>
 
-### gTokg *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### gTokg *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in grams into kilograms.</p>
 
@@ -470,7 +470,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in grams from 'UnitConversionForGramToKilogramStream' input stream is converted into kilograms and returned to the 'OutMediationStream' output stream.</p>
 
-### gTomg *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### gTomg *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in grams into milligrams.</p>
 
@@ -509,7 +509,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in grams from 'UnitConversionForGramToMilligramStream' input stream is converted into milligrams and returned to the 'OutMediationStream' output stream.</p>
 
-### gToug *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### gToug *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in grams into micrograms.</p>
 
@@ -548,7 +548,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in grams from 'UnitConversionForGramToMicrogramStream' input stream is converted into micrograms and returned to the 'OutMediationStream' output stream.</p>
 
-### hTom *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### hTom *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in hours into minutes.</p>
 
@@ -587,7 +587,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in hours from 'UnitConversionForHourToMinuteStream' input stream isconverted into minutes and returned to the 'OutMediationStream' output stream.</p>
 
-### hTos *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### hTos *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in hours into seconds.</p>
 
@@ -626,7 +626,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in hours from 'UnitConversionForHourToSecondStream' input stream is converted into seconds and returned to the 'OutMediationStream' output stream.</p>
 
-### kgToLT *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kgToLT *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilograms into imperial tons.</p>
 
@@ -665,7 +665,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToImperialTonStream' input stream is converted into imperial tons and returned to the 'OutMediationStream' output stream.</p>
 
-### kgToST *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kgToST *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilograms into US tons.</p>
 
@@ -704,7 +704,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToUSTonStream' input stream is converted into US tons and returned to the 'OutMediationStream' output stream.</p>
 
-### kgTog *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kgTog *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilograms into grams.</p>
 
@@ -743,7 +743,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToGramStream' input stream is converted into grams and returned to the 'OutMediationStream' output stream.</p>
 
-### kgTolb *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kgTolb *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilograms into pounds.</p>
 
@@ -782,7 +782,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToPoundStream' input stream is converted into pounds and returned to the 'OutMediationStream' output stream.</p>
 
-### kgTooz *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kgTooz *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilograms into ounces.</p>
 
@@ -821,7 +821,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToOunceStream' input stream is converted into ounces and returned to the 'OutMediationStream' output stream.</p>
 
-### kgTost *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kgTost *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilograms into imperial stones.</p>
 
@@ -860,7 +860,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToStonemStream' input stream is converted into imperial stones and returned to the 'OutMediationStream' output stream.</p>
 
-### kgTot *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kgTot *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilograms into tonnes.</p>
 
@@ -899,7 +899,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToTonneStream' input stream is converted into tonnes and returned to the 'OutMediationStream' output stream.</p>
 
-### kmTocm *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kmTocm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilometers into centimeters.</p>
 
@@ -938,7 +938,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The values in kilometers obtained from 'UnitConversionForKilometreToCentimetreStream'input stream is converted into centimeters and returned to the 'OutMediationStream' outputstream.</p>
 
-### kmToft *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kmToft *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilometers into feet.</p>
 
@@ -977,7 +977,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToFootStream' input stream is converted into feet and returned to the 'OutMediationStream' output stream.</p>
 
-### kmToin *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kmToin *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilometers into inches.</p>
 
@@ -1016,7 +1016,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToInchStream' input stream is converted into inches and returned to the 'OutMediationStream' output stream.</p>
 
-### kmTom *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kmTom *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilometers into meters.</p>
 
@@ -1055,7 +1055,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToMetreStream'input stream is converted into meters and returned to the 'OutMediationStream' output stream.</p>
 
-### kmTomi *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kmTomi *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilometers into miles.</p>
 
@@ -1094,7 +1094,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToMileStream' input stream is converted into miles and returned to the 'OutMediationStream' output stream.</p>
 
-### kmTomm *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kmTomm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilometers into millimeters.</p>
 
@@ -1133,7 +1133,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToMillimetreStream'input stream is converted into millimeters and returned to the 'OutMediationStream' output stream.</p>
 
-### kmTonm *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kmTonm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilometers into nanometers.</p>
 
@@ -1172,7 +1172,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToNanometreStream'input stream is converted into nanometers and returned to the 'OutMediationStream' output stream.</p>
 
-### kmToum *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kmToum *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilometers into micrometers.</p>
 
@@ -1211,7 +1211,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToMicrometreStream'input stream is converted into micrometers and returned to the 'OutMediationStream'output stream.</p>
 
-### kmToyd *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### kmToyd *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in kilometers into yards.</p>
 
@@ -1250,7 +1250,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in kilometers from 'UnitConversionForKilometreToYardStream' input streamis converted into yards and returned to the 'OutMediationStream' output stream.</p>
 
-### lTom3 *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### lTom3 *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in liters into cubic meters.</p>
 
@@ -1289,7 +1289,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in liters from 'UnitConversionForLitreToCubicmetreStream' input stream is converted into cubic meters and returned to the 'OutMediationStream' output stream.</p>
 
-### lToml *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### lToml *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in liters into milliliters.</p>
 
@@ -1328,7 +1328,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in liters from 'UnitConversionForLitreToMillilitreStream' input stream is converted into milliliters and returned to the 'OutMediationStream' output stream.</p>
 
-### m3Tol *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### m3Tol *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in cubic meters into liters.</p>
 
@@ -1367,7 +1367,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in cubic meters from 'UnitConversionForCubicmetreToLitreStream' input streamis converted into liters and returned to the 'OutMediationStream' output stream.</p>
 
-### mTocm *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### mTocm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in meters into centimeters.</p>
 
@@ -1406,7 +1406,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in meters from 'UnitConversionForMetreToCentimetreStream' input stream is converted to centimeters and returned to the 'OutMediationStream' output stream.</p>
 
-### mToft *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### mToft *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in meters into feet.</p>
 
@@ -1445,7 +1445,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in meters from 'UnitConversionForMetreToFootStream' input stream is converted into feet and returned to the 'OutMediationStream' output stream.</p>
 
-### mTomm *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### mTomm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in meters into millimeters.</p>
 
@@ -1484,7 +1484,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in meters from 'UnitConversionForMetreToMillimetreStream' input streamis converted into millimeters and returned to the 'OutMediationStream' output stream.</p>
 
-### mTos *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### mTos *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in minutes into seconds.</p>
 
@@ -1523,7 +1523,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in minutes from 'UnitConversionForMinuteToSecondStream' input stream is converted into seconds and returned to the 'OutMediationStream' output stream.</p>
 
-### mToyd *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### mToyd *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in meters into yards.</p>
 
@@ -1562,7 +1562,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in meters from 'UnitConversionForMetreToYardStream' input stream is converted into yards and returned to the 'OutMediationStream' output stream.</p>
 
-### miTokm *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### miTokm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in miles into kilometers.</p>
 
@@ -1601,7 +1601,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in miles from 'UnitConversionForMileToKilometreStream' input stream is converted into kilometers and returned to the 'OutMediationStream' output stream.</p>
 
-### mlTol *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### mlTol *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in milliliters into liters.</p>
 
@@ -1640,7 +1640,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in milliliters from 'UnitConversionForMillilitreToLitreStream' input stream is converted into liters and returned to the 'OutMediationStream' output stream.</p>
 
-### sToms *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### sToms *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in seconds into milliseconds.</p>
 
@@ -1679,7 +1679,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in seconds from 'UnitConversionForSecondToMillisecondStream' input stream is converted into milliseconds and returned to the 'OutMediationStream' output stream.</p>
 
-### sTons *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### sTons *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in seconds into nanoseconds.</p>
 
@@ -1718,7 +1718,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in seconds from 'UnitConversionForSecondToNanosecondStream' input stream is converted into nanoseconds and returned to the 'OutMediationStream' output stream.</p>
 
-### sTous *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### sTous *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in seconds into microseconds.</p>
 
@@ -1757,7 +1757,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in seconds from 'UnitConversionForSecondToMicrosecondStream' input stream is converted into microseconds and returned to the 'OutMediationStream' output stream.</p>
 
-### tTog *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### tTog *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in tonnes into grams.</p>
 
@@ -1796,7 +1796,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in tonnes from 'UnitConversionForTonneToGramStream' input stream is converted into grams and returned to the 'OutMediationStream' output stream.</p>
 
-### tTokg *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### tTokg *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the input given in tonnes into kilograms.</p>
 
@@ -1835,7 +1835,7 @@ insert into OutMediationStream;
 ```
 <p style="word-wrap: break-word">The value in tonnes from 'UnitConversionForTonneToKilogramStream' input stream is converted into kilograms and returned to the 'OutMediationStream' output stream.</p>
 
-### yTod *<a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a>*
+### yTod *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
 
 <p style="word-wrap: break-word">This converts the given input in years into days.</p>
 
