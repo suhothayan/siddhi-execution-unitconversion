@@ -45,10 +45,10 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "kgToLT",
         namespace = "unitconversion",
-        description = "This converts the input given in kilograms into imperial tons.",
+        description = "Function converts the input given in kilograms into imperial tons.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from kilograms into imperial tons.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -56,11 +56,11 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in imperial tons.",
+                description = "Returns the value in imperial tons.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kgToLT(1000) \n",
-                description = "The kilograms value '1000' is converted into imperial tons as '0.9842' ."
+                syntax = "unitconversion:kgToLT(1000)",
+                description = "The kilograms value `1000` is converted into imperial tons as `0.9842`."
         )
 )
 public class KilogramToImperialTon extends FunctionExecutor {

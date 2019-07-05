@@ -44,10 +44,10 @@ import static tec.units.ri.unit.Units.SECOND;
 @Extension(
         name = "sTons",
         namespace = "unitconversion",
-        description = "This converts the input given in seconds into nanoseconds.",
+        description = "Function converts the input given in seconds into nanoseconds.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from seconds into nanoseconds.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -55,11 +55,11 @@ import static tec.units.ri.unit.Units.SECOND;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in nanoseconds.",
+                description = "Returns the value in nanoseconds.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:sTons(1) \n",
-                description = "The second value '1' is converted into nanoseconds as '1000000000.0' ."
+                syntax = "unitconversion:sTons(1)",
+                description = "The second value `1` is converted into nanoseconds as `1000000000.0`."
         )
 )
 public class SecondToNanosecond extends FunctionExecutor {

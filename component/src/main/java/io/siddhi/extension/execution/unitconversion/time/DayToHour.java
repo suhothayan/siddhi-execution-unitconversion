@@ -44,10 +44,10 @@ import static tec.units.ri.unit.Units.HOUR;
 @Extension(
         name = "dToh",
         namespace = "unitconversion",
-        description = "This converts the input given in days into hours.",
+        description = "Function converts the input given in days into hours.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from days into hours.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -55,11 +55,11 @@ import static tec.units.ri.unit.Units.HOUR;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in hours.",
+                description = "Returns the value in hours.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:dToh(1) \n",
-                description = "The day value '1' is converted into hours as '24.0'."
+                syntax = "unitconversion:dToh(1)",
+                description = "The day value `1` is converted into hours as `24.0`."
         )
 )
 public class DayToHour extends FunctionExecutor {

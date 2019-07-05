@@ -45,10 +45,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmToum",
         namespace = "unitconversion",
-        description = "This converts the input in centimeters into micrometers.",
+        description = "Function converts the input in centimeters into micrometers.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from centimeters into micrometers.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -56,11 +56,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in micrometers.",
+                description = "Returns the value in micrometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmToum(100) \n",
-                description = "The centimeters value '100' is converted into micrometers as '1000000.0' ."
+                syntax = "unitconversion:cmToum(100)",
+                description = "The centimeters value `100` is converted into micrometers as `1000000.0`."
         )
 )
 public class CentimetreToMicrometre extends FunctionExecutor {

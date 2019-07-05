@@ -44,10 +44,10 @@ import static tec.units.ri.unit.Units.GRAM;
 @Extension(
         name = "gTokg",
         namespace = "unitconversion",
-        description = "This converts the input given in grams into kilograms.",
+        description = "Function converts the input given in grams into kilograms.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from grams into kilograms.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -55,11 +55,11 @@ import static tec.units.ri.unit.Units.GRAM;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in kilograms.",
+                description = "Returns the value in kilograms.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:gTokg(1000) \n",
-                description = "The grams value '1000' is converted into kilogram as '1.0' ."
+                syntax = "unitconversion:gTokg(1000)",
+                description = "The grams value `1000` is converted into kilogram as `1.0`."
         )
 )
 public class GramToKilogram extends FunctionExecutor {

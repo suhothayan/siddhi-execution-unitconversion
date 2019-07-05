@@ -2,11 +2,13 @@
 
 ## Unitconversion
 
-### MmTokm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+!!! Info "Tested Siddhi Core version: *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/">5.0.0</a>*"
+    It could also support other Siddhi Core minor versions.
 
-<p style="word-wrap: break-word">This converts the input given in megameters into kilometers.</p>
-
+### MmTokm *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in megameters into kilometers.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:MmTokm(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -23,29 +25,25 @@
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from megameters into kilometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForMegametreToKilometreStream (inValue int); 
-from UnitConversionForMegametreToKilometreStream 
-select unitconversion:MmTokm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:MmTokm(1)
 ```
-<p style="word-wrap: break-word">The value in megameters from 'UnitConversionForMegametreToKilometreStream' input stream is converted into kilometers and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The megameter value <code>1</code> is converted into kilometers as <code>1000.0</code>.</p>
 
-### cmToft *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in centimeters into feet.</p>
-
+### cmToft *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in centimeters to feet.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:cmToft(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -62,29 +60,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into feet.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForCentimetreToFootStream (inValue int); 
-from UnitConversionForCentimetreToFootStream 
-select unitconversion:cmToft(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:cmToft(100)
 ```
-<p style="word-wrap: break-word">The centimeter values received from 'UnitConversionForCentimetreToFootStream' input stream is converted into feet and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The centimeters value <code>100</code> will be converted into feet as <code>3.280</code>.</p>
 
-### cmToin *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in centimeters into inches.</p>
-
+### cmToin *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in centimeters into inches.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:cmToin(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -101,29 +95,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into inches.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForCentimetreToInchStream (inValue int); 
-from UnitConversionForCentimetreToInchStream 
-select unitconversion:cmToin(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:cmToin(100)
 ```
-<p style="word-wrap: break-word">The value in centimeters obtained from 'UnitConversionForCentimetreToInchStream' input stream, is converted into inches and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">Input centimeters value <code>100</code> will be converted into inches as <code>39.37</code>.</p>
 
-### cmTokm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input value given in centimeters into kilometers.</p>
-
+### cmTokm *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input value given in centimeters into kilometers.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:cmTokm(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -140,29 +130,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into kilometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForCentimetreToKilometreStream (inValue int); 
-from UnitConversionForCentimetreToKilometreStream 
-select unitconversion:cmTokm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:cmTokm(100)
 ```
-<p style="word-wrap: break-word">The value obtained from 'UnitConversionForCentimetreToKilometreStream' input stream in centimeters, is converted into kilometers and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The centimeters value <code>100</code> is converted into kilometers as <code>0.001</code>.</p>
 
-### cmTom *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in centimeters into meters.</p>
-
+### cmTom *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in centimeters into meters.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:cmTom(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -179,29 +165,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into meters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForCentimetreToMeterStream (inValue int); 
-from UnitConversionForCentimetreToMeterStream 
-select unitconversion:cmTom(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:cmTom(100)
 ```
-<p style="word-wrap: break-word">The value in centimeters obtained from 'UnitConversionForCentimetreToMeterStream'input stream is converted into meters and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The centimeters value <code>100</code> is converted into meters as <code>1.0</code>.</p>
 
-### cmTomi *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in centimeters into miles.</p>
-
+### cmTomi *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in centimeters into miles.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:cmTomi(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -218,29 +200,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into miles.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForCentimetreToMileStream (inValue int); 
-from UnitConversionForCentimetreToMileStream 
-select unitconversion:cmTomi(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:cmTomi(10000)
 ```
-<p style="word-wrap: break-word">The value in centimeters obtained from 'UnitConversionForCentimetreToMileStream' input stream is converted into miles and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The centimeters value <code>10000</code> is converted into miles as <code>0.062</code>.</p>
 
-### cmTomm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in centimeters into millimeters.</p>
-
+### cmTomm *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in centimeters into millimeters.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:cmTomm(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -257,29 +235,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into millimeters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForCentimetreToMillimetreStream (inValue int); 
-from UnitConversionForCentimetreToMillimetreStream 
-select unitconversion:cmTomm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:cmTomm(1)
 ```
-<p style="word-wrap: break-word">The value in centimeters obtained from 'UnitConversionForCentimetreToMillimetreStream' input stream is converted into millimeters and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The centimeter value <code>1</code> is converted into millimeters as <code>10.0</code>.</p>
 
-### cmTonm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in centimeters into nanometers.</p>
-
+### cmTonm *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in centimeters into nanometers.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:cmTonm(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -296,29 +270,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into nanometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForCentimetreToNanometreStream (inValue int); 
-from UnitConversionForCentimetreToNanometreStream 
-select unitconversion:cmTonm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:cmTonm(1)
 ```
-<p style="word-wrap: break-word">The values in centimeters obtained from 'UnitConversionForCentimetreToNanometreStream' input stream is converted into nanometers and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The centimeter value <code>1</code> is converted into nanometers as <code>10000000</code>.</p>
 
-### cmToum *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input in centimeters into micrometers.</p>
-
+### cmToum *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input in centimeters into micrometers.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:cmToum(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -335,29 +305,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into micrometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForCentimetreToMicrometreStream (inValue int); 
-from UnitConversionForCentimetreToMicrometreStream 
-select unitconversion:cmToum(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:cmToum(100)
 ```
-<p style="word-wrap: break-word">The value in centimeter obtained from 'UnitConversionForCentimetreToMicrometreStream' input stream is converted into micrometers and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The centimeters value <code>100</code> is converted into micrometers as <code>1000000.0</code>.</p>
 
-### cmToyd *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in centimeters into yards.</p>
-
+### cmToyd *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in centimeters into yards.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:cmToyd(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -374,29 +340,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into yards.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForCentimetreToYardStream (inValue int); 
-from UnitConversionForCentimetreToYardStream 
-select unitconversion:cmToyd(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:cmToyd(1)
 ```
-<p style="word-wrap: break-word">The values in centimeters obtained from 'UnitConversionForCentimetreToYardStream' is converted into yards and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The centimeter value <code>1</code> is converted into yards as <code>0.01</code>.</p>
 
-### dToh *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in days into hours.</p>
-
+### dToh *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in days into hours.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:dToh(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -413,29 +375,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from days into hours.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForDayToHourStream (inValue int); 
-from UnitConversionForDayToHourStream 
-select unitconversion:dToh(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:dToh(1)
 ```
-<p style="word-wrap: break-word">The value in days from 'UnitConversionForDayToHourStream' is converted into hours and returned to the 'OutMediationStream'.</p>
+<p style="word-wrap: break-word">The day value <code>1</code> is converted into hours as <code>24.0</code>.</p>
 
-### gTokg *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in grams into kilograms.</p>
-
+### gTokg *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in grams into kilograms.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:gTokg(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -452,29 +410,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from grams into kilograms.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForGramToKilogramStream (inValue int); 
-from UnitConversionForGramToKilogramStream 
-select unitconversion:gTokg(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:gTokg(1000)
 ```
-<p style="word-wrap: break-word">The value in grams from 'UnitConversionForGramToKilogramStream' input stream is converted into kilograms and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The grams value <code>1000</code> is converted into kilogram as <code>1.0</code>.</p>
 
-### gTomg *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in grams into milligrams.</p>
-
+### gTomg *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in grams into milligrams.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:gTomg(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -491,29 +445,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from grams into milligrams.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForGramToMilligramStream (inValue int); 
-from UnitConversionForGramToMilligramStream 
-select unitconversion:gTomg(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:gTomg(1)
 ```
-<p style="word-wrap: break-word">The value in grams from 'UnitConversionForGramToMilligramStream' input stream is converted into milligrams and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The gram value <code>1</code> is converted into milligrams as <code>1000.0</code>.</p>
 
-### gToug *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in grams into micrograms.</p>
-
+### gToug *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in grams into micrograms.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:gToug(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -530,29 +480,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from grams into micrograms.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForGramToMicrogramStream (inValue int); 
-from UnitConversionForGramToMicrogramStream 
-select unitconversion:gToug(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:gToug(1)
 ```
-<p style="word-wrap: break-word">The value in grams from 'UnitConversionForGramToMicrogramStream' input stream is converted into micrograms and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The gram value <code>1</code> is converted into micrograms as <code>1000000.0</code>.</p>
 
-### hTom *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in hours into minutes.</p>
-
+### hTom *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in hours into minutes.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:hTom(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -569,29 +515,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from hours into minutes.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForHourToMinuteStream (inValue int); 
-from UnitConversionForHourToMinuteStream 
-select unitconversion:hTom(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:hTom(1)
 ```
-<p style="word-wrap: break-word">The value in hours from 'UnitConversionForHourToMinuteStream' input stream isconverted into minutes and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The hour value <code>1</code> is converted into minutes as <code>60.0</code>.</p>
 
-### hTos *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in hours into seconds.</p>
-
+### hTos *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in hours into seconds.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:hTos(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -608,29 +550,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from hours into seconds.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForHourToSecondStream (inValue int); 
-from UnitConversionForHourToSecondStream 
-select unitconversion:hTos(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:hTos(1)
 ```
-<p style="word-wrap: break-word">The value in hours from 'UnitConversionForHourToSecondStream' input stream is converted into seconds and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The hour value <code>1</code> is converted into seconds as <code>3600.0</code>.</p>
 
-### kgToLT *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilograms into imperial tons.</p>
-
+### kgToLT *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilograms into imperial tons.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kgToLT(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -647,29 +585,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into imperial tons.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilogramToImperialTonStream (inValue int); 
-from UnitConversionForKilogramToImperialTonStream 
-select unitconversion:kgToLT(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kgToLT(1000)
 ```
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToImperialTonStream' input stream is converted into imperial tons and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilograms value <code>1000</code> is converted into imperial tons as <code>0.9842</code>.</p>
 
-### kgToST *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilograms into US tons.</p>
-
+### kgToST *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilograms into US tons.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kgToST(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -686,29 +620,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into US tons.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilogramToUSTonStream (inValue int); 
-from UnitConversionForKilogramToUSTonStream 
-select unitconversion:kgToST(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kgToST(1000)
 ```
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToUSTonStream' input stream is converted into US tons and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilograms value <code>1000</code> is converted into US tons as <code>1.10</code>.</p>
 
-### kgTog *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilograms into grams.</p>
-
+### kgTog *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilograms into grams.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kgTog(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -725,29 +655,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into grams.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilogramToGramStream (inValue int); 
-from UnitConversionForKilogramToGramStream 
-select unitconversion:kgTog(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kgTog(1)
 ```
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToGramStream' input stream is converted into grams and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilogram value <code>1</code> is converted into grams as <code>1000</code>.</p>
 
-### kgTolb *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilograms into pounds.</p>
-
+### kgTolb *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilograms into pounds.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kgTolb(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -764,29 +690,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into pounds.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilogramToPoundStream (inValue int); 
-from UnitConversionForKilogramToPoundStream 
-select unitconversion:kgTolb(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kgTolb(1)
 ```
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToPoundStream' input stream is converted into pounds and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilogram value <code>1</code> is converted into pounds as <code>2.2</code>.</p>
 
-### kgTooz *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilograms into ounces.</p>
-
+### kgTooz *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilograms into ounces.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kgTooz(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -803,29 +725,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into ounces.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilogramToOunceStream (inValue int); 
-from UnitConversionForKilogramToOunceStream 
-select unitconversion:kgTooz(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kgTooz(1)
 ```
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToOunceStream' input stream is converted into ounces and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilogram value <code>1</code> is converted into ounces as <code>35.274</code>.</p>
 
-### kgTost *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilograms into imperial stones.</p>
-
+### kgTost *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilograms into imperial stones.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kgTost(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -842,29 +760,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into imperial stones.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilogramToStonemStream (inValue int); 
-from UnitConversionForKilogramToStonemStream 
-select unitconversion:kgTost(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kgTost(1)
 ```
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToStonemStream' input stream is converted into imperial stones and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilogram value <code>1</code> is converted into imperial stones as <code>0.157</code>.</p>
 
-### kgTot *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilograms into tonnes.</p>
-
+### kgTot *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilograms into tonnes.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kgTot(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -881,29 +795,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into tonnes.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilogramToTonneStream (inValue int); 
-from UnitConversionForKilogramToTonneStream 
-select unitconversion:kgTot(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kgTot(1)
 ```
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToTonneStream' input stream is converted into tonnes and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilogram value <code>1</code> is converted into tonnes as <code>0.001</code>.</p>
 
-### kmTocm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilometers into centimeters.</p>
-
+### kmTocm *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilometers into centimeters.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kmTocm(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -920,29 +830,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into centimeters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilometreToCentimetreStream (inValue int); 
-from UnitConversionForKilometreToCentimetreStream 
-select unitconversion:kmTocm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kmTocm(1)
 ```
-<p style="word-wrap: break-word">The values in kilometers obtained from 'UnitConversionForKilometreToCentimetreStream'input stream is converted into centimeters and returned to the 'OutMediationStream' outputstream.</p>
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into centimeters as <code>100000.0</code>.</p>
 
-### kmToft *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilometers into feet.</p>
-
+### kmToft *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilometers into foot.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kmToft(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -959,29 +865,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into feet.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilometreToFootStream (inValue int); 
-from UnitConversionForKilometreToFootStream 
-select unitconversion:kmToft(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kmToft(1)
 ```
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToFootStream' input stream is converted into feet and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into foot as <code>3280.8</code>.</p>
 
-### kmToin *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilometers into inches.</p>
-
+### kmToin *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilometers into inches.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kmToin(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -998,29 +900,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into inches.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilometreToInchStream (inValue int); 
-from UnitConversionForKilometreToInchStream 
-select unitconversion:kmToin(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kmToin(1)
 ```
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToInchStream' input stream is converted into inches and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into inches as <code>39370.08</code>.</p>
 
-### kmTom *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilometers into meters.</p>
-
+### kmTom *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilometers into meters.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kmTom(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1037,29 +935,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into meters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilometreToMetreStream (inValue int); 
-from UnitConversionForKilometreToMetreStream 
-select unitconversion:kmTom(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kmTom(1)
 ```
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToMetreStream'input stream is converted into meters and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into meters as <code>1000.0</code>.</p>
 
-### kmTomi *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilometers into miles.</p>
-
+### kmTomi *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilometers into miles.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kmTomi(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1076,29 +970,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into miles.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilometreToMileStream (inValue int); 
-from UnitConversionForKilometreToMileStream 
-select unitconversion:kmTomi(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kmTomi(1)
 ```
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToMileStream' input stream is converted into miles and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into miles as <code>0.621</code>.</p>
 
-### kmTomm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilometers into millimeters.</p>
-
+### kmTomm *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilometers into millimeters.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kmTomm(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1115,29 +1005,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into millimeters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilometreToMillimetreStream (inValue int); 
-from UnitConversionForKilometreToMillimetreStream 
-select unitconversion:kmTomm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kmTomm(1)
 ```
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToMillimetreStream'input stream is converted into millimeters and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into millimeters as <code>1000000.0</code>.</p>
 
-### kmTonm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilometers into nanometers.</p>
-
+### kmTonm *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilometers into nanometers.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kmTonm(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1154,29 +1040,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into nanometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilometreToNanometreStream (inValue int); 
-from UnitConversionForKilometreToNanometreStream 
-select unitconversion:kmTonm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kmTonm(1)
 ```
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToNanometreStream'input stream is converted into nanometers and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into nanometers as <code>1000000000000.0</code>.</p>
 
-### kmToum *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilometers into micrometers.</p>
-
+### kmToum *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilometers into micrometers.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kmToum(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1193,29 +1075,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into micrometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilometreToMicrometreStream (inValue int); 
-from UnitConversionForKilometreToMicrometreStream 
-select unitconversion:kmToum(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kmToum(1)
 ```
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToMicrometreStream'input stream is converted into micrometers and returned to the 'OutMediationStream'output stream.</p>
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into micrometers as <code>1000000000.0</code>.</p>
 
-### kmToyd *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in kilometers into yards.</p>
-
+### kmToyd *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in kilometers into yards.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:kmToyd(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1232,29 +1110,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into yards.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForKilometreToYardStream (inValue int); 
-from UnitConversionForKilometreToYardStream 
-select unitconversion:kmToyd(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:kmToyd(1)
 ```
-<p style="word-wrap: break-word">The value in kilometers from 'UnitConversionForKilometreToYardStream' input streamis converted into yards and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into yards as <code>1093.6</code>.</p>
 
-### lTom3 *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in liters into cubic meters.</p>
-
+### lTom3 *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in liters into cubic meters.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:lTom3(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1271,29 +1145,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from liters into cubic meters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForLitreToCubicmetreStream (inValue int); 
-from UnitConversionForLitreToCubicmetreStream 
-select unitconversion:lTom3(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:lTom3(1000)
 ```
-<p style="word-wrap: break-word">The value in liters from 'UnitConversionForLitreToCubicmetreStream' input stream is converted into cubic meters and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The liters value <code>1000</code> is converted into cubic meters as <code>1</code>.</p>
 
-### lToml *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in liters into milliliters.</p>
-
+### lToml *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in liters into milliliters.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:lToml(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1310,29 +1180,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from liters into milliliters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForLitreToMillilitreStream (inValue int); 
-from UnitConversionForLitreToMillilitreStream 
-select unitconversion:lToml(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:lToml(1)
 ```
-<p style="word-wrap: break-word">The value in liters from 'UnitConversionForLitreToMillilitreStream' input stream is converted into milliliters and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The liter value <code>1</code> is converted into milliliters as <code>1000.0</code>.</p>
 
-### m3Tol *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in cubic meters into liters.</p>
-
+### m3Tol *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in cubic meters into liters.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:m3Tol(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1349,29 +1215,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from meters into liters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForCubicmetreToLitreStream (inValue int); 
-from UnitConversionForCubicmetreToLitreStream 
-select unitconversion:m3Tol(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:m3Tol(1)
 ```
-<p style="word-wrap: break-word">The value in cubic meters from 'UnitConversionForCubicmetreToLitreStream' input streamis converted into liters and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The cubic meter value <code>1</code> is converted into liters as <code>1000.0</code>.</p>
 
-### mTocm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in meters into centimeters.</p>
-
+### mTocm *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in meters into centimeters.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:mTocm(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1388,29 +1250,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from meters into centimeters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForMetreToCentimetreStream (inValue int); 
-from UnitConversionForMetreToCentimetreStream 
-select unitconversion:mTocm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:mTocm(1)
 ```
-<p style="word-wrap: break-word">The value in meters from 'UnitConversionForMetreToCentimetreStream' input stream is converted to centimeters and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The meter value <code>1</code> is converted to centimeters as <code>100.0</code>.</p>
 
-### mToft *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in meters into feet.</p>
-
+### mToft *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in meters into foot.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:mToft(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1427,29 +1285,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from meters into feet.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForMetreToFootStream (inValue int); 
-from UnitConversionForMetreToFootStream 
-select unitconversion:mToft(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:mToft(1)
 ```
-<p style="word-wrap: break-word">The value in meters from 'UnitConversionForMetreToFootStream' input stream is converted into feet and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The meter value <code>1</code> is converted into foot as <code>3.280</code>.</p>
 
-### mTomm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in meters into millimeters.</p>
-
+### mTomm *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in meters into millimeters.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:mTomm(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1466,29 +1320,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from meters into millimeters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForMetreToMillimetreStream (inValue int); 
-from UnitConversionForMetreToMillimetreStream 
-select unitconversion:mTomm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:mTomm(1)
 ```
-<p style="word-wrap: break-word">The value in meters from 'UnitConversionForMetreToMillimetreStream' input streamis converted into millimeters and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The meter value <code>1</code> is converted into millimeters as <code>1000.0</code>.</p>
 
-### mTos *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in minutes into seconds.</p>
-
+### mTos *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in minutes into seconds.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:mTos(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1505,29 +1355,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from minutes into seconds.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForMinuteToSecondStream (inValue int); 
-from UnitConversionForMinuteToSecondStream 
-select unitconversion:mTos(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:mTos(1)
 ```
-<p style="word-wrap: break-word">The value in minutes from 'UnitConversionForMinuteToSecondStream' input stream is converted into seconds and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The minute value <code>1</code> is converted into seconds as <code>60.0</code>.</p>
 
-### mToyd *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in meters into yards.</p>
-
+### mToyd *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in meters into yards.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:mToyd(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1544,29 +1390,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from meters into yards.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForMetreToYardStream (inValue int); 
-from UnitConversionForMetreToYardStream 
-select unitconversion:mToyd(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:mToyd(1)
 ```
-<p style="word-wrap: break-word">The value in meters from 'UnitConversionForMetreToYardStream' input stream is converted into yards and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The meter value <code>1</code> is converted into yards as <code>1.093</code>.</p>
 
-### miTokm *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in miles into kilometers.</p>
-
+### miTokm *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in miles into kilometers.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:miTokm(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1583,29 +1425,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from miles into kilometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForMileToKilometreStream (inValue int); 
-from UnitConversionForMileToKilometreStream 
-select unitconversion:miTokm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:miTokm(1)
 ```
-<p style="word-wrap: break-word">The value in miles from 'UnitConversionForMileToKilometreStream' input stream is converted into kilometers and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The mile value <code>1</code> is converted into kilometers as <code>1.6</code>.</p>
 
-### mlTol *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in milliliters into liters.</p>
-
+### mlTol *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in milliliters into liters.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:mlTol(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1622,29 +1460,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from milliliters into liters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForMillilitreToLitreStream (inValue int); 
-from UnitConversionForMillilitreToLitreStream 
-select unitconversion:mlTol(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:mlTol(1000)
 ```
-<p style="word-wrap: break-word">The value in milliliters from 'UnitConversionForMillilitreToLitreStream' input stream is converted into liters and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The milliliters value <code>1000</code> is converted into liters as <code>1</code>.</p>
 
-### sToms *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in seconds into milliseconds.</p>
-
+### sToms *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in seconds into milliseconds.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:sToms(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1661,29 +1495,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from seconds into milliseconds.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForSecondToMillisecondStream (inValue int); 
-from UnitConversionForSecondToMillisecondStream 
-select unitconversion:sToms(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:sToms(1)
 ```
-<p style="word-wrap: break-word">The value in seconds from 'UnitConversionForSecondToMillisecondStream' input stream is converted into milliseconds and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The second value <code>1</code> is converted into milliseconds as <code>1000.0</code>.</p>
 
-### sTons *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in seconds into nanoseconds.</p>
-
+### sTons *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in seconds into nanoseconds.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:sTons(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1700,29 +1530,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from seconds into nanoseconds.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForSecondToNanosecondStream (inValue int); 
-from UnitConversionForSecondToNanosecondStream 
-select unitconversion:sTons(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:sTons(1)
 ```
-<p style="word-wrap: break-word">The value in seconds from 'UnitConversionForSecondToNanosecondStream' input stream is converted into nanoseconds and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The second value <code>1</code> is converted into nanoseconds as <code>1000000000.0</code>.</p>
 
-### sTous *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in seconds into microseconds.</p>
-
+### sTous *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in seconds into microseconds.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:sTous(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1739,29 +1565,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from seconds into microseconds.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForSecondToMicrosecondStream (inValue int); 
-from UnitConversionForSecondToMicrosecondStream 
-select unitconversion:sTous(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:sTous(1)
 ```
-<p style="word-wrap: break-word">The value in seconds from 'UnitConversionForSecondToMicrosecondStream' input stream is converted into microseconds and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The second value <code>1</code> is converted into microseconds as <code>1000000.0</code>.</p>
 
-### tTog *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in tonnes into grams.</p>
-
+### tTog *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in tonnes into grams.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:tTog(<INT|DOUBLE> p1)
 ```
@@ -1778,29 +1600,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from Tonnes into grams.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForTonneToGramStream (inValue int); 
-from UnitConversionForTonneToGramStream 
-select unitconversion:tTog(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:tTog(1)
 ```
-<p style="word-wrap: break-word">The value in tonnes from 'UnitConversionForTonneToGramStream' input stream is converted into grams and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The tonne value <code>1</code> is converted into grams as <code>1000000.0</code>.</p>
 
-### tTokg *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the input given in tonnes into kilograms.</p>
-
+### tTokg *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the input given in tonnes into kilograms.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:tTokg(<INT|DOUBLE> p1)
 ```
@@ -1817,29 +1635,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from tonnes into kilograms.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForTonneToKilogramStream (inValue int); 
-from UnitConversionForTonneToKilogramStream 
-select unitconversion:tTokg(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:tTokg(1)
 ```
-<p style="word-wrap: break-word">The value in tonnes from 'UnitConversionForTonneToKilogramStream' input stream is converted into kilograms and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The tonne value <code>1</code> is converted into kilograms as <code>1000.0</code>.</p>
 
-### yTod *<a target="_blank" href="https://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
-
-<p style="word-wrap: break-word">This converts the given input in years into days.</p>
-
+### yTod *<a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a>*
+<p style="word-wrap: break-word">Function converts the given input in years into days.</p>
 <span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span>
+
 ```
 <DOUBLE> unitconversion:yTod(<INT|LONG|FLOAT|DOUBLE> p1)
 ```
@@ -1856,21 +1670,18 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from years into days.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table>
 
 <span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span>
 ```
-define stream UnitConversionForYearToDayStream (inValue int); 
-from UnitConversionForYearToDayStream 
-select unitconversion:yTod(inValue) as UnitConversionValue 
-insert into OutMediationStream;
+unitconversion:yTod(1)
 ```
-<p style="word-wrap: break-word">The value in years from 'UnitConversionForYearToDayStream' input stream is converted into days and returned to the 'OutMediationStream' output stream.</p>
+<p style="word-wrap: break-word">The year value <code>1</code> is converted into days as <code>365.2525</code>.</p>
 

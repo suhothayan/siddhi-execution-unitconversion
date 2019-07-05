@@ -46,10 +46,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmToin",
         namespace = "unitconversion",
-        description = "This converts the input given in kilometers into inches.",
+        description = "Function converts the input given in kilometers into inches.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from kilometers into inches.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -57,11 +57,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in inches.",
+                description = "Returns the value in inches.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kmToin(1) \n",
-                description = "The kilometer value '1' is converted into inches as '39370.08' ."
+                syntax = "unitconversion:kmToin(1)",
+                description = "The kilometer value `1` is converted into inches as `39370.08`."
         )
 )
 public class KilometreToInch extends FunctionExecutor {

@@ -45,10 +45,10 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "kgToST",
         namespace = "unitconversion",
-        description = "This converts the input given in kilograms into US tons.",
+        description = "Function converts the input given in kilograms into US tons.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from kilograms into US tons.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -56,11 +56,11 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in US tons.",
+                description = "Returns the value in US tons.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kgToST(1000) \n",
-                description = "The kilograms value '1000 is converted into US tons as '1.10' ."
+                syntax = "unitconversion:kgToST(1000)",
+                description = "The kilograms value `1000` is converted into US tons as `1.10`."
         )
 )
 public class KilogramToUSTon extends FunctionExecutor {

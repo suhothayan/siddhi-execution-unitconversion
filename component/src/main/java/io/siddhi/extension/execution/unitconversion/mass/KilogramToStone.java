@@ -45,10 +45,10 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "kgTost",
         namespace = "unitconversion",
-        description = "This converts the input given in kilograms into imperial stones.",
+        description = "Function converts the input given in kilograms into imperial stones.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from kilograms into imperial stones.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -56,11 +56,11 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in imperial stones.",
+                description = "Returns the value in imperial stones.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kgTost(1) \n",
-                description = "The kilogram value '1' is converted into imperial stones as '0.157' ."
+                syntax = "unitconversion:kgTost(1)",
+                description = "The kilogram value `1` is converted into imperial stones as `0.157`."
         )
 )
 public class KilogramToStone extends FunctionExecutor {

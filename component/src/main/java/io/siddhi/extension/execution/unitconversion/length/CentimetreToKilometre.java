@@ -46,10 +46,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmTokm",
         namespace = "unitconversion",
-        description = "This converts the input value given in centimeters into kilometers.",
+        description = "Function converts the input value given in centimeters into kilometers.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from centimeters into kilometers.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -57,11 +57,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in kilometers.",
+                description = "Returns the value in kilometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmTokm(100) \n",
-                description = "The centimeters value '100' is converted into kilometers as '0.001'."
+                syntax = "unitconversion:cmTokm(100)",
+                description = "The centimeters value `100` is converted into kilometers as `0.001`."
         )
 )
 public class CentimetreToKilometre extends FunctionExecutor {

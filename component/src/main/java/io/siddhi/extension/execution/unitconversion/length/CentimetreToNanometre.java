@@ -45,10 +45,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmTonm",
         namespace = "unitconversion",
-        description = "This converts the input given in centimeters into nanometers.",
+        description = "Function converts the input given in centimeters into nanometers.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from centimeters into nanometers.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -56,11 +56,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in nanometers.",
+                description = "Returns the value in nanometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmTonm(1) \n",
-                description = "The centimeter value '1' is converted into nanometers as '10000000' ."
+                syntax = "unitconversion:cmTonm(1)",
+                description = "The centimeter value `1` is converted into nanometers as `10000000`."
         )
 )
 public class CentimetreToNanometre extends FunctionExecutor {

@@ -44,10 +44,10 @@ import static tec.units.ri.unit.Units.LITRE;
 @Extension(
         name = "lToml",
         namespace = "unitconversion",
-        description = "This converts the input given in liters into milliliters.",
+        description = "Function converts the input given in liters into milliliters.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from liters into milliliters.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -55,11 +55,11 @@ import static tec.units.ri.unit.Units.LITRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in milliliters.",
+                description = "Returns the value in milliliters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:lToml(1) \n",
-                description = "The liter value '1' is converted into milliliters as '1000.0' ."
+                syntax = "unitconversion:lToml(1)",
+                description = "The liter value `1` is converted into milliliters as `1000.0`."
         )
 )
 public class LitreToMillilitre extends FunctionExecutor {

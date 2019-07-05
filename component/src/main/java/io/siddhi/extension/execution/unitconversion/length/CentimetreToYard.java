@@ -46,10 +46,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmToyd",
         namespace = "unitconversion",
-        description = "This converts the input given in centimeters into yards.",
+        description = "Function converts the input given in centimeters into yards.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from centimeters into yards.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -57,11 +57,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in yards.",
+                description = "Returns the value in yards.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmToyd(1) \n",
-                description = "The centimeter value '1' is converted into yards as '0.01' ."
+                syntax = "unitconversion:cmToyd(1)",
+                description = "The centimeter value `1` is converted into yards as `0.01`."
         )
 )
 public class CentimetreToYard extends FunctionExecutor {

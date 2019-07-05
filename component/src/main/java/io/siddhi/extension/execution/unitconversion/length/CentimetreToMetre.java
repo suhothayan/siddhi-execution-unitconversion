@@ -45,10 +45,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmTom",
         namespace = "unitconversion",
-        description = "This converts the input given in centimeters into meters.",
+        description = "Function converts the input given in centimeters into meters.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from centimeters into meters.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -56,11 +56,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in meters.",
+                description = "Returns the value in meters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmTom(100) \n",
-                description = "The centimeters value '100' is converted into meters as '1.0' ."
+                syntax = "unitconversion:cmTom(100)",
+                description = "The centimeters value `100` is converted into meters as `1.0`."
         )
 )
 public class CentimetreToMetre extends FunctionExecutor {

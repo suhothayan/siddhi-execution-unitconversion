@@ -44,10 +44,10 @@ import static tec.units.ri.unit.Units.SECOND;
 @Extension(
         name = "sToms",
         namespace = "unitconversion",
-        description = "This converts the input given in seconds into milliseconds.",
+        description = "Function converts the input given in seconds into milliseconds.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from seconds into milliseconds.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -55,11 +55,11 @@ import static tec.units.ri.unit.Units.SECOND;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in milliseconds.",
+                description = "Returns the value in milliseconds.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:sToms(1) \n",
-                description = "The second value '1' is converted into milliseconds as '1000.0' ."
+                syntax = "unitconversion:sToms(1)",
+                description = "The second value `1` is converted into milliseconds as `1000.0`."
         )
 )
 public class SecondToMillisecond extends FunctionExecutor {

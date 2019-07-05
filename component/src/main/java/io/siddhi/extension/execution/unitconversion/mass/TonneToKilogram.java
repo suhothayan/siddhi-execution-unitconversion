@@ -45,10 +45,10 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "tTokg",
         namespace = "unitconversion",
-        description = "This converts the input given in tonnes into kilograms.",
+        description = "Function converts the input given in tonnes into kilograms.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from tonnes into kilograms.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -56,11 +56,11 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in kilograms.",
+                description = "Returns the value in kilograms.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:tTokg(inValue) \n",
-                description = "The tonne value is converted into kilograms as '1000.0' ."
+                syntax = "unitconversion:tTokg(1)",
+                description = "The tonne value `1` is converted into kilograms as `1000.0`."
         )
 )
 public class TonneToKilogram extends FunctionExecutor {

@@ -44,10 +44,10 @@ import static tec.units.ri.unit.Units.SECOND;
 @Extension(
         name = "hTos",
         namespace = "unitconversion",
-        description = "This converts the input given in hours into seconds.",
+        description = "Function converts the input given in hours into seconds.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from hours into seconds.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -55,11 +55,11 @@ import static tec.units.ri.unit.Units.SECOND;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in seconds.",
+                description = "Returns the value in seconds.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:hTos(1) \n",
-                description = "The hour value '1' is converted into seconds as '3600.0'."
+                syntax = "unitconversion:hTos(1)",
+                description = "The hour value `1` is converted into seconds as `3600.0`."
 
         )
 )

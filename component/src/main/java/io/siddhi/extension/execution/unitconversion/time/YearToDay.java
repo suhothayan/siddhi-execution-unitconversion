@@ -44,10 +44,10 @@ import static tec.units.ri.unit.Units.YEAR;
 @Extension(
         name = "yTod",
         namespace = "unitconversion",
-        description = "This converts the given input in years into days.",
+        description = "Function converts the given input in years into days.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from years into days.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -55,11 +55,11 @@ import static tec.units.ri.unit.Units.YEAR;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in days.",
+                description = "Returns the value in days.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:yTod(1) \n",
-                description = "The year value '1' is converted into days as '365.2525' ."
+                syntax = "unitconversion:yTod(1)",
+                description = "The year value `1` is converted into days as `365.2525`."
         )
 )
 public class YearToDay extends FunctionExecutor {

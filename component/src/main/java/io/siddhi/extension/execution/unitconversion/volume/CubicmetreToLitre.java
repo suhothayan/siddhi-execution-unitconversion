@@ -44,10 +44,10 @@ import static tec.units.ri.unit.Units.LITRE;
 @Extension(
         name = "m3Tol",
         namespace = "unitconversion",
-        description = "This converts the input given in cubic meters into liters.",
+        description = "Function converts the input given in cubic meters into liters.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from meters into liters.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -55,11 +55,11 @@ import static tec.units.ri.unit.Units.LITRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in liters.",
+                description = "Returns the value in liters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:m3Tol(1) \n",
-                description = "The cubic meter value '1' is converted into liters as '1000.0' ."
+                syntax = "unitconversion:m3Tol(1)",
+                description = "The cubic meter value `1` is converted into liters as `1000.0`."
         )
 )
 public class CubicmetreToLitre extends FunctionExecutor {

@@ -46,10 +46,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "MmTokm",
         namespace = "unitconversion",
-        description = "This converts the input given in megameters into kilometers.",
+        description = "Function converts the input given in megameters into kilometers.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from megameters into kilometers.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -57,11 +57,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in kilometers.",
+                description = "Returns the value in kilometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:MmTokm(1) \n",
-                description = "The megameter value '1' is converted into kilometers as '1000.0' ."
+                syntax = "unitconversion:MmTokm(1)",
+                description = "The megameter value `1` is converted into kilometers as `1000.0`."
         )
 )
 public class MegametreToKilometre extends FunctionExecutor {

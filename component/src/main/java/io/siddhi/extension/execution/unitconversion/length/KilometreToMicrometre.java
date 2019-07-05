@@ -45,10 +45,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmToum",
         namespace = "unitconversion",
-        description = "This converts the input given in kilometers into micrometers.",
+        description = "Function converts the input given in kilometers into micrometers.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from kilometers into micrometers.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -56,11 +56,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in micrometers.",
+                description = "Returns the value in micrometers.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kmToum(1) \n",
-                description = "The kilometer value '1' is converted into micrometers as '1000000000.0' ."
+                syntax = "unitconversion:kmToum(1)",
+                description = "The kilometer value `1` is converted into micrometers as `1000000000.0`."
         )
 )
 public class KilometreToMicrometre extends FunctionExecutor {

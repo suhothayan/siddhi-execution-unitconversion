@@ -48,10 +48,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmTomi",
         namespace = "unitconversion",
-        description = "This converts the input given in centimeters into miles.",
+        description = "Function converts the input given in centimeters into miles.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from centimeters into miles.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -59,11 +59,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in miles.",
+                description = "Returns the value in miles.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmTomi(10000) \n",
-                description = "The centimeters value '10000' is converted into miles as '0.062' ."
+                syntax = "unitconversion:cmTomi(10000)",
+                description = "The centimeters value `10000` is converted into miles as `0.062`."
         )
 )
 public class CentimetreToMile extends FunctionExecutor {

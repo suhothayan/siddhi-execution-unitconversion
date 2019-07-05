@@ -45,10 +45,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "mToft",
         namespace = "unitconversion",
-        description = "This converts the input given in meters into feet.",
+        description = "Function converts the input given in meters into foot.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from meters into feet.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -56,11 +56,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in feet.",
+                description = "Returns the value in foot.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:mToft(1) \n",
-                description = "The meter value '1' is converted into feet as '3.280' ."
+                syntax = "unitconversion:mToft(1)",
+                description = "The meter value `1` is converted into foot as `3.280`."
         )
 )
 public class MetreToFoot extends FunctionExecutor {

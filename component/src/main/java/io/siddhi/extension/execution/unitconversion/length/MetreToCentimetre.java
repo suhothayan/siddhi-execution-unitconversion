@@ -44,10 +44,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "mTocm",
         namespace = "unitconversion",
-        description = "This converts the input given in meters into centimeters.",
+        description = "Function converts the input given in meters into centimeters.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from meters into centimeters.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -55,11 +55,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in centimeters.",
+                description = "Returns the value in centimeters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:mTocm(1) \n",
-                description = "The meter value '1' is converted to centimeters as '100.0' ."
+                syntax = "unitconversion:mTocm(1)",
+                description = "The meter value `1` is converted to centimeters as `100.0`."
         )
 )
 public class MetreToCentimetre extends FunctionExecutor {

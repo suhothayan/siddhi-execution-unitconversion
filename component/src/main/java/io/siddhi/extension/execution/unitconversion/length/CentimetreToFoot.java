@@ -46,10 +46,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "cmToft",
         namespace = "unitconversion",
-        description = "This converts the input given in centimeters into feet.",
+        description = "Function converts the input given in centimeters to feet.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from centimeters into feet.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -57,11 +57,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in feet.",
+                description = "Returns the value in feet.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:cmToft(100) \n",
-                description = "The centimeters value '100' is converted into feet as '3.280' ."
+                syntax = "unitconversion:cmToft(100)",
+                description = "The centimeters value `100` will be converted into feet as `3.280`."
         )
 )
 public class CentimetreToFoot extends FunctionExecutor {

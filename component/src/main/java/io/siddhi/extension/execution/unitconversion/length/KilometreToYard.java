@@ -46,10 +46,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "kmToyd",
         namespace = "unitconversion",
-        description = "This converts the input given in kilometers into yards.",
+        description = "Function converts the input given in kilometers into yards.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from kilometers into yards.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -57,11 +57,11 @@ import static tec.units.ri.unit.Units.METRE;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in yards.",
+                description = "Returns the value in yards.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kmToyd(1) \n",
-                description = "The kilometer value '1' is converted into yards as '1093.6' ."
+                syntax = "unitconversion:kmToyd(1)",
+                description = "The kilometer value `1` is converted into yards as `1093.6`."
         )
 )
 public class KilometreToYard extends FunctionExecutor {

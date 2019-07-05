@@ -44,10 +44,10 @@ import static tec.units.ri.unit.Units.GRAM;
 @Extension(
         name = "gTomg",
         namespace = "unitconversion",
-        description = "This converts the input given in grams into milligrams.",
+        description = "Function converts the input given in grams into milligrams.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from grams into milligrams.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.GRAM;
                 description = "The value that is returned milligrams.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:gTomg(1) \n",
-                description = "The gram value '1' is converted into milligrams as '1000.0' ."
+                syntax = "unitconversion:gTomg(1)",
+                description = "The gram value `1` is converted into milligrams as `1000.0`."
         )
 )
 

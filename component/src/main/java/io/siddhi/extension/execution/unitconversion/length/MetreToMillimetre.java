@@ -44,10 +44,10 @@ import static tec.units.ri.unit.Units.METRE;
 @Extension(
         name = "mTomm",
         namespace = "unitconversion",
-        description = "This converts the input given in meters into millimeters.",
+        description = "Function converts the input given in meters into millimeters.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from meters into millimeters.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -58,8 +58,8 @@ import static tec.units.ri.unit.Units.METRE;
                 description = "The value returned in millimeters.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:mTomm(1) \n",
-                description = "The meter value '1' is converted into millimeters as '1000.0' ."
+                syntax = "unitconversion:mTomm(1)",
+                description = "The meter value `1` is converted into millimeters as `1000.0`."
         )
 )
 public class MetreToMillimetre extends FunctionExecutor {

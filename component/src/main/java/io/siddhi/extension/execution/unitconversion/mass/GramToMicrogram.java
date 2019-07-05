@@ -44,10 +44,10 @@ import static tec.units.ri.unit.Units.GRAM;
 @Extension(
         name = "gToug",
         namespace = "unitconversion",
-        description = "This converts the input given in grams into micrograms.",
+        description = "Function converts the input given in grams into micrograms.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from grams into micrograms.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -55,11 +55,11 @@ import static tec.units.ri.unit.Units.GRAM;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in micrograms.",
+                description = "Returns the value in micrograms.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:gToug(1) \n",
-                description = "The gram value '1' is converted into micrograms as '1000000.0' ."
+                syntax = "unitconversion:gToug(1)",
+                description = "The gram value `1` is converted into micrograms as `1000000.0`."
         )
 )
 public class GramToMicrogram extends FunctionExecutor {

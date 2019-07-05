@@ -45,10 +45,10 @@ import static tec.units.ri.unit.Units.KILOGRAM;
 @Extension(
         name = "kgTooz",
         namespace = "unitconversion",
-        description = "This converts the input given in kilograms into ounces.",
+        description = "Function converts the input given in kilograms into ounces.",
         parameters = @Parameter(
                 name = "p1",
-                description = "The value that needs to be converted from kilograms into ounces.",
+                description = "The value that needs to be converted.",
                 type = {DataType.INT, DataType.LONG, DataType.FLOAT, DataType.DOUBLE},
                 dynamic = true
         ),
@@ -56,11 +56,11 @@ import static tec.units.ri.unit.Units.KILOGRAM;
                 @ParameterOverload(parameterNames = {"p1"})
         },
         returnAttributes = @ReturnAttribute(
-                description = "The value that is returned in ounces.",
+                description = "Returns the value in ounces.",
                 type = {DataType.DOUBLE}),
         examples = @Example(
-                syntax = "unitconversion:kgTooz(1) \n",
-                description = "The kilogram value '1' is converted into ounces as ' 35.274' ."
+                syntax = "unitconversion:kgTooz(1)",
+                description = "The kilogram value `1` is converted into ounces as `35.274`."
         )
 )
 public class KilogramToOunce extends FunctionExecutor {
