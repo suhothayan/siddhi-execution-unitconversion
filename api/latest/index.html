@@ -1,1279 +1,33 @@
-
-
-
-
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      
-        <meta name="description" content="Siddhi Execution Unitconversion Extension">
-      
-      
-        <link rel="canonical" href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/api/latest/">
-      
-      
-        <meta name="author" content="WSO2">
-      
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.2">
-    
-    
-      
-        <title>latest - Siddhi Execution Unitconversion</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application.ba0fd1a6.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.6079476c.css">
-      
-      
-        
-        
-        <meta name="theme-color" content="#009688">
-      
-    
-    
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
-    
-    
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-      
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
-      
-    
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
-    
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
-    
-    
-  </head>
-  
-    
-    
-    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
-  
-    <svg class="md-svg">
-      <defs>
-        
-        
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
-        
-      </defs>
-    </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#api-docs-v200" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
-    
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://wso2-extensions.github.io/siddhi-execution-unitconversion/" title="Siddhi Execution Unitconversion" class="md-header-nav__button md-logo">
-          
-            <img src="../../images/siddhi-logo-w.svg" width="24" height="24">
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            
-              <span class="md-header-nav__topic">
-                Siddhi Execution Unitconversion
-              </span>
-              <span class="md-header-nav__topic">
-                latest
-              </span>
-            
-          
-        </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Siddhi Execution Unit Conversion Extension"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../../images/favicon.ico"><meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.3.0"><title>latest - Siddhi Execution Unit Conversion</title><link rel="stylesheet" href="../../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content="#009688"><script src="../../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=swap"><style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../../assets/fonts/material-icons.css"><link rel="stylesheet" href="../../assets/stylesheets/extra.css"><script>window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-103065-28", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })</script><script async src="https://www.google-analytics.com/analytics.js"></script></head><body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal"><svg class="md-svg"><defs><svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#api-docs-v201" tabindex="1" class="md-skip">Skip to content </a><header class="md-header" data-md-component="header"><nav class="md-header-nav md-grid"><div class="md-flex"><div class="md-flex__cell md-flex__cell--shrink"><a href="../.." title="Siddhi Execution Unit Conversion" class="md-header-nav__button md-logo"><img src="../../images/siddhi-logo.svg" width="24" height="24"></a></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label></div><div class="md-flex__cell md-flex__cell--stretch"><div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"><span class="md-header-nav__topic">Siddhi Execution Unit Conversion</span><span class="md-header-nav__topic">latest</span></div></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--search md-header-nav__button" for="__search"></label><div class="md-search" data-md-component="search" role="dialog"><label class="md-search__overlay" for="__search"></label><div class="md-search__inner" role="search"><form class="md-search__form" name="search"><input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active"> <label class="md-icon md-search__icon" for="__search"></label> <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button></form><div class="md-search__output"><div class="md-search__scrollwrap" data-md-scrollfix><div class="md-search-result" data-md-component="result"><div class="md-search-result__meta">Type to start searching</div><ol class="md-search-result__list"></ol></div></div></div></div></div></div><div class="md-flex__cell md-flex__cell--shrink"><div class="md-header-nav__source"><a href="https://github.com/siddhi-io/siddhi-execution-unitconversion/" title="Go to repository" class="md-source" data-md-source="github"><div class="md-source__icon"><svg viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#__github" width="24" height="24"></use></svg></div><div class="md-source__repository">Siddhi Execution Unitconversion</div></a></div></div></div></nav></header><div class="md-container"><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="../.." title="Siddhi Execution Unit Conversion" class="md-nav__button md-logo"><img src="../../images/siddhi-logo.svg" width="48" height="48"></a>Siddhi Execution Unit Conversion</label><div class="md-nav__source"><a href="https://github.com/siddhi-io/siddhi-execution-unitconversion/" title="Go to repository" class="md-source" data-md-source="github"><div class="md-source__icon"><svg viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#__github" width="24" height="24"></use></svg></div><div class="md-source__repository">Siddhi Execution Unitconversion</div></a></div><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../.." title="Information" class="md-nav__link">Information</a></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked><label class="md-nav__link" for="nav-2">API Docs</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-2">API Docs</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item md-nav__item--active"><input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc"><label class="md-nav__link md-nav__link--active" for="__toc">latest</label><a href="./" title="latest" class="md-nav__link md-nav__link--active">latest</a><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#unitconversion" title="Unitconversion" class="md-nav__link">Unitconversion</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#mmtokm-function" title="MmTokm (Function)" class="md-nav__link">MmTokm (Function)</a></li><li class="md-nav__item"><a href="#cmtoft-function" title="cmToft (Function)" class="md-nav__link">cmToft (Function)</a></li><li class="md-nav__item"><a href="#cmtoin-function" title="cmToin (Function)" class="md-nav__link">cmToin (Function)</a></li><li class="md-nav__item"><a href="#cmtokm-function" title="cmTokm (Function)" class="md-nav__link">cmTokm (Function)</a></li><li class="md-nav__item"><a href="#cmtom-function" title="cmTom (Function)" class="md-nav__link">cmTom (Function)</a></li><li class="md-nav__item"><a href="#cmtomi-function" title="cmTomi (Function)" class="md-nav__link">cmTomi (Function)</a></li><li class="md-nav__item"><a href="#cmtomm-function" title="cmTomm (Function)" class="md-nav__link">cmTomm (Function)</a></li><li class="md-nav__item"><a href="#cmtonm-function" title="cmTonm (Function)" class="md-nav__link">cmTonm (Function)</a></li><li class="md-nav__item"><a href="#cmtoum-function" title="cmToum (Function)" class="md-nav__link">cmToum (Function)</a></li><li class="md-nav__item"><a href="#cmtoyd-function" title="cmToyd (Function)" class="md-nav__link">cmToyd (Function)</a></li><li class="md-nav__item"><a href="#dtoh-function" title="dToh (Function)" class="md-nav__link">dToh (Function)</a></li><li class="md-nav__item"><a href="#gtokg-function" title="gTokg (Function)" class="md-nav__link">gTokg (Function)</a></li><li class="md-nav__item"><a href="#gtomg-function" title="gTomg (Function)" class="md-nav__link">gTomg (Function)</a></li><li class="md-nav__item"><a href="#gtoug-function" title="gToug (Function)" class="md-nav__link">gToug (Function)</a></li><li class="md-nav__item"><a href="#htom-function" title="hTom (Function)" class="md-nav__link">hTom (Function)</a></li><li class="md-nav__item"><a href="#htos-function" title="hTos (Function)" class="md-nav__link">hTos (Function)</a></li><li class="md-nav__item"><a href="#kgtolt-function" title="kgToLT (Function)" class="md-nav__link">kgToLT (Function)</a></li><li class="md-nav__item"><a href="#kgtost-function" title="kgToST (Function)" class="md-nav__link">kgToST (Function)</a></li><li class="md-nav__item"><a href="#kgtog-function" title="kgTog (Function)" class="md-nav__link">kgTog (Function)</a></li><li class="md-nav__item"><a href="#kgtolb-function" title="kgTolb (Function)" class="md-nav__link">kgTolb (Function)</a></li><li class="md-nav__item"><a href="#kgtooz-function" title="kgTooz (Function)" class="md-nav__link">kgTooz (Function)</a></li><li class="md-nav__item"><a href="#kgtost-function_1" title="kgTost (Function)" class="md-nav__link">kgTost (Function)</a></li><li class="md-nav__item"><a href="#kgtot-function" title="kgTot (Function)" class="md-nav__link">kgTot (Function)</a></li><li class="md-nav__item"><a href="#kmtocm-function" title="kmTocm (Function)" class="md-nav__link">kmTocm (Function)</a></li><li class="md-nav__item"><a href="#kmtoft-function" title="kmToft (Function)" class="md-nav__link">kmToft (Function)</a></li><li class="md-nav__item"><a href="#kmtoin-function" title="kmToin (Function)" class="md-nav__link">kmToin (Function)</a></li><li class="md-nav__item"><a href="#kmtom-function" title="kmTom (Function)" class="md-nav__link">kmTom (Function)</a></li><li class="md-nav__item"><a href="#kmtomi-function" title="kmTomi (Function)" class="md-nav__link">kmTomi (Function)</a></li><li class="md-nav__item"><a href="#kmtomm-function" title="kmTomm (Function)" class="md-nav__link">kmTomm (Function)</a></li><li class="md-nav__item"><a href="#kmtonm-function" title="kmTonm (Function)" class="md-nav__link">kmTonm (Function)</a></li><li class="md-nav__item"><a href="#kmtoum-function" title="kmToum (Function)" class="md-nav__link">kmToum (Function)</a></li><li class="md-nav__item"><a href="#kmtoyd-function" title="kmToyd (Function)" class="md-nav__link">kmToyd (Function)</a></li><li class="md-nav__item"><a href="#ltom3-function" title="lTom3 (Function)" class="md-nav__link">lTom3 (Function)</a></li><li class="md-nav__item"><a href="#ltoml-function" title="lToml (Function)" class="md-nav__link">lToml (Function)</a></li><li class="md-nav__item"><a href="#m3tol-function" title="m3Tol (Function)" class="md-nav__link">m3Tol (Function)</a></li><li class="md-nav__item"><a href="#mtocm-function" title="mTocm (Function)" class="md-nav__link">mTocm (Function)</a></li><li class="md-nav__item"><a href="#mtoft-function" title="mToft (Function)" class="md-nav__link">mToft (Function)</a></li><li class="md-nav__item"><a href="#mtomm-function" title="mTomm (Function)" class="md-nav__link">mTomm (Function)</a></li><li class="md-nav__item"><a href="#mtos-function" title="mTos (Function)" class="md-nav__link">mTos (Function)</a></li><li class="md-nav__item"><a href="#mtoyd-function" title="mToyd (Function)" class="md-nav__link">mToyd (Function)</a></li><li class="md-nav__item"><a href="#mitokm-function" title="miTokm (Function)" class="md-nav__link">miTokm (Function)</a></li><li class="md-nav__item"><a href="#mltol-function" title="mlTol (Function)" class="md-nav__link">mlTol (Function)</a></li><li class="md-nav__item"><a href="#stoms-function" title="sToms (Function)" class="md-nav__link">sToms (Function)</a></li><li class="md-nav__item"><a href="#stons-function" title="sTons (Function)" class="md-nav__link">sTons (Function)</a></li><li class="md-nav__item"><a href="#stous-function" title="sTous (Function)" class="md-nav__link">sTous (Function)</a></li><li class="md-nav__item"><a href="#ttog-function" title="tTog (Function)" class="md-nav__link">tTog (Function)</a></li><li class="md-nav__item"><a href="#ttokg-function" title="tTokg (Function)" class="md-nav__link">tTokg (Function)</a></li><li class="md-nav__item"><a href="#ytod-function" title="yTod (Function)" class="md-nav__link">yTod (Function)</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item"><a href="../2.0.1/" title="2.0.1" class="md-nav__link">2.0.1</a></li><li class="md-nav__item"><a href="../2.0.0/" title="2.0.0" class="md-nav__link">2.0.0</a></li><li class="md-nav__item"><a href="../1.1.1/" title="1.1.1" class="md-nav__link">1.1.1</a></li><li class="md-nav__item"><a href="../1.1.0/" title="1.1.0" class="md-nav__link">1.1.0</a></li><li class="md-nav__item"><a href="../1.0.17/" title="1.0.17" class="md-nav__link">1.0.17</a></li><li class="md-nav__item"><a href="../1.0.16/" title="1.0.16" class="md-nav__link">1.0.16</a></li><li class="md-nav__item"><a href="../1.0.15/" title="1.0.15" class="md-nav__link">1.0.15</a></li><li class="md-nav__item"><a href="../1.0.14/" title="1.0.14" class="md-nav__link">1.0.14</a></li><li class="md-nav__item"><a href="../1.0.13/" title="1.0.13" class="md-nav__link">1.0.13</a></li><li class="md-nav__item"><a href="../1.0.12/" title="1.0.12" class="md-nav__link">1.0.12</a></li><li class="md-nav__item"><a href="../1.0.11/" title="1.0.11" class="md-nav__link">1.0.11</a></li><li class="md-nav__item"><a href="../1.0.10/" title="1.0.10" class="md-nav__link">1.0.10</a></li><li class="md-nav__item"><a href="../1.0.9/" title="1.0.9" class="md-nav__link">1.0.9</a></li><li class="md-nav__item"><a href="../1.0.8/" title="1.0.8" class="md-nav__link">1.0.8</a></li><li class="md-nav__item"><a href="../1.0.7/" title="1.0.7" class="md-nav__link">1.0.7</a></li><li class="md-nav__item"><a href="../1.0.6/" title="1.0.6" class="md-nav__link">1.0.6</a></li><li class="md-nav__item"><a href="../1.0.5/" title="1.0.5" class="md-nav__link">1.0.5</a></li></ul></nav></li><li class="md-nav__item"><a href="../../license/" title="License" class="md-nav__link">License</a></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#unitconversion" title="Unitconversion" class="md-nav__link">Unitconversion</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#mmtokm-function" title="MmTokm (Function)" class="md-nav__link">MmTokm (Function)</a></li><li class="md-nav__item"><a href="#cmtoft-function" title="cmToft (Function)" class="md-nav__link">cmToft (Function)</a></li><li class="md-nav__item"><a href="#cmtoin-function" title="cmToin (Function)" class="md-nav__link">cmToin (Function)</a></li><li class="md-nav__item"><a href="#cmtokm-function" title="cmTokm (Function)" class="md-nav__link">cmTokm (Function)</a></li><li class="md-nav__item"><a href="#cmtom-function" title="cmTom (Function)" class="md-nav__link">cmTom (Function)</a></li><li class="md-nav__item"><a href="#cmtomi-function" title="cmTomi (Function)" class="md-nav__link">cmTomi (Function)</a></li><li class="md-nav__item"><a href="#cmtomm-function" title="cmTomm (Function)" class="md-nav__link">cmTomm (Function)</a></li><li class="md-nav__item"><a href="#cmtonm-function" title="cmTonm (Function)" class="md-nav__link">cmTonm (Function)</a></li><li class="md-nav__item"><a href="#cmtoum-function" title="cmToum (Function)" class="md-nav__link">cmToum (Function)</a></li><li class="md-nav__item"><a href="#cmtoyd-function" title="cmToyd (Function)" class="md-nav__link">cmToyd (Function)</a></li><li class="md-nav__item"><a href="#dtoh-function" title="dToh (Function)" class="md-nav__link">dToh (Function)</a></li><li class="md-nav__item"><a href="#gtokg-function" title="gTokg (Function)" class="md-nav__link">gTokg (Function)</a></li><li class="md-nav__item"><a href="#gtomg-function" title="gTomg (Function)" class="md-nav__link">gTomg (Function)</a></li><li class="md-nav__item"><a href="#gtoug-function" title="gToug (Function)" class="md-nav__link">gToug (Function)</a></li><li class="md-nav__item"><a href="#htom-function" title="hTom (Function)" class="md-nav__link">hTom (Function)</a></li><li class="md-nav__item"><a href="#htos-function" title="hTos (Function)" class="md-nav__link">hTos (Function)</a></li><li class="md-nav__item"><a href="#kgtolt-function" title="kgToLT (Function)" class="md-nav__link">kgToLT (Function)</a></li><li class="md-nav__item"><a href="#kgtost-function" title="kgToST (Function)" class="md-nav__link">kgToST (Function)</a></li><li class="md-nav__item"><a href="#kgtog-function" title="kgTog (Function)" class="md-nav__link">kgTog (Function)</a></li><li class="md-nav__item"><a href="#kgtolb-function" title="kgTolb (Function)" class="md-nav__link">kgTolb (Function)</a></li><li class="md-nav__item"><a href="#kgtooz-function" title="kgTooz (Function)" class="md-nav__link">kgTooz (Function)</a></li><li class="md-nav__item"><a href="#kgtost-function_1" title="kgTost (Function)" class="md-nav__link">kgTost (Function)</a></li><li class="md-nav__item"><a href="#kgtot-function" title="kgTot (Function)" class="md-nav__link">kgTot (Function)</a></li><li class="md-nav__item"><a href="#kmtocm-function" title="kmTocm (Function)" class="md-nav__link">kmTocm (Function)</a></li><li class="md-nav__item"><a href="#kmtoft-function" title="kmToft (Function)" class="md-nav__link">kmToft (Function)</a></li><li class="md-nav__item"><a href="#kmtoin-function" title="kmToin (Function)" class="md-nav__link">kmToin (Function)</a></li><li class="md-nav__item"><a href="#kmtom-function" title="kmTom (Function)" class="md-nav__link">kmTom (Function)</a></li><li class="md-nav__item"><a href="#kmtomi-function" title="kmTomi (Function)" class="md-nav__link">kmTomi (Function)</a></li><li class="md-nav__item"><a href="#kmtomm-function" title="kmTomm (Function)" class="md-nav__link">kmTomm (Function)</a></li><li class="md-nav__item"><a href="#kmtonm-function" title="kmTonm (Function)" class="md-nav__link">kmTonm (Function)</a></li><li class="md-nav__item"><a href="#kmtoum-function" title="kmToum (Function)" class="md-nav__link">kmToum (Function)</a></li><li class="md-nav__item"><a href="#kmtoyd-function" title="kmToyd (Function)" class="md-nav__link">kmToyd (Function)</a></li><li class="md-nav__item"><a href="#ltom3-function" title="lTom3 (Function)" class="md-nav__link">lTom3 (Function)</a></li><li class="md-nav__item"><a href="#ltoml-function" title="lToml (Function)" class="md-nav__link">lToml (Function)</a></li><li class="md-nav__item"><a href="#m3tol-function" title="m3Tol (Function)" class="md-nav__link">m3Tol (Function)</a></li><li class="md-nav__item"><a href="#mtocm-function" title="mTocm (Function)" class="md-nav__link">mTocm (Function)</a></li><li class="md-nav__item"><a href="#mtoft-function" title="mToft (Function)" class="md-nav__link">mToft (Function)</a></li><li class="md-nav__item"><a href="#mtomm-function" title="mTomm (Function)" class="md-nav__link">mTomm (Function)</a></li><li class="md-nav__item"><a href="#mtos-function" title="mTos (Function)" class="md-nav__link">mTos (Function)</a></li><li class="md-nav__item"><a href="#mtoyd-function" title="mToyd (Function)" class="md-nav__link">mToyd (Function)</a></li><li class="md-nav__item"><a href="#mitokm-function" title="miTokm (Function)" class="md-nav__link">miTokm (Function)</a></li><li class="md-nav__item"><a href="#mltol-function" title="mlTol (Function)" class="md-nav__link">mlTol (Function)</a></li><li class="md-nav__item"><a href="#stoms-function" title="sToms (Function)" class="md-nav__link">sToms (Function)</a></li><li class="md-nav__item"><a href="#stons-function" title="sTons (Function)" class="md-nav__link">sTons (Function)</a></li><li class="md-nav__item"><a href="#stous-function" title="sTous (Function)" class="md-nav__link">sTous (Function)</a></li><li class="md-nav__item"><a href="#ttog-function" title="tTog (Function)" class="md-nav__link">tTog (Function)</a></li><li class="md-nav__item"><a href="#ttokg-function" title="tTokg (Function)" class="md-nav__link">tTokg (Function)</a></li><li class="md-nav__item"><a href="#ytod-function" title="yTod (Function)" class="md-nav__link">yTod (Function)</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><a href="https://github.com/siddhi-io/siddhi-execution-unitconversion/blob/master/api/latest.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a><h1 id="api-docs-v201">API Docs - v2.0.1</h1>
+<h2 id="unitconversion">Unitconversion</h2>
+<div class="admonition info">
+<p class="admonition-title">Tested Siddhi Core version: <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/">5.0.0</a></em></p>
+<p>It could also support other Siddhi Core minor versions.</p>
 </div>
-          
-        
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-
-  <a href="https://github.com/wso2-extensions/siddhi-execution-unitconversion/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      Siddhi-Execution-Unitconversion
-    </div>
-  </a>
-
-          </div>
-        </div>
-      
-    </div>
-  </nav>
-</header>
-    
-    <div class="md-container">
-      
-        
-      
-      
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
-          
-            
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <span class="md-nav__button md-logo">
-      
-        <img src="../../images/siddhi-logo-w.svg" width="48" height="48">
-      
-    </span>
-    Siddhi Execution Unitconversion
-  </label>
-  
-    <div class="md-nav__source">
-      
-
-
-  
-
-
-  <a href="https://github.com/wso2-extensions/siddhi-execution-unitconversion/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      Siddhi-Execution-Unitconversion
-    </div>
-  </a>
-
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../.." title="Welcome" class="md-nav__link">
-      Welcome
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
-    
-    <label class="md-nav__link" for="nav-2">
-      API Docs
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        API Docs
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../2.0.0/" title="2.0.0" class="md-nav__link">
-      2.0.0
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.1.1/" title="1.1.1" class="md-nav__link">
-      1.1.1
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.1.0/" title="1.1.0" class="md-nav__link">
-      1.1.0
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.17/" title="1.0.17" class="md-nav__link">
-      1.0.17
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.16/" title="1.0.16" class="md-nav__link">
-      1.0.16
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.15/" title="1.0.15" class="md-nav__link">
-      1.0.15
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.14/" title="1.0.14" class="md-nav__link">
-      1.0.14
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.13/" title="1.0.13" class="md-nav__link">
-      1.0.13
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.12/" title="1.0.12" class="md-nav__link">
-      1.0.12
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.11/" title="1.0.11" class="md-nav__link">
-      1.0.11
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.10/" title="1.0.10" class="md-nav__link">
-      1.0.10
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.9/" title="1.0.9" class="md-nav__link">
-      1.0.9
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.8/" title="1.0.8" class="md-nav__link">
-      1.0.8
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.7/" title="1.0.7" class="md-nav__link">
-      1.0.7
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.6/" title="1.0.6" class="md-nav__link">
-      1.0.6
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.0.5/" title="1.0.5" class="md-nav__link">
-      1.0.5
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        latest
-      </label>
-    
-    <a href="./" title="latest" class="md-nav__link md-nav__link--active">
-      latest
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#unitconversion" title="Unitconversion" class="md-nav__link">
-    Unitconversion
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mmtokm-function" title="MmTokm (Function)" class="md-nav__link">
-    MmTokm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtoft-function" title="cmToft (Function)" class="md-nav__link">
-    cmToft (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtoin-function" title="cmToin (Function)" class="md-nav__link">
-    cmToin (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtokm-function" title="cmTokm (Function)" class="md-nav__link">
-    cmTokm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtom-function" title="cmTom (Function)" class="md-nav__link">
-    cmTom (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtomi-function" title="cmTomi (Function)" class="md-nav__link">
-    cmTomi (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtomm-function" title="cmTomm (Function)" class="md-nav__link">
-    cmTomm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtonm-function" title="cmTonm (Function)" class="md-nav__link">
-    cmTonm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtoum-function" title="cmToum (Function)" class="md-nav__link">
-    cmToum (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtoyd-function" title="cmToyd (Function)" class="md-nav__link">
-    cmToyd (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dtoh-function" title="dToh (Function)" class="md-nav__link">
-    dToh (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gtokg-function" title="gTokg (Function)" class="md-nav__link">
-    gTokg (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gtomg-function" title="gTomg (Function)" class="md-nav__link">
-    gTomg (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gtoug-function" title="gToug (Function)" class="md-nav__link">
-    gToug (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#htom-function" title="hTom (Function)" class="md-nav__link">
-    hTom (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#htos-function" title="hTos (Function)" class="md-nav__link">
-    hTos (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtolt-function" title="kgToLT (Function)" class="md-nav__link">
-    kgToLT (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtost-function" title="kgToST (Function)" class="md-nav__link">
-    kgToST (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtog-function" title="kgTog (Function)" class="md-nav__link">
-    kgTog (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtolb-function" title="kgTolb (Function)" class="md-nav__link">
-    kgTolb (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtooz-function" title="kgTooz (Function)" class="md-nav__link">
-    kgTooz (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtost-function_1" title="kgTost (Function)" class="md-nav__link">
-    kgTost (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtot-function" title="kgTot (Function)" class="md-nav__link">
-    kgTot (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtocm-function" title="kmTocm (Function)" class="md-nav__link">
-    kmTocm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtoft-function" title="kmToft (Function)" class="md-nav__link">
-    kmToft (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtoin-function" title="kmToin (Function)" class="md-nav__link">
-    kmToin (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtom-function" title="kmTom (Function)" class="md-nav__link">
-    kmTom (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtomi-function" title="kmTomi (Function)" class="md-nav__link">
-    kmTomi (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtomm-function" title="kmTomm (Function)" class="md-nav__link">
-    kmTomm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtonm-function" title="kmTonm (Function)" class="md-nav__link">
-    kmTonm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtoum-function" title="kmToum (Function)" class="md-nav__link">
-    kmToum (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtoyd-function" title="kmToyd (Function)" class="md-nav__link">
-    kmToyd (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ltom3-function" title="lTom3 (Function)" class="md-nav__link">
-    lTom3 (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ltoml-function" title="lToml (Function)" class="md-nav__link">
-    lToml (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#m3tol-function" title="m3Tol (Function)" class="md-nav__link">
-    m3Tol (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtocm-function" title="mTocm (Function)" class="md-nav__link">
-    mTocm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtoft-function" title="mToft (Function)" class="md-nav__link">
-    mToft (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtomm-function" title="mTomm (Function)" class="md-nav__link">
-    mTomm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtos-function" title="mTos (Function)" class="md-nav__link">
-    mTos (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtoyd-function" title="mToyd (Function)" class="md-nav__link">
-    mToyd (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mitokm-function" title="miTokm (Function)" class="md-nav__link">
-    miTokm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mltol-function" title="mlTol (Function)" class="md-nav__link">
-    mlTol (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stoms-function" title="sToms (Function)" class="md-nav__link">
-    sToms (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stons-function" title="sTons (Function)" class="md-nav__link">
-    sTons (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stous-function" title="sTous (Function)" class="md-nav__link">
-    sTous (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ttog-function" title="tTog (Function)" class="md-nav__link">
-    tTog (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ttokg-function" title="tTokg (Function)" class="md-nav__link">
-    tTokg (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ytod-function" title="yTod (Function)" class="md-nav__link">
-    yTod (Function)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../license/" title="License" class="md-nav__link">
-      License
-    </a>
-  </li>
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#unitconversion" title="Unitconversion" class="md-nav__link">
-    Unitconversion
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mmtokm-function" title="MmTokm (Function)" class="md-nav__link">
-    MmTokm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtoft-function" title="cmToft (Function)" class="md-nav__link">
-    cmToft (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtoin-function" title="cmToin (Function)" class="md-nav__link">
-    cmToin (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtokm-function" title="cmTokm (Function)" class="md-nav__link">
-    cmTokm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtom-function" title="cmTom (Function)" class="md-nav__link">
-    cmTom (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtomi-function" title="cmTomi (Function)" class="md-nav__link">
-    cmTomi (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtomm-function" title="cmTomm (Function)" class="md-nav__link">
-    cmTomm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtonm-function" title="cmTonm (Function)" class="md-nav__link">
-    cmTonm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtoum-function" title="cmToum (Function)" class="md-nav__link">
-    cmToum (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmtoyd-function" title="cmToyd (Function)" class="md-nav__link">
-    cmToyd (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dtoh-function" title="dToh (Function)" class="md-nav__link">
-    dToh (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gtokg-function" title="gTokg (Function)" class="md-nav__link">
-    gTokg (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gtomg-function" title="gTomg (Function)" class="md-nav__link">
-    gTomg (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gtoug-function" title="gToug (Function)" class="md-nav__link">
-    gToug (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#htom-function" title="hTom (Function)" class="md-nav__link">
-    hTom (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#htos-function" title="hTos (Function)" class="md-nav__link">
-    hTos (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtolt-function" title="kgToLT (Function)" class="md-nav__link">
-    kgToLT (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtost-function" title="kgToST (Function)" class="md-nav__link">
-    kgToST (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtog-function" title="kgTog (Function)" class="md-nav__link">
-    kgTog (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtolb-function" title="kgTolb (Function)" class="md-nav__link">
-    kgTolb (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtooz-function" title="kgTooz (Function)" class="md-nav__link">
-    kgTooz (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtost-function_1" title="kgTost (Function)" class="md-nav__link">
-    kgTost (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kgtot-function" title="kgTot (Function)" class="md-nav__link">
-    kgTot (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtocm-function" title="kmTocm (Function)" class="md-nav__link">
-    kmTocm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtoft-function" title="kmToft (Function)" class="md-nav__link">
-    kmToft (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtoin-function" title="kmToin (Function)" class="md-nav__link">
-    kmToin (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtom-function" title="kmTom (Function)" class="md-nav__link">
-    kmTom (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtomi-function" title="kmTomi (Function)" class="md-nav__link">
-    kmTomi (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtomm-function" title="kmTomm (Function)" class="md-nav__link">
-    kmTomm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtonm-function" title="kmTonm (Function)" class="md-nav__link">
-    kmTonm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtoum-function" title="kmToum (Function)" class="md-nav__link">
-    kmToum (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kmtoyd-function" title="kmToyd (Function)" class="md-nav__link">
-    kmToyd (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ltom3-function" title="lTom3 (Function)" class="md-nav__link">
-    lTom3 (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ltoml-function" title="lToml (Function)" class="md-nav__link">
-    lToml (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#m3tol-function" title="m3Tol (Function)" class="md-nav__link">
-    m3Tol (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtocm-function" title="mTocm (Function)" class="md-nav__link">
-    mTocm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtoft-function" title="mToft (Function)" class="md-nav__link">
-    mToft (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtomm-function" title="mTomm (Function)" class="md-nav__link">
-    mTomm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtos-function" title="mTos (Function)" class="md-nav__link">
-    mTos (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtoyd-function" title="mToyd (Function)" class="md-nav__link">
-    mToyd (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mitokm-function" title="miTokm (Function)" class="md-nav__link">
-    miTokm (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mltol-function" title="mlTol (Function)" class="md-nav__link">
-    mlTol (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stoms-function" title="sToms (Function)" class="md-nav__link">
-    sToms (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stons-function" title="sTons (Function)" class="md-nav__link">
-    sTons (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stous-function" title="sTous (Function)" class="md-nav__link">
-    sTous (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ttog-function" title="tTog (Function)" class="md-nav__link">
-    tTog (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ttokg-function" title="tTokg (Function)" class="md-nav__link">
-    tTokg (Function)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ytod-function" title="yTod (Function)" class="md-nav__link">
-    yTod (Function)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                  <a href="https://github.com/wso2-extensions/siddhi-execution-unitconversion/edit/master/docs/api/latest.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
-                
-                
-                <h1 id="api-docs-v200">API Docs - v2.0.0<a class="headerlink" href="#api-docs-v200" title="Permanent link">&para;</a></h1>
-<h2 id="unitconversion">Unitconversion<a class="headerlink" href="#unitconversion" title="Permanent link">&para;</a></h2>
-<h3 id="mmtokm-function">MmTokm <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#mmtokm-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in megameters into kilometers.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:MmTokm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="mmtokm-function">MmTokm <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in megameters into kilometers.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:MmTokm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1287,31 +41,25 @@
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from megameters into kilometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForMegametreToKilometreStream (inValue int); 
-from UnitConversionForMegametreToKilometreStream 
-select unitconversion:MmTokm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:MmTokm(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The megameter value <code>1</code> is converted into kilometers as <code>1000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in megameters from 'UnitConversionForMegametreToKilometreStream' input stream is converted into kilometers and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="cmtoft-function">cmToft <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#cmtoft-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in centimeters into feet.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:cmToft(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="cmtoft-function">cmToft <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in centimeters to feet.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:cmToft(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1325,31 +73,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into feet.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForCentimetreToFootStream (inValue int); 
-from UnitConversionForCentimetreToFootStream 
-select unitconversion:cmToft(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:cmToft(100)
+</code></pre>
 
+<p style="word-wrap: break-word">The centimeters value <code>100</code> will be converted into feet as <code>3.280</code>.</p>
 
-<p style="word-wrap: break-word">The centimeter values received from 'UnitConversionForCentimetreToFootStream' input stream is converted into feet and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="cmtoin-function">cmToin <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#cmtoin-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in centimeters into inches.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:cmToin(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="cmtoin-function">cmToin <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in centimeters into inches.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:cmToin(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1363,31 +105,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into inches.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForCentimetreToInchStream (inValue int); 
-from UnitConversionForCentimetreToInchStream 
-select unitconversion:cmToin(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:cmToin(100)
+</code></pre>
 
+<p style="word-wrap: break-word">Input centimeters value <code>100</code> will be converted into inches as <code>39.37</code>.</p>
 
-<p style="word-wrap: break-word">The value in centimeters obtained from 'UnitConversionForCentimetreToInchStream' input stream, is converted into inches and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="cmtokm-function">cmTokm <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#cmtokm-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input value given in centimeters into kilometers.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:cmTokm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="cmtokm-function">cmTokm <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input value given in centimeters into kilometers.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:cmTokm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1401,31 +137,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into kilometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForCentimetreToKilometreStream (inValue int); 
-from UnitConversionForCentimetreToKilometreStream 
-select unitconversion:cmTokm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:cmTokm(100)
+</code></pre>
 
+<p style="word-wrap: break-word">The centimeters value <code>100</code> is converted into kilometers as <code>0.001</code>.</p>
 
-<p style="word-wrap: break-word">The value obtained from 'UnitConversionForCentimetreToKilometreStream' input stream in centimeters, is converted into kilometers and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="cmtom-function">cmTom <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#cmtom-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in centimeters into meters.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:cmTom(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="cmtom-function">cmTom <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in centimeters into meters.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:cmTom(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1439,31 +169,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into meters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForCentimetreToMeterStream (inValue int); 
-from UnitConversionForCentimetreToMeterStream 
-select unitconversion:cmTom(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:cmTom(100)
+</code></pre>
 
+<p style="word-wrap: break-word">The centimeters value <code>100</code> is converted into meters as <code>1.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in centimeters obtained from 'UnitConversionForCentimetreToMeterStream'input stream is converted into meters and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="cmtomi-function">cmTomi <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#cmtomi-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in centimeters into miles.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:cmTomi(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="cmtomi-function">cmTomi <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in centimeters into miles.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:cmTomi(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1477,31 +201,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into miles.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForCentimetreToMileStream (inValue int); 
-from UnitConversionForCentimetreToMileStream 
-select unitconversion:cmTomi(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:cmTomi(10000)
+</code></pre>
 
+<p style="word-wrap: break-word">The centimeters value <code>10000</code> is converted into miles as <code>0.062</code>.</p>
 
-<p style="word-wrap: break-word">The value in centimeters obtained from 'UnitConversionForCentimetreToMileStream' input stream is converted into miles and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="cmtomm-function">cmTomm <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#cmtomm-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in centimeters into millimeters.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:cmTomm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="cmtomm-function">cmTomm <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in centimeters into millimeters.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:cmTomm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1515,31 +233,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into millimeters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForCentimetreToMillimetreStream (inValue int); 
-from UnitConversionForCentimetreToMillimetreStream 
-select unitconversion:cmTomm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:cmTomm(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The centimeter value <code>1</code> is converted into millimeters as <code>10.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in centimeters obtained from 'UnitConversionForCentimetreToMillimetreStream' input stream is converted into millimeters and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="cmtonm-function">cmTonm <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#cmtonm-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in centimeters into nanometers.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:cmTonm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="cmtonm-function">cmTonm <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in centimeters into nanometers.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:cmTonm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1553,31 +265,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into nanometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForCentimetreToNanometreStream (inValue int); 
-from UnitConversionForCentimetreToNanometreStream 
-select unitconversion:cmTonm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:cmTonm(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The centimeter value <code>1</code> is converted into nanometers as <code>10000000</code>.</p>
 
-<p style="word-wrap: break-word">The values in centimeters obtained from 'UnitConversionForCentimetreToNanometreStream' input stream is converted into nanometers and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="cmtoum-function">cmToum <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#cmtoum-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input in centimeters into micrometers.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:cmToum(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="cmtoum-function">cmToum <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input in centimeters into micrometers.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:cmToum(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1591,31 +297,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into micrometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForCentimetreToMicrometreStream (inValue int); 
-from UnitConversionForCentimetreToMicrometreStream 
-select unitconversion:cmToum(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:cmToum(100)
+</code></pre>
 
+<p style="word-wrap: break-word">The centimeters value <code>100</code> is converted into micrometers as <code>1000000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in centimeter obtained from 'UnitConversionForCentimetreToMicrometreStream' input stream is converted into micrometers and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="cmtoyd-function">cmToyd <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#cmtoyd-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in centimeters into yards.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:cmToyd(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="cmtoyd-function">cmToyd <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in centimeters into yards.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:cmToyd(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1629,31 +329,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from centimeters into yards.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForCentimetreToYardStream (inValue int); 
-from UnitConversionForCentimetreToYardStream 
-select unitconversion:cmToyd(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:cmToyd(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The centimeter value <code>1</code> is converted into yards as <code>0.01</code>.</p>
 
-<p style="word-wrap: break-word">The values in centimeters obtained from 'UnitConversionForCentimetreToYardStream' is converted into yards and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="dtoh-function">dToh <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#dtoh-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in days into hours.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:dToh(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="dtoh-function">dToh <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in days into hours.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:dToh(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1667,31 +361,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from days into hours.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForDayToHourStream (inValue int); 
-from UnitConversionForDayToHourStream 
-select unitconversion:dToh(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:dToh(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The day value <code>1</code> is converted into hours as <code>24.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in days from 'UnitConversionForDayToHourStream' is converted into hours and returned to the 'OutMediationStream'.</p>
-
-<h3 id="gtokg-function">gTokg <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#gtokg-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in grams into kilograms.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:gTokg(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="gtokg-function">gTokg <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in grams into kilograms.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:gTokg(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1705,31 +393,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from grams into kilograms.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForGramToKilogramStream (inValue int); 
-from UnitConversionForGramToKilogramStream 
-select unitconversion:gTokg(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:gTokg(1000)
+</code></pre>
 
+<p style="word-wrap: break-word">The grams value <code>1000</code> is converted into kilogram as <code>1.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in grams from 'UnitConversionForGramToKilogramStream' input stream is converted into kilograms and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="gtomg-function">gTomg <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#gtomg-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in grams into milligrams.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:gTomg(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="gtomg-function">gTomg <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in grams into milligrams.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:gTomg(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1743,31 +425,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from grams into milligrams.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForGramToMilligramStream (inValue int); 
-from UnitConversionForGramToMilligramStream 
-select unitconversion:gTomg(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:gTomg(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The gram value <code>1</code> is converted into milligrams as <code>1000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in grams from 'UnitConversionForGramToMilligramStream' input stream is converted into milligrams and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="gtoug-function">gToug <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#gtoug-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in grams into micrograms.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:gToug(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="gtoug-function">gToug <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in grams into micrograms.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:gToug(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1781,31 +457,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from grams into micrograms.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForGramToMicrogramStream (inValue int); 
-from UnitConversionForGramToMicrogramStream 
-select unitconversion:gToug(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:gToug(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The gram value <code>1</code> is converted into micrograms as <code>1000000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in grams from 'UnitConversionForGramToMicrogramStream' input stream is converted into micrograms and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="htom-function">hTom <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#htom-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in hours into minutes.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:hTom(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="htom-function">hTom <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in hours into minutes.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:hTom(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1819,31 +489,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from hours into minutes.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForHourToMinuteStream (inValue int); 
-from UnitConversionForHourToMinuteStream 
-select unitconversion:hTom(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:hTom(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The hour value <code>1</code> is converted into minutes as <code>60.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in hours from 'UnitConversionForHourToMinuteStream' input stream isconverted into minutes and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="htos-function">hTos <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#htos-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in hours into seconds.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:hTos(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="htos-function">hTos <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in hours into seconds.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:hTos(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1857,31 +521,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from hours into seconds.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForHourToSecondStream (inValue int); 
-from UnitConversionForHourToSecondStream 
-select unitconversion:hTos(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:hTos(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The hour value <code>1</code> is converted into seconds as <code>3600.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in hours from 'UnitConversionForHourToSecondStream' input stream is converted into seconds and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kgtolt-function">kgToLT <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kgtolt-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilograms into imperial tons.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kgToLT(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kgtolt-function">kgToLT <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilograms into imperial tons.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kgToLT(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1895,31 +553,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into imperial tons.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilogramToImperialTonStream (inValue int); 
-from UnitConversionForKilogramToImperialTonStream 
-select unitconversion:kgToLT(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kgToLT(1000)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilograms value <code>1000</code> is converted into imperial tons as <code>0.9842</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToImperialTonStream' input stream is converted into imperial tons and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kgtost-function">kgToST <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kgtost-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilograms into US tons.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kgToST(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kgtost-function">kgToST <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilograms into US tons.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kgToST(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1933,31 +585,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into US tons.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilogramToUSTonStream (inValue int); 
-from UnitConversionForKilogramToUSTonStream 
-select unitconversion:kgToST(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kgToST(1000)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilograms value <code>1000</code> is converted into US tons as <code>1.10</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToUSTonStream' input stream is converted into US tons and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kgtog-function">kgTog <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kgtog-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilograms into grams.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kgTog(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kgtog-function">kgTog <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilograms into grams.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kgTog(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -1971,31 +617,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into grams.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilogramToGramStream (inValue int); 
-from UnitConversionForKilogramToGramStream 
-select unitconversion:kgTog(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kgTog(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilogram value <code>1</code> is converted into grams as <code>1000</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToGramStream' input stream is converted into grams and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kgtolb-function">kgTolb <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kgtolb-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilograms into pounds.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kgTolb(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kgtolb-function">kgTolb <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilograms into pounds.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kgTolb(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2009,31 +649,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into pounds.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilogramToPoundStream (inValue int); 
-from UnitConversionForKilogramToPoundStream 
-select unitconversion:kgTolb(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kgTolb(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilogram value <code>1</code> is converted into pounds as <code>2.2</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToPoundStream' input stream is converted into pounds and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kgtooz-function">kgTooz <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kgtooz-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilograms into ounces.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kgTooz(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kgtooz-function">kgTooz <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilograms into ounces.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kgTooz(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2047,31 +681,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into ounces.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilogramToOunceStream (inValue int); 
-from UnitConversionForKilogramToOunceStream 
-select unitconversion:kgTooz(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kgTooz(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilogram value <code>1</code> is converted into ounces as <code>35.274</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToOunceStream' input stream is converted into ounces and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kgtost-function_1">kgTost <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kgtost-function_1" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilograms into imperial stones.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kgTost(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kgtost-function_1">kgTost <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilograms into imperial stones.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kgTost(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2085,31 +713,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into imperial stones.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilogramToStonemStream (inValue int); 
-from UnitConversionForKilogramToStonemStream 
-select unitconversion:kgTost(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kgTost(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilogram value <code>1</code> is converted into imperial stones as <code>0.157</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToStonemStream' input stream is converted into imperial stones and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kgtot-function">kgTot <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kgtot-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilograms into tonnes.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kgTot(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kgtot-function">kgTot <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilograms into tonnes.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kgTot(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2123,31 +745,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilograms into tonnes.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilogramToTonneStream (inValue int); 
-from UnitConversionForKilogramToTonneStream 
-select unitconversion:kgTot(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kgTot(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilogram value <code>1</code> is converted into tonnes as <code>0.001</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilograms from 'UnitConversionForKilogramToTonneStream' input stream is converted into tonnes and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kmtocm-function">kmTocm <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kmtocm-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilometers into centimeters.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kmTocm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kmtocm-function">kmTocm <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilometers into centimeters.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kmTocm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2161,31 +777,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into centimeters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilometreToCentimetreStream (inValue int); 
-from UnitConversionForKilometreToCentimetreStream 
-select unitconversion:kmTocm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kmTocm(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into centimeters as <code>100000.0</code>.</p>
 
-<p style="word-wrap: break-word">The values in kilometers obtained from 'UnitConversionForKilometreToCentimetreStream'input stream is converted into centimeters and returned to the 'OutMediationStream' outputstream.</p>
-
-<h3 id="kmtoft-function">kmToft <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kmtoft-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilometers into feet.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kmToft(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kmtoft-function">kmToft <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilometers into foot.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kmToft(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2199,31 +809,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into feet.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilometreToFootStream (inValue int); 
-from UnitConversionForKilometreToFootStream 
-select unitconversion:kmToft(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kmToft(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into foot as <code>3280.8</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToFootStream' input stream is converted into feet and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kmtoin-function">kmToin <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kmtoin-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilometers into inches.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kmToin(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kmtoin-function">kmToin <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilometers into inches.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kmToin(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2237,31 +841,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into inches.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilometreToInchStream (inValue int); 
-from UnitConversionForKilometreToInchStream 
-select unitconversion:kmToin(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kmToin(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into inches as <code>39370.08</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToInchStream' input stream is converted into inches and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kmtom-function">kmTom <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kmtom-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilometers into meters.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kmTom(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kmtom-function">kmTom <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilometers into meters.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kmTom(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2275,31 +873,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into meters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilometreToMetreStream (inValue int); 
-from UnitConversionForKilometreToMetreStream 
-select unitconversion:kmTom(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kmTom(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into meters as <code>1000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToMetreStream'input stream is converted into meters and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kmtomi-function">kmTomi <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kmtomi-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilometers into miles.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kmTomi(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kmtomi-function">kmTomi <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilometers into miles.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kmTomi(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2313,31 +905,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into miles.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilometreToMileStream (inValue int); 
-from UnitConversionForKilometreToMileStream 
-select unitconversion:kmTomi(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kmTomi(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into miles as <code>0.621</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToMileStream' input stream is converted into miles and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kmtomm-function">kmTomm <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kmtomm-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilometers into millimeters.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kmTomm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kmtomm-function">kmTomm <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilometers into millimeters.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kmTomm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2351,31 +937,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into millimeters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilometreToMillimetreStream (inValue int); 
-from UnitConversionForKilometreToMillimetreStream 
-select unitconversion:kmTomm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kmTomm(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into millimeters as <code>1000000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToMillimetreStream'input stream is converted into millimeters and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kmtonm-function">kmTonm <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kmtonm-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilometers into nanometers.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kmTonm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kmtonm-function">kmTonm <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilometers into nanometers.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kmTonm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2389,31 +969,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into nanometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilometreToNanometreStream (inValue int); 
-from UnitConversionForKilometreToNanometreStream 
-select unitconversion:kmTonm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kmTonm(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into nanometers as <code>1000000000000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToNanometreStream'input stream is converted into nanometers and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="kmtoum-function">kmToum <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kmtoum-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilometers into micrometers.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kmToum(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kmtoum-function">kmToum <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilometers into micrometers.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kmToum(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2427,31 +1001,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into micrometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilometreToMicrometreStream (inValue int); 
-from UnitConversionForKilometreToMicrometreStream 
-select unitconversion:kmToum(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kmToum(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into micrometers as <code>1000000000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilometers obtained from 'UnitConversionForKilometreToMicrometreStream'input stream is converted into micrometers and returned to the 'OutMediationStream'output stream.</p>
-
-<h3 id="kmtoyd-function">kmToyd <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#kmtoyd-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in kilometers into yards.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:kmToyd(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="kmtoyd-function">kmToyd <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in kilometers into yards.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:kmToyd(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2465,31 +1033,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from kilometers into yards.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForKilometreToYardStream (inValue int); 
-from UnitConversionForKilometreToYardStream 
-select unitconversion:kmToyd(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:kmToyd(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The kilometer value <code>1</code> is converted into yards as <code>1093.6</code>.</p>
 
-<p style="word-wrap: break-word">The value in kilometers from 'UnitConversionForKilometreToYardStream' input streamis converted into yards and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="ltom3-function">lTom3 <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#ltom3-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in liters into cubic meters.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:lTom3(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="ltom3-function">lTom3 <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in liters into cubic meters.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:lTom3(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2503,31 +1065,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from liters into cubic meters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForLitreToCubicmetreStream (inValue int); 
-from UnitConversionForLitreToCubicmetreStream 
-select unitconversion:lTom3(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:lTom3(1000)
+</code></pre>
 
+<p style="word-wrap: break-word">The liters value <code>1000</code> is converted into cubic meters as <code>1</code>.</p>
 
-<p style="word-wrap: break-word">The value in liters from 'UnitConversionForLitreToCubicmetreStream' input stream is converted into cubic meters and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="ltoml-function">lToml <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#ltoml-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in liters into milliliters.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:lToml(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="ltoml-function">lToml <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in liters into milliliters.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:lToml(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2541,31 +1097,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from liters into milliliters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForLitreToMillilitreStream (inValue int); 
-from UnitConversionForLitreToMillilitreStream 
-select unitconversion:lToml(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:lToml(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The liter value <code>1</code> is converted into milliliters as <code>1000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in liters from 'UnitConversionForLitreToMillilitreStream' input stream is converted into milliliters and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="m3tol-function">m3Tol <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#m3tol-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in cubic meters into liters.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:m3Tol(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="m3tol-function">m3Tol <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in cubic meters into liters.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:m3Tol(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2579,31 +1129,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from meters into liters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForCubicmetreToLitreStream (inValue int); 
-from UnitConversionForCubicmetreToLitreStream 
-select unitconversion:m3Tol(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:m3Tol(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The cubic meter value <code>1</code> is converted into liters as <code>1000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in cubic meters from 'UnitConversionForCubicmetreToLitreStream' input streamis converted into liters and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="mtocm-function">mTocm <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#mtocm-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in meters into centimeters.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:mTocm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="mtocm-function">mTocm <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in meters into centimeters.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:mTocm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2617,31 +1161,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from meters into centimeters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForMetreToCentimetreStream (inValue int); 
-from UnitConversionForMetreToCentimetreStream 
-select unitconversion:mTocm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:mTocm(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The meter value <code>1</code> is converted to centimeters as <code>100.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in meters from 'UnitConversionForMetreToCentimetreStream' input stream is converted to centimeters and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="mtoft-function">mToft <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#mtoft-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in meters into feet.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:mToft(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="mtoft-function">mToft <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in meters into foot.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:mToft(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2655,31 +1193,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from meters into feet.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForMetreToFootStream (inValue int); 
-from UnitConversionForMetreToFootStream 
-select unitconversion:mToft(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:mToft(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The meter value <code>1</code> is converted into foot as <code>3.280</code>.</p>
 
-<p style="word-wrap: break-word">The value in meters from 'UnitConversionForMetreToFootStream' input stream is converted into feet and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="mtomm-function">mTomm <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#mtomm-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in meters into millimeters.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:mTomm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="mtomm-function">mTomm <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in meters into millimeters.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:mTomm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2693,31 +1225,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from meters into millimeters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForMetreToMillimetreStream (inValue int); 
-from UnitConversionForMetreToMillimetreStream 
-select unitconversion:mTomm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:mTomm(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The meter value <code>1</code> is converted into millimeters as <code>1000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in meters from 'UnitConversionForMetreToMillimetreStream' input streamis converted into millimeters and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="mtos-function">mTos <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#mtos-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in minutes into seconds.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:mTos(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="mtos-function">mTos <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in minutes into seconds.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:mTos(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2731,31 +1257,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from minutes into seconds.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForMinuteToSecondStream (inValue int); 
-from UnitConversionForMinuteToSecondStream 
-select unitconversion:mTos(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:mTos(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The minute value <code>1</code> is converted into seconds as <code>60.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in minutes from 'UnitConversionForMinuteToSecondStream' input stream is converted into seconds and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="mtoyd-function">mToyd <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#mtoyd-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in meters into yards.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:mToyd(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="mtoyd-function">mToyd <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in meters into yards.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:mToyd(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2769,31 +1289,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from meters into yards.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForMetreToYardStream (inValue int); 
-from UnitConversionForMetreToYardStream 
-select unitconversion:mToyd(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:mToyd(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The meter value <code>1</code> is converted into yards as <code>1.093</code>.</p>
 
-<p style="word-wrap: break-word">The value in meters from 'UnitConversionForMetreToYardStream' input stream is converted into yards and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="mitokm-function">miTokm <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#mitokm-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in miles into kilometers.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:miTokm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="mitokm-function">miTokm <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in miles into kilometers.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:miTokm(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2807,31 +1321,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from miles into kilometers.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForMileToKilometreStream (inValue int); 
-from UnitConversionForMileToKilometreStream 
-select unitconversion:miTokm(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:miTokm(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The mile value <code>1</code> is converted into kilometers as <code>1.6</code>.</p>
 
-<p style="word-wrap: break-word">The value in miles from 'UnitConversionForMileToKilometreStream' input stream is converted into kilometers and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="mltol-function">mlTol <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#mltol-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in milliliters into liters.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:mlTol(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="mltol-function">mlTol <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in milliliters into liters.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:mlTol(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2845,31 +1353,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from milliliters into liters.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForMillilitreToLitreStream (inValue int); 
-from UnitConversionForMillilitreToLitreStream 
-select unitconversion:mlTol(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:mlTol(1000)
+</code></pre>
 
+<p style="word-wrap: break-word">The milliliters value <code>1000</code> is converted into liters as <code>1</code>.</p>
 
-<p style="word-wrap: break-word">The value in milliliters from 'UnitConversionForMillilitreToLitreStream' input stream is converted into liters and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="stoms-function">sToms <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#stoms-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in seconds into milliseconds.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:sToms(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="stoms-function">sToms <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in seconds into milliseconds.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:sToms(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2883,31 +1385,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from seconds into milliseconds.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForSecondToMillisecondStream (inValue int); 
-from UnitConversionForSecondToMillisecondStream 
-select unitconversion:sToms(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:sToms(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The second value <code>1</code> is converted into milliseconds as <code>1000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in seconds from 'UnitConversionForSecondToMillisecondStream' input stream is converted into milliseconds and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="stons-function">sTons <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#stons-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in seconds into nanoseconds.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:sTons(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="stons-function">sTons <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in seconds into nanoseconds.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:sTons(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2921,31 +1417,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from seconds into nanoseconds.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForSecondToNanosecondStream (inValue int); 
-from UnitConversionForSecondToNanosecondStream 
-select unitconversion:sTons(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:sTons(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The second value <code>1</code> is converted into nanoseconds as <code>1000000000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in seconds from 'UnitConversionForSecondToNanosecondStream' input stream is converted into nanoseconds and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="stous-function">sTous <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#stous-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in seconds into microseconds.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:sTous(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="stous-function">sTous <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in seconds into microseconds.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:sTous(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2959,31 +1449,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from seconds into microseconds.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForSecondToMicrosecondStream (inValue int); 
-from UnitConversionForSecondToMicrosecondStream 
-select unitconversion:sTous(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:sTous(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The second value <code>1</code> is converted into microseconds as <code>1000000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in seconds from 'UnitConversionForSecondToMicrosecondStream' input stream is converted into microseconds and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="ttog-function">tTog <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#ttog-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in tonnes into grams.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:tTog(&lt;INT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="ttog-function">tTog <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in tonnes into grams.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:tTog(&lt;INT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -2997,31 +1481,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from Tonnes into grams.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForTonneToGramStream (inValue int); 
-from UnitConversionForTonneToGramStream 
-select unitconversion:tTog(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:tTog(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The tonne value <code>1</code> is converted into grams as <code>1000000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in tonnes from 'UnitConversionForTonneToGramStream' input stream is converted into grams and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="ttokg-function">tTokg <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#ttokg-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the input given in tonnes into kilograms.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:tTokg(&lt;INT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="ttokg-function">tTokg <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the input given in tonnes into kilograms.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:tTokg(&lt;INT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -3035,31 +1513,25 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from tonnes into kilograms.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForTonneToKilogramStream (inValue int); 
-from UnitConversionForTonneToKilogramStream 
-select unitconversion:tTokg(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:tTokg(1)
+</code></pre>
 
+<p style="word-wrap: break-word">The tonne value <code>1</code> is converted into kilograms as <code>1000.0</code>.</p>
 
-<p style="word-wrap: break-word">The value in tonnes from 'UnitConversionForTonneToKilogramStream' input stream is converted into kilograms and returned to the 'OutMediationStream' output stream.</p>
-
-<h3 id="ytod-function">yTod <em><a target="_blank" href="http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/#function">(Function)</a></em><a class="headerlink" href="#ytod-function" title="Permanent link">&para;</a></h3>
-<p style="word-wrap: break-word">This converts the given input in years into days.</p>
-
-<p><span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
-<div class="codehilite"><pre><span></span>&lt;DOUBLE&gt; unitconversion:yTod(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
-</pre></div>
-
+<h3 id="ytod-function">yTod <em><a target="_blank" href="http://siddhi.io/en/v5.0/docs/query-guide/#function">(Function)</a></em></h3>
+<p><p style="word-wrap: break-word">Function converts the given input in years into days.</p>
+<span id="syntax" class="md-typeset" style="display: block; font-weight: bold;">Syntax</span></p>
+<pre><code>&lt;DOUBLE&gt; unitconversion:yTod(&lt;INT|LONG|FLOAT|DOUBLE&gt; p1)
+</code></pre>
 
 <p><span id="query-parameters" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">QUERY PARAMETERS</span>
 <table>
@@ -3073,118 +1545,16 @@ insert into OutMediationStream;
     </tr>
     <tr>
         <td style="vertical-align: top">p1</td>
-        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted from years into days.</td>
+        <td style="vertical-align: top; word-wrap: break-word">The value that needs to be converted.</td>
         <td style="vertical-align: top"></td>
         <td style="vertical-align: top">INT<br>LONG<br>FLOAT<br>DOUBLE</td>
         <td style="vertical-align: top">No</td>
-        <td style="vertical-align: top">No</td>
+        <td style="vertical-align: top">Yes</td>
     </tr>
 </table></p>
 <p><span id="examples" class="md-typeset" style="display: block; font-weight: bold;">Examples</span>
 <span id="example-1" class="md-typeset" style="display: block; color: rgba(0, 0, 0, 0.54); font-size: 12.8px; font-weight: bold;">EXAMPLE 1</span></p>
-<div class="codehilite"><pre><span></span>define stream UnitConversionForYearToDayStream (inValue int); 
-from UnitConversionForYearToDayStream 
-select unitconversion:yTod(inValue) as UnitConversionValue 
-insert into OutMediationStream;
-</pre></div>
+<pre><code>unitconversion:yTod(1)
+</code></pre>
 
-
-<p style="word-wrap: break-word">The value in years from 'UnitConversionForYearToDayStream' input stream is converted into days and returned to the 'OutMediationStream' output stream.</p>
-                
-                  
-                
-              
-              
-                
-
-
-              
-            </article>
-          </div>
-        </div>
-      </main>
-      
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../1.0.5/" title="1.0.5" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                1.0.5
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../../license/" title="License" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                License
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2011 - 2018 WSO2
-          </div>
-        
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
-      </div>
-      
-        
-  <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
-    
-      <a href="https://github.com/wso2/siddhi" class="md-footer-social__link fa fa-github"></a>
-    
-      <a href="https://www.linkedin.com/groups/13553064" class="md-footer-social__link fa fa-linkedin"></a>
-    
-  </div>
-
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    
-      <script src="../../assets/javascripts/application.a59e2a89.js"></script>
-      
-      <script>app.initialize({version:"0.17.4",url:{base:"../.."}})</script>
-      
-        <script src="../../javascripts/extra.js"></script>
-      
-    
-    
-      
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-103065-28","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-      
-    
-  </body>
-</html>
+<p style="word-wrap: break-word">The year value <code>1</code> is converted into days as <code>365.2525</code>.</p></article></div></div></main><footer class="md-footer"><div class="md-footer-nav"><nav class="md-footer-nav__inner md-grid"><a href="../.." title="Information" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev"><div class="md-flex__cell md-flex__cell--shrink"><i class="md-icon md-icon--arrow-back md-footer-nav__button"></i></div><div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span class="md-flex__ellipsis"><span class="md-footer-nav__direction">Previous</span>Information</span></div></a><a href="../2.0.1/" title="2.0.1" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next"><div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span class="md-flex__ellipsis"><span class="md-footer-nav__direction">Next</span>2.0.1</span></div><div class="md-flex__cell md-flex__cell--shrink"><i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i></div></a></nav></div><div class="md-footer-meta md-typeset"><div class="md-footer-meta__inner md-grid"><div class="md-footer-copyright"><div class="md-footer-copyright__highlight">Siddhi - Documentation</div>powered by <a href="https://www.mkdocs.org">MkDocs</a> and <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></div><div class="md-footer-social"><link rel="stylesheet" href="../../assets/fonts/font-awesome.css"> <a href="https://github.com/siddhi-io/siddhi" class="md-footer-social__link fa fa-github"></a>  <a href="https://medium.com/siddhi-io" class="md-footer-social__link fa fa-medium"></a>  <a href="https://twitter.com/siddhi_io" class="md-footer-social__link fa fa-twitter"></a>  <a href="https://www.linkedin.com/groups/13553064" class="md-footer-social__link fa fa-linkedin"></a> </div></div></div></footer></div><script src="../../assets/javascripts/application.b260a35d.js"></script><script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script><script src="../../assets/javascripts/extra.js"></script></body></html>
